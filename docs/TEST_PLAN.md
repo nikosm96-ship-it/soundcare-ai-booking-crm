@@ -1,6 +1,6 @@
 # Test Plan
 
-## Current Phase: Phase 7
+## Current Phase: Phase 8
 
 Manual checks:
 - Run `npm run dev`.
@@ -86,3 +86,16 @@ npm run dev
 - Confirm desktop and mobile layouts are readable.
 - Confirm no text clips, overlaps, or creates horizontal page overflow on mobile.
 - Confirm README explains project purpose, features, tech stack, local setup, safety/demo data note, and current limitations.
+
+## Phase 8: Final QA Checks
+
+- Confirm the real project folder contains `package.json`, `vite.config.js`, `src`, `docs`, and `.git`.
+- Run the dev server and confirm the app opens through the configured Vite open behavior.
+- Test desktop and mobile layouts for horizontal overflow, clipped text, broken spacing, unreadable text, and obvious visual issues.
+- Submit a fake booking and confirm the form resets, analytics update, the dashboard shows the new booking, and the mock assistant booking dropdown can use it.
+- Generate a mock assistant draft and confirm it is administrative only, includes `This message is a non-medical administrative draft.`, and includes no medical advice.
+- Change a booking status and confirm analytics update.
+- Refresh the page and confirm saved booking/status persistence.
+- Reset demo bookings and confirm the demo state returns and remains after refresh.
+- Run `npm run build`.
+- Review README, changelog, product owner notes, and this test plan for current project status.

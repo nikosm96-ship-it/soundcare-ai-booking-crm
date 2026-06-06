@@ -6,9 +6,9 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Phase 7: portfolio polish and presentation readiness.
+Phase 8: final QA pass and portfolio-readiness review.
 
-The MVP is browser-only and designed for portfolio review. It keeps the first screen focused on the working app, then presents the core features, booking form, analytics, mock assistant, and CRM dashboard in a readable layout.
+The MVP is browser-only and designed for portfolio review. The final QA pass confirms the first screen stays focused on the working app, then presents the core features, booking form, analytics, mock assistant, and CRM dashboard in a readable layout.
 
 ## Features
 

@@ -20,7 +20,7 @@ export default function AppShell() {
 
       <main className="app__main" aria-labelledby="app-title">
         <section className="intro" aria-label="Project status">
-          <p className="phase-label">Current phase: Portfolio polish</p>
+          <p className="phase-label">Current phase: Final QA pass</p>
           <p className="safety-note">
             This is a portfolio demo for a hearing-care booking workflow. It is
             not medical advice and should not be used with real patient data.

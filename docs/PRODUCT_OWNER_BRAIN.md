@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 7: Portfolio polish and presentation readiness.
+Phase 8: Final QA pass and portfolio-readiness review.
 
-Goal: make the existing React MVP easier to review as a portfolio project by improving layout, hierarchy, safety notes, README clarity, and validation documentation without adding backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: verify the existing React MVP end to end, fix only small QA issues if needed, and confirm the app and docs are ready for portfolio review without adding backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -46,12 +46,13 @@ Goal: make the existing React MVP easier to review as a portfolio project by imp
 - Phase 4: Simple CRM booking dashboard.
 - Phase 5: Basic analytics overview.
 - Phase 6: Mock AI assistant.
+- Phase 7: Portfolio polish and presentation readiness.
 
 ## Next Phase
-Portfolio screenshots and interview walkthrough preparation after Phase 7 is validated.
+Portfolio screenshots and interview walkthrough preparation after Phase 8 is validated.
 
 ## Current Blockers
-- Git is not available in the current PowerShell path.
+- Local PATH was adjusted so PowerShell 7, Node/npm, and Git are available from new terminals.
 - Portfolio screenshots have not been captured yet.
 
 ## Important Decisions

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.10.0 - 2026-06-06
+- Completed Phase 8 final QA pass and portfolio-readiness review.
+- Verified the full browser MVP flow: feature summary, analytics overview, public booking form, mock AI assistant, CRM dashboard, status updates, reset demo bookings, localStorage persistence, and footer safety notes.
+- Updated current-phase documentation and app status copy from Phase 7 portfolio polish to Phase 8 final QA.
+- Kept backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and message sending out of scope.
+
 ## 0.9.0 - 2026-06-06
 - Added Phase 7 portfolio polish and presentation readiness updates.
 - Added a compact feature summary section for booking requests, CRM tracking, analytics overview, and the mock AI draft assistant.
