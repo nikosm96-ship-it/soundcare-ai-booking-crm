@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 - 2026-06-06
+- Added Phase 4 CRM-style booking dashboard.
+- Listed bookings from the existing localStorage booking helpers.
+- Added per-booking status dropdowns using the existing booking status source of truth.
+- Persisted status changes with an updated `updatedAt` timestamp.
+- Added a reset demo bookings action using the existing `resetBookings()` helper.
+- Kept analytics UI, AI assistant logic, backend APIs, authentication, payments, and external libraries out of scope.
+
 ## 0.5.0 - 2026-06-06
 - Added Phase 3 public booking request form.
 - Added required field validation for customer name, customer email, and service.

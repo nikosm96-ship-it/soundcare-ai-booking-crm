@@ -45,7 +45,7 @@ function validateBookingForm(values) {
   return errors;
 }
 
-export default function BookingForm() {
+export default function BookingForm({ onBookingSaved }) {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
@@ -91,6 +91,10 @@ export default function BookingForm() {
     setFormValues(initialFormValues);
     setErrors({});
     setSuccessMessage('Your demo booking request has been saved.');
+
+    if (onBookingSaved) {
+      onBookingSaved();
+    }
   }
 
   return (

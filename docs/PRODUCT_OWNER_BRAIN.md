@@ -33,24 +33,24 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 3: Public booking form.
+Phase 4: Simple CRM booking dashboard.
 
-Goal: let a visitor submit a fake/demo booking request through a React form and save it to localStorage through the existing Phase 2 helpers.
+Goal: let a clinic admin review fake/demo booking requests from localStorage, update booking status, and reset browser data back to demo bookings.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
 - Phase 1 WordPress skeleton: completed but abandoned after the React pivot.
 - Phase 1 Restart: React app skeleton.
 - Phase 2: React data model and localStorage booking service.
+- Phase 3: Public booking form.
 
 ## Next Phase
-Phase 4: Admin dashboard booking list.
+Phase 5: Basic analytics.
 
-Only start this after the Phase 3 public booking form is validated.
+Only start this after the Phase 4 booking dashboard is validated.
 
 ## Current Blockers
 - Git is not available in the current PowerShell path.
-- npm is not available in the current PowerShell path.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
