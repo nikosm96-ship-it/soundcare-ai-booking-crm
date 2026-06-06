@@ -10,11 +10,11 @@ The old WordPress PHP skeleton has been removed.
 
 ## Current Phase
 
-Phase 4: simple CRM booking dashboard.
+Phase 5: basic analytics overview.
 
-The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, a public demo booking request form, and a simple CRM-style dashboard. Submitted requests are stored in browser localStorage only, and dashboard status updates persist there.
+The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, a public demo booking request form, a simple CRM-style dashboard, and basic analytics cards. Submitted requests are stored in browser localStorage only, dashboard status updates persist there, and analytics counts refresh when bookings change.
 
-This phase intentionally does not add analytics UI, AI logic, backend APIs, authentication, payments, or external database integrations.
+This phase intentionally does not add AI logic, backend APIs, authentication, payments, or external database integrations.
 
 ## Local Development
 
@@ -45,7 +45,7 @@ npm run dev
 - Booking data model stored locally in browser localStorage
 - Admin dashboard-style booking list with status updates
 - Demo booking reset button
-- Basic analytics planned for a later phase
+- Basic analytics overview from local demo bookings
 - Mock AI summary, next action, and follow-up message planned for a later phase
 - Portfolio-ready README with screenshots and learning notes
 

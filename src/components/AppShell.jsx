@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import AnalyticsOverview from './AnalyticsOverview.jsx';
 import BookingDashboard from './BookingDashboard.jsx';
 import BookingForm from './BookingForm.jsx';
 import Header from './Header.jsx';
 
 export default function AppShell() {
-  const [dashboardRefreshKey, setDashboardRefreshKey] = useState(0);
+  const [bookingsRefreshKey, setBookingsRefreshKey] = useState(0);
 
-  function refreshDashboard() {
-    setDashboardRefreshKey((currentKey) => currentKey + 1);
+  function refreshBookings() {
+    setBookingsRefreshKey((currentKey) => currentKey + 1);
   }
 
   return (
@@ -16,15 +17,19 @@ export default function AppShell() {
 
       <main className="app__main" aria-labelledby="app-title">
         <section className="intro" aria-label="Project status">
-          <p className="phase-label">Current phase: CRM booking dashboard</p>
+          <p className="phase-label">Current phase: Basic analytics</p>
           <p className="safety-note">
             This is a portfolio demo for a hearing-care booking workflow. It is
             not medical advice and should not be used with real patient data.
           </p>
         </section>
 
-        <BookingForm onBookingSaved={refreshDashboard} />
-        <BookingDashboard refreshKey={dashboardRefreshKey} />
+        <AnalyticsOverview refreshKey={bookingsRefreshKey} />
+        <BookingForm onBookingSaved={refreshBookings} />
+        <BookingDashboard
+          refreshKey={bookingsRefreshKey}
+          onBookingsChanged={refreshBookings}
+        />
       </main>
     </div>
   );

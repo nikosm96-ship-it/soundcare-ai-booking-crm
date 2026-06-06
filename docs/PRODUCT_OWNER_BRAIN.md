@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 4: Simple CRM booking dashboard.
+Phase 5: Basic analytics overview.
 
-Goal: let a clinic admin review fake/demo booking requests from localStorage, update booking status, and reset browser data back to demo bookings.
+Goal: show simple booking counts from localStorage so a clinic admin can understand the fake/demo booking pipeline at a glance.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -43,11 +43,12 @@ Goal: let a clinic admin review fake/demo booking requests from localStorage, up
 - Phase 1 Restart: React app skeleton.
 - Phase 2: React data model and localStorage booking service.
 - Phase 3: Public booking form.
+- Phase 4: Simple CRM booking dashboard.
 
 ## Next Phase
-Phase 5: Basic analytics.
+Phase 6: Mock AI assistant.
 
-Only start this after the Phase 4 booking dashboard is validated.
+Only start this after the Phase 5 analytics overview is validated.
 
 ## Current Blockers
 - Git is not available in the current PowerShell path.

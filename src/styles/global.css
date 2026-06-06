@@ -87,6 +87,7 @@ h1 {
   line-height: 1.7;
 }
 
+.analytics-overview,
 .booking-form-section {
   margin-bottom: 28px;
   padding: 28px;
@@ -123,6 +124,37 @@ h1 {
   margin-bottom: 0;
   color: #526469;
   line-height: 1.6;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.analytics-card {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #d8e2df;
+  border-radius: 8px;
+  background: #fbfdfc;
+}
+
+.analytics-card p {
+  margin: 0;
+  color: #526469;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.analytics-card strong {
+  color: #102a30;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .booking-form {
@@ -353,6 +385,7 @@ h1 {
     padding: 32px 0 24px;
   }
 
+  .analytics-overview,
   .booking-form-section {
     padding: 22px;
   }
@@ -363,6 +396,10 @@ h1 {
   }
 
   .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-grid {
     grid-template-columns: 1fr;
   }
 

@@ -1,15 +1,16 @@
 # Test Plan
 
-## Current Phase: Phase 4
+## Current Phase: Phase 5
 
 Manual checks:
 - Run `npm run dev`.
 - Open the local dev server URL.
-- Confirm the dashboard displays fake demo bookings.
-- Submit valid fake booking data from the public form and confirm it appears in the dashboard after the UI updates or after refresh.
-- Change a booking status and confirm it persists after refresh.
-- Click `Reset demo bookings` and confirm demo records return.
-- Confirm no analytics UI, AI logic, backend API, authentication, payments, or external libraries are added.
+- Confirm analytics cards show the correct demo booking counts.
+- Submit valid fake booking data from the public form and confirm total bookings increases.
+- Change a booking status and confirm the matching analytics status count updates.
+- Click `Reset demo bookings` and confirm analytics counts return to the demo values.
+- Confirm the dashboard still displays fake demo bookings and status updates still persist.
+- Confirm no AI logic, backend API, authentication, payments, external libraries, real patient data, medical advice, diagnosis, or treatment recommendations are added.
 
 ## Phase 1 Restart: React Skeleton Checks
 
@@ -57,8 +58,9 @@ npm run dev
 
 - Confirm total bookings count is correct.
 - Confirm status counts are correct.
-- Confirm service counts are correct.
-- Confirm upcoming appointment requests are shown correctly.
+- Confirm analytics update after a new fake booking is submitted.
+- Confirm analytics update after a booking status changes.
+- Confirm analytics return to demo values after reset.
 
 ## Phase 6: Mock AI Checks
 

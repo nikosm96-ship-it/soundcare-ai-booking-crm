@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 - 2026-06-06
+- Added Phase 5 basic analytics overview cards.
+- Counted total, new, scheduled, completed, follow-up, and cancelled bookings from the existing localStorage booking helpers.
+- Used the existing booking status constants as the analytics source of truth.
+- Refreshed analytics after fake booking submissions, dashboard status changes, and demo booking resets.
+- Kept AI assistant logic, backend APIs, authentication, payments, external libraries, real patient data, and medical advice out of scope.
+
 ## 0.6.0 - 2026-06-06
 - Added Phase 4 CRM-style booking dashboard.
 - Listed bookings from the existing localStorage booking helpers.

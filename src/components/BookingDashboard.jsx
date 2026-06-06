@@ -10,7 +10,7 @@ function displayValue(value) {
   return value || 'Not provided';
 }
 
-export default function BookingDashboard({ refreshKey }) {
+export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
   const [bookings, setBookings] = useState(() => getBookings());
 
   useEffect(() => {
@@ -32,10 +32,18 @@ export default function BookingDashboard({ refreshKey }) {
 
     saveBookings(updatedBookings);
     setBookings(updatedBookings);
+
+    if (onBookingsChanged) {
+      onBookingsChanged();
+    }
   }
 
   function handleResetBookings() {
     setBookings(resetBookings());
+
+    if (onBookingsChanged) {
+      onBookingsChanged();
+    }
   }
 
   return (
