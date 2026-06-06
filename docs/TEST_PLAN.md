@@ -1,17 +1,22 @@
 # Test Plan
 
-## Current Phase: Phase 6
+## Current Phase: Phase 7
 
 Manual checks:
 - Run `npm run dev`.
 - Open the local dev server URL.
-- Confirm analytics, booking form, and booking dashboard still appear.
-- Confirm the Mock AI Assistant panel appears.
-- Select one demo booking, one draft type, and one tone.
-- Click `Generate draft` and confirm a safe administrative draft appears.
+- Confirm the app loads as a React + Vite app.
+- Confirm the feature summary appears near the top.
+- Confirm the footer appears with portfolio MVP, fake/demo data, and no medical advice notes.
+- Confirm analytics, booking form, Mock AI Assistant, and booking dashboard still appear.
+- Submit a fake booking and confirm analytics and dashboard update.
+- Generate a mock assistant draft and confirm it remains administrative only.
 - Confirm the draft includes the line `This message is a non-medical administrative draft.`
-- Confirm the draft may include only administrative booking details such as customer name, service, preferred date, and preferred time.
-- Click `Clear draft` and confirm the generated text is removed.
+- Change one dashboard booking status and confirm analytics update.
+- Click `Reset demo bookings` and confirm demo data returns.
+- Check a mobile-sized viewport for clipped text, overlapping content, or horizontal overflow.
+- Run `npm run build`.
+- If needed, run `node node_modules/vite/bin/vite.js build`.
 - Confirm no real AI logic, API key, backend API, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or message sending are added.
 
 ## Phase 1 Restart: React Skeleton Checks
@@ -72,3 +77,12 @@ npm run dev
 - Confirm every generated draft includes the non-medical administrative safety line.
 - Confirm `Clear draft` removes generated text.
 - Confirm mock AI works without API keys, backend APIs, or external libraries.
+
+## Phase 7: Portfolio Polish Checks
+
+- Confirm the feature summary lists booking requests, CRM tracking, analytics overview, and mock AI draft assistant.
+- Confirm footer safety notes are visible and concise.
+- Confirm the first viewport still presents the actual app identity and workflow, not a marketing landing page.
+- Confirm desktop and mobile layouts are readable.
+- Confirm no text clips, overlaps, or creates horizontal page overflow on mobile.
+- Confirm README explains project purpose, features, tech stack, local setup, safety/demo data note, and current limitations.

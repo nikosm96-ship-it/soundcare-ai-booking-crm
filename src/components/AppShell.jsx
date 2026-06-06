@@ -2,6 +2,8 @@ import { useState } from 'react';
 import AnalyticsOverview from './AnalyticsOverview.jsx';
 import BookingDashboard from './BookingDashboard.jsx';
 import BookingForm from './BookingForm.jsx';
+import FeatureSummary from './FeatureSummary.jsx';
+import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import MockAiAssistant from './MockAiAssistant.jsx';
 
@@ -18,13 +20,14 @@ export default function AppShell() {
 
       <main className="app__main" aria-labelledby="app-title">
         <section className="intro" aria-label="Project status">
-          <p className="phase-label">Current phase: Mock AI assistant</p>
+          <p className="phase-label">Current phase: Portfolio polish</p>
           <p className="safety-note">
             This is a portfolio demo for a hearing-care booking workflow. It is
             not medical advice and should not be used with real patient data.
           </p>
         </section>
 
+        <FeatureSummary />
         <AnalyticsOverview refreshKey={bookingsRefreshKey} />
         <BookingForm onBookingSaved={refreshBookings} />
         <MockAiAssistant refreshKey={bookingsRefreshKey} />
@@ -33,6 +36,7 @@ export default function AppShell() {
           onBookingsChanged={refreshBookings}
         />
       </main>
+      <Footer />
     </div>
   );
 }

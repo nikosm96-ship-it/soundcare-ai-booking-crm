@@ -1,22 +1,38 @@
 # SoundCare AI Booking CRM
 
-SoundCare AI Booking CRM is now a React portfolio MVP for a demo hearing-care clinic. It will let a visitor submit a booking request, let a clinic admin manage bookings in a CRM-style dashboard, and later provide safe mock AI-assisted follow-up suggestions.
+SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect demo booking requests, persist them in the browser, track CRM-style statuses, show simple analytics, and generate safe mock administrative draft text.
 
-## Project Pivot
+This is the active React app version of the project. The earlier WordPress plugin direction was abandoned on 2026-06-06 and the old PHP skeleton was removed.
 
-This project started as a WordPress plugin skeleton, but the direction changed on 2026-06-06. The active project is now a React app, not a WordPress plugin.
+## Current Status
 
-The old WordPress PHP skeleton has been removed.
+Phase 7: portfolio polish and presentation readiness.
 
-## Current Phase
+The MVP is browser-only and designed for portfolio review. It keeps the first screen focused on the working app, then presents the core features, booking form, analytics, mock assistant, and CRM dashboard in a readable layout.
 
-Phase 6: safe mock AI assistant.
+## Features
 
-The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, a public demo booking request form, a simple CRM-style dashboard, basic analytics cards, and a mock assistant that generates safe administrative follow-up drafts from existing fake booking data. Submitted requests are stored in browser localStorage only, dashboard status updates persist there, analytics counts refresh when bookings change, and generated drafts use local template logic only.
+- Public booking form for fake/demo appointment requests.
+- Required-field validation for name, email, and service.
+- Browser localStorage persistence for demo bookings.
+- CRM-style booking dashboard with status updates.
+- Reset demo bookings action.
+- Analytics overview for total and status-based booking counts.
+- Mock AI Assistant that creates administrative draft text from fake booking data.
+- Beginner-friendly React component structure and plain CSS styling.
+- Portfolio safety notes for fake data and non-medical use.
 
-This phase intentionally does not add real AI logic, OpenAI API calls, API keys, backend APIs, authentication, payments, message sending, external libraries, or external database integrations.
+## Tech Stack
 
-## Local Development
+- React
+- Vite
+- JavaScript
+- CSS
+- Browser localStorage
+
+No external UI libraries, backend APIs, authentication, payments, database services, or real AI API calls are used in this phase.
+
+## Run Locally
 
 Install dependencies:
 
@@ -30,28 +46,33 @@ Start the Vite development server:
 npm run dev
 ```
 
-## Planned Tech Stack
+Build the app:
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Browser localStorage for the first working MVP
-- Mock AI output before any real AI API
+```bash
+npm run build
+```
 
-## MVP Features
+If the build command fails in PowerShell with `Access is denied`, try:
 
-- Public booking form for fake/demo booking requests
-- Booking data model stored locally in browser localStorage
-- Admin dashboard-style booking list with status updates
-- Demo booking reset button
-- Basic analytics overview from local demo bookings
-- Mock AI Assistant panel for safe administrative draft text
-- Portfolio-ready README with screenshots and learning notes
+```bash
+node node_modules/vite/bin/vite.js build
+```
 
-## Safety Note
+## Safety And Demo Data
 
-This is a portfolio demo and learning project. Do not use real patient data. The mock assistant must not provide medical diagnosis, medical advice, treatment recommendations, clinical claims, or message sending.
+This project is a portfolio demo only. Use fake/demo data only.
+
+The app does not provide medical advice, diagnosis, treatment recommendations, clinical claims, or message sending. The mock assistant is limited to administrative draft text about scheduling and booking details.
+
+## Current Limitations
+
+- Data is stored in browser localStorage only.
+- The AI assistant is mock/template-based only.
+- There is no backend yet.
+- There is no real AI API integration.
+- There is no authentication or role-based access.
+- There are no payments.
+- There is no production database.
 
 ## Project Docs
 

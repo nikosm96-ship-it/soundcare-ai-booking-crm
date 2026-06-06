@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 6: Mock AI assistant.
+Phase 7: Portfolio polish and presentation readiness.
 
-Goal: generate safe, non-medical administrative follow-up message drafts from existing fake/demo booking data using local template logic only.
+Goal: make the existing React MVP easier to review as a portfolio project by improving layout, hierarchy, safety notes, README clarity, and validation documentation without adding backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -45,14 +45,14 @@ Goal: generate safe, non-medical administrative follow-up message drafts from ex
 - Phase 3: Public booking form.
 - Phase 4: Simple CRM booking dashboard.
 - Phase 5: Basic analytics overview.
+- Phase 6: Mock AI assistant.
 
 ## Next Phase
-Phase 7: Portfolio polish and README screenshots.
-
-Only start this after the Phase 6 mock assistant is validated.
+Portfolio screenshots and interview walkthrough preparation after Phase 7 is validated.
 
 ## Current Blockers
 - Git is not available in the current PowerShell path.
+- Portfolio screenshots have not been captured yet.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -73,7 +73,7 @@ The MVP is complete when:
 4. The admin dashboard lists bookings.
 5. The admin can update booking status.
 6. The app shows basic analytics.
-7. Mock AI summary, next action, and follow-up message work safely.
-8. README explains installation, features, screenshots, architecture, and learning outcomes.
+7. Mock AI administrative draft generation works safely.
+8. README explains installation, features, tech stack, safety notes, and current limitations.
 9. Test plan is completed.
 10. Nikos can explain the project in an interview.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.9.0 - 2026-06-06
+- Added Phase 7 portfolio polish and presentation readiness updates.
+- Added a compact feature summary section for booking requests, CRM tracking, analytics overview, and the mock AI draft assistant.
+- Added a short footer with portfolio MVP, fake/demo data, and no medical advice notes.
+- Refined header copy, spacing, responsive layout, and visual hierarchy while keeping the first screen focused on the working app.
+- Updated README, product owner notes, and test plan for the current MVP status and limitations.
+- Kept backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and message sending out of scope.
+
 ## 0.8.0 - 2026-06-06
 - Added Phase 6 Mock AI Assistant panel.
 - Loaded existing fake bookings from the local booking storage helper.
