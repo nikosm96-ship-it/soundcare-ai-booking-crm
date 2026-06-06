@@ -38,7 +38,8 @@ select {
 
 .site-header__content,
 .app__main {
-  width: min(100% - 32px, 1040px);
+  width: calc(100% - 32px);
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -378,11 +379,24 @@ h1 {
 @media (max-width: 560px) {
   .site-header__content,
   .app__main {
-    width: min(100% - 24px, 1040px);
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
   }
 
   .site-header__content {
     padding: 32px 0 24px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    max-width: 12ch;
+    overflow-wrap: break-word;
+  }
+
+  .safety-note,
+  .section-heading p:last-child {
+    max-width: 30ch;
+    overflow-wrap: break-word;
   }
 
   .analytics-overview,
