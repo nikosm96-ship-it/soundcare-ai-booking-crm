@@ -10,9 +10,11 @@ The old WordPress PHP skeleton has been removed.
 
 ## Current Phase
 
-Phase 2: booking data model and localStorage helpers.
+Phase 3: public booking request form.
 
-The project has a clean React + Vite structure plus beginner-friendly booking status constants, fake demo bookings, and localStorage helper functions. This phase intentionally does not add the public booking form, admin dashboard UI, analytics UI, AI logic, backend APIs, authentication, payments, or external database integrations.
+The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, and a public demo booking request form. Submitted requests are stored in browser localStorage only.
+
+This phase intentionally does not add the admin dashboard UI, analytics UI, AI logic, backend APIs, authentication, payments, or external database integrations.
 
 ## Local Development
 
@@ -39,8 +41,8 @@ npm run dev
 
 ## MVP Features
 
-- Public booking form
-- Booking data model stored locally at first
+- Public booking form for fake/demo booking requests
+- Booking data model stored locally in browser localStorage
 - Admin dashboard-style booking list
 - Status workflow
 - Basic analytics

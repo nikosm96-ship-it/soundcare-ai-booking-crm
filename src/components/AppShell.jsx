@@ -1,11 +1,8 @@
+import BookingForm from './BookingForm.jsx';
 import Header from './Header.jsx';
 import PlaceholderPanel from './PlaceholderPanel.jsx';
 
 const futurePanels = [
-  {
-    title: 'Booking Form',
-    description: 'Future visitor intake area for appointment requests.',
-  },
   {
     title: 'CRM Dashboard',
     description: 'Future clinic admin view for reviewing booking requests.',
@@ -27,12 +24,14 @@ export default function AppShell() {
 
       <main className="app__main" aria-labelledby="app-title">
         <section className="intro" aria-label="Project status">
-          <p className="phase-label">Current phase: React Skeleton</p>
+          <p className="phase-label">Current phase: Public booking form</p>
           <p className="safety-note">
             This is a portfolio demo for a hearing-care booking workflow. It is
             not medical advice and should not be used with real patient data.
           </p>
         </section>
+
+        <BookingForm />
 
         <section className="panel-grid" aria-label="Future feature placeholders">
           {futurePanels.map((panel) => (

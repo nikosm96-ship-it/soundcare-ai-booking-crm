@@ -33,19 +33,20 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 2: React data model and localStorage booking service.
+Phase 3: Public booking form.
 
-Goal: define booking statuses, add fake demo bookings, and create beginner-friendly localStorage helpers without adding UI or backend features.
+Goal: let a visitor submit a fake/demo booking request through a React form and save it to localStorage through the existing Phase 2 helpers.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
 - Phase 1 WordPress skeleton: completed but abandoned after the React pivot.
 - Phase 1 Restart: React app skeleton.
+- Phase 2: React data model and localStorage booking service.
 
 ## Next Phase
-Phase 3: Public booking form.
+Phase 4: Admin dashboard booking list.
 
-Only start this after the Phase 2 data model and localStorage helpers are validated.
+Only start this after the Phase 3 public booking form is validated.
 
 ## Current Blockers
 - Git is not available in the current PowerShell path.

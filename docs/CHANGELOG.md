@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 - 2026-06-06
+- Added Phase 3 public booking request form.
+- Added required field validation for customer name, customer email, and service.
+- Saved fake/demo booking requests to localStorage through the existing Phase 2 storage helpers.
+- Kept dashboard, analytics, AI assistant logic, backend APIs, authentication, payments, and external libraries out of scope.
+
 ## 0.4.0 - 2026-06-06
 - Added Phase 2 booking status constants in one place.
 - Added fake demo booking records for local development and portfolio testing.

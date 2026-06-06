@@ -87,6 +87,125 @@ h1 {
   line-height: 1.7;
 }
 
+.booking-form-section {
+  margin-bottom: 28px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #d8e2df;
+  border-radius: 8px;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin-bottom: 10px;
+  color: #102a30;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.section-heading p:last-child {
+  margin-bottom: 0;
+  color: #526469;
+  line-height: 1.6;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #102a30;
+  font-weight: 700;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #b9cac6;
+  border-radius: 8px;
+  padding: 11px 12px;
+  color: #18333a;
+  background: #ffffff;
+  line-height: 1.4;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 3px solid #bfebe4;
+  border-color: #2f6b73;
+}
+
+.form-field [aria-invalid="true"] {
+  border-color: #a33b3b;
+}
+
+.field-error {
+  color: #a33b3b;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.form-message {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.form-message--success {
+  color: #174f34;
+  background: #e3f4eb;
+  border: 1px solid #a8d9bf;
+}
+
+.primary-button {
+  align-self: flex-start;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #ffffff;
+  background: #1d5861;
+  font-weight: 800;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #174850;
+}
+
+.primary-button:focus {
+  outline: 3px solid #bfebe4;
+  outline-offset: 2px;
+}
+
 .panel-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -141,6 +260,18 @@ h1 {
 
   .site-header__content {
     padding: 32px 0 24px;
+  }
+
+  .booking-form-section {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button {
+    width: 100%;
   }
 
   .panel-grid {

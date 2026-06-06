@@ -1,14 +1,15 @@
 # Test Plan
 
-## Current Phase: Phase 2
+## Current Phase: Phase 3
 
 Manual checks:
-- Confirm booking statuses are defined in one shared data file.
-- Confirm fake demo bookings exist and use only fake data.
-- Confirm localStorage helpers can load, save, and reset bookings.
-- Confirm invalid JSON in localStorage returns demo bookings instead of crashing.
-- Confirm the React skeleton still runs locally.
-- Confirm no booking form, dashboard UI, analytics UI, AI logic, backend API, authentication, payments, or external libraries are added yet.
+- Run `npm run dev`.
+- Open the local dev server URL.
+- Submit the booking form with empty required fields and confirm validation appears.
+- Submit valid fake booking data and confirm the success message appears.
+- Confirm browser localStorage contains the saved booking under `soundcare-ai-bookings`.
+- Confirm the saved booking status is `New`.
+- Confirm no dashboard UI, analytics UI, AI logic, backend API, authentication, payments, or external libraries are added.
 
 ## Phase 1 Restart: React Skeleton Checks
 
