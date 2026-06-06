@@ -1,16 +1,18 @@
 # Test Plan
 
-## Current Phase: Phase 5
+## Current Phase: Phase 6
 
 Manual checks:
 - Run `npm run dev`.
 - Open the local dev server URL.
-- Confirm analytics cards show the correct demo booking counts.
-- Submit valid fake booking data from the public form and confirm total bookings increases.
-- Change a booking status and confirm the matching analytics status count updates.
-- Click `Reset demo bookings` and confirm analytics counts return to the demo values.
-- Confirm the dashboard still displays fake demo bookings and status updates still persist.
-- Confirm no AI logic, backend API, authentication, payments, external libraries, real patient data, medical advice, diagnosis, or treatment recommendations are added.
+- Confirm analytics, booking form, and booking dashboard still appear.
+- Confirm the Mock AI Assistant panel appears.
+- Select one demo booking, one draft type, and one tone.
+- Click `Generate draft` and confirm a safe administrative draft appears.
+- Confirm the draft includes the line `This message is a non-medical administrative draft.`
+- Confirm the draft may include only administrative booking details such as customer name, service, preferred date, and preferred time.
+- Click `Clear draft` and confirm the generated text is removed.
+- Confirm no real AI logic, API key, backend API, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or message sending are added.
 
 ## Phase 1 Restart: React Skeleton Checks
 
@@ -64,7 +66,9 @@ npm run dev
 
 ## Phase 6: Mock AI Checks
 
-- Confirm AI summary is generated from booking data.
-- Confirm suggested next action is administrative, not medical.
-- Confirm follow-up message is safe and does not diagnose.
-- Confirm mock AI works without API keys.
+- Confirm Mock AI Assistant panel appears.
+- Confirm user can select a booking, draft type, and tone.
+- Confirm `Generate draft` creates a safe administrative draft from fake booking data.
+- Confirm every generated draft includes the non-medical administrative safety line.
+- Confirm `Clear draft` removes generated text.
+- Confirm mock AI works without API keys, backend APIs, or external libraries.

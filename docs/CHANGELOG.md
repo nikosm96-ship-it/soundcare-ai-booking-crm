@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.0 - 2026-06-06
+- Added Phase 6 Mock AI Assistant panel.
+- Loaded existing fake bookings from the local booking storage helper.
+- Added booking, draft type, and tone selectors for administrative draft generation.
+- Generated safe local template drafts only, always including the non-medical administrative safety line.
+- Added a clear draft action.
+- Kept real AI calls, API keys, backend APIs, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and message sending out of scope.
+
 ## 0.7.0 - 2026-06-06
 - Added Phase 5 basic analytics overview cards.
 - Counted total, new, scheduled, completed, follow-up, and cancelled bookings from the existing localStorage booking helpers.

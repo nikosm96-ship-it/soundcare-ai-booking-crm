@@ -89,7 +89,8 @@ h1 {
 }
 
 .analytics-overview,
-.booking-form-section {
+.booking-form-section,
+.mock-ai-assistant {
   margin-bottom: 28px;
   padding: 28px;
   background: #ffffff;
@@ -203,6 +204,30 @@ h1 {
 .form-field textarea:focus {
   outline: 3px solid #bfebe4;
   border-color: #2f6b73;
+}
+
+.mock-ai-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mock-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mock-ai-output {
+  min-height: 210px;
+  background: #fbfdfc;
+}
+
+.secondary-button:disabled,
+.secondary-button:disabled:hover {
+  color: #82939a;
+  background: #f4f7f6;
+  cursor: not-allowed;
 }
 
 .form-field [aria-invalid="true"] {
@@ -400,7 +425,8 @@ h1 {
   }
 
   .analytics-overview,
-  .booking-form-section {
+  .booking-form-section,
+  .mock-ai-assistant {
     padding: 22px;
   }
 

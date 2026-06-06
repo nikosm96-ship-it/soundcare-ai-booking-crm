@@ -10,11 +10,11 @@ The old WordPress PHP skeleton has been removed.
 
 ## Current Phase
 
-Phase 5: basic analytics overview.
+Phase 6: safe mock AI assistant.
 
-The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, a public demo booking request form, a simple CRM-style dashboard, and basic analytics cards. Submitted requests are stored in browser localStorage only, dashboard status updates persist there, and analytics counts refresh when bookings change.
+The project has a clean React + Vite structure, beginner-friendly booking status constants, fake demo bookings, localStorage helper functions, a public demo booking request form, a simple CRM-style dashboard, basic analytics cards, and a mock assistant that generates safe administrative follow-up drafts from existing fake booking data. Submitted requests are stored in browser localStorage only, dashboard status updates persist there, analytics counts refresh when bookings change, and generated drafts use local template logic only.
 
-This phase intentionally does not add AI logic, backend APIs, authentication, payments, or external database integrations.
+This phase intentionally does not add real AI logic, OpenAI API calls, API keys, backend APIs, authentication, payments, message sending, external libraries, or external database integrations.
 
 ## Local Development
 
@@ -46,12 +46,12 @@ npm run dev
 - Admin dashboard-style booking list with status updates
 - Demo booking reset button
 - Basic analytics overview from local demo bookings
-- Mock AI summary, next action, and follow-up message planned for a later phase
+- Mock AI Assistant panel for safe administrative draft text
 - Portfolio-ready README with screenshots and learning notes
 
 ## Safety Note
 
-This is a portfolio demo and learning project. Do not use real patient data. The AI assistant must not provide medical diagnosis or medical advice.
+This is a portfolio demo and learning project. Do not use real patient data. The mock assistant must not provide medical diagnosis, medical advice, treatment recommendations, clinical claims, or message sending.
 
 ## Project Docs
 
