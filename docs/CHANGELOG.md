@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.11.0 - 2026-06-07
+- Completed Phase 9 portfolio walkthrough and screenshot preparation documentation.
+- Added `docs/PORTFOLIO_WALKTHROUGH.md` with elevator pitch, problem/goal framing, feature walkthrough, screenshot checklist, interview talking points, limitations, and next improvements.
+- Linked the walkthrough from README.
+- Updated product owner notes and test plan for screenshot/walkthrough validation.
+- Kept app UI, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and deployment out of scope.
+
 ## 0.10.0 - 2026-06-06
 - Completed Phase 8 final QA pass and portfolio-readiness review.
 - Verified the full browser MVP flow: feature summary, analytics overview, public booking form, mock AI assistant, CRM dashboard, status updates, reset demo bookings, localStorage persistence, and footer safety notes.

@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 8: Final QA pass and portfolio-readiness review.
+Phase 9: Portfolio walkthrough and screenshot preparation docs.
 
-Goal: verify the existing React MVP end to end, fix only small QA issues if needed, and confirm the app and docs are ready for portfolio review without adding backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: prepare a clear portfolio presentation path, screenshot checklist, interview talking points, limitations, and next-step story without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -47,13 +47,15 @@ Goal: verify the existing React MVP end to end, fix only small QA issues if need
 - Phase 5: Basic analytics overview.
 - Phase 6: Mock AI assistant.
 - Phase 7: Portfolio polish and presentation readiness.
+- Phase 8: Final QA pass and portfolio-readiness review.
 
 ## Next Phase
-Portfolio screenshots and interview walkthrough preparation after Phase 8 is validated.
+Capture portfolio screenshots and prepare deployment only after Phase 9 documentation is validated.
 
 ## Current Blockers
 - Local PATH was adjusted so PowerShell 7, Node/npm, and Git are available from new terminals.
 - Portfolio screenshots have not been captured yet.
+- Deployment has not started yet.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -78,3 +80,4 @@ The MVP is complete when:
 8. README explains installation, features, tech stack, safety notes, and current limitations.
 9. Test plan is completed.
 10. Nikos can explain the project in an interview.
+11. Portfolio walkthrough and screenshot checklist are ready.

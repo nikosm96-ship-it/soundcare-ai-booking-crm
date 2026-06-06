@@ -64,6 +64,10 @@ This project is a portfolio demo only. Use fake/demo data only.
 
 The app does not provide medical advice, diagnosis, treatment recommendations, clinical claims, or message sending. The mock assistant is limited to administrative draft text about scheduling and booking details.
 
+## Portfolio Walkthrough
+
+For presentation flow, screenshot planning, limitations, and interview talking points, see [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md).
+
 ## Current Limitations
 
 - Data is stored in browser localStorage only.

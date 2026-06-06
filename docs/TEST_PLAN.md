@@ -1,8 +1,14 @@
 # Test Plan
 
-## Current Phase: Phase 8
+## Current Phase: Phase 9
 
 Manual checks:
+- Review `docs/PORTFOLIO_WALKTHROUGH.md`.
+- Confirm the walkthrough includes elevator pitch, problem/goal, feature walkthrough, screenshot checklist, interview talking points, limitations, and next improvements.
+- Confirm screenshot checklist covers first screen, analytics overview, booking form, dashboard with bookings, status change interaction, mock AI draft, mobile layout, and footer safety note.
+- Confirm walkthrough text has no placeholder text.
+- Confirm walkthrough does not claim backend APIs, real AI calls, authentication, payments, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or deployment.
+- Confirm README links to `docs/PORTFOLIO_WALKTHROUGH.md`.
 - Run `npm run dev`.
 - Open the local dev server URL.
 - Confirm the app loads as a React + Vite app.
@@ -18,6 +24,8 @@ Manual checks:
 - Run `npm run build`.
 - If needed, run `node node_modules/vite/bin/vite.js build`.
 - Confirm no real AI logic, API key, backend API, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or message sending are added.
+
+For Phase 9 documentation-only updates, app run/build checks are only needed if app or package files change.
 
 ## Phase 1 Restart: React Skeleton Checks
 
@@ -99,3 +107,12 @@ npm run dev
 - Reset demo bookings and confirm the demo state returns and remains after refresh.
 - Run `npm run build`.
 - Review README, changelog, product owner notes, and this test plan for current project status.
+
+## Phase 9: Portfolio Walkthrough Checks
+
+- Confirm `docs/PORTFOLIO_WALKTHROUGH.md` exists.
+- Confirm it explains how to present the feature summary, booking form, analytics overview, CRM booking dashboard, status updates, reset demo bookings, mock AI assistant, and footer safety notes.
+- Confirm it includes the recommended screenshot checklist.
+- Confirm it includes interview talking points for React + Vite, localStorage, mock AI, safety/privacy, phase planning, and GitHub commit history.
+- Confirm it clearly lists current limitations and realistic next improvements.
+- Confirm README links to the walkthrough.
