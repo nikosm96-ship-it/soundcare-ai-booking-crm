@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-06-06
+- Added Phase 2 booking status constants in one place.
+- Added fake demo booking records for local development and portfolio testing.
+- Added localStorage helper functions for loading, saving, and resetting bookings.
+- Kept the React UI skeleton unchanged with no booking form, dashboard, analytics, backend, authentication, payments, or AI logic added.
+
 ## 0.3.0 - 2026-06-06
 - Removed the obsolete WordPress plugin skeleton files and folders.
 - Added a minimal React + Vite app skeleton.

@@ -33,18 +33,19 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 1 Restart: React app skeleton.
+Phase 2: React data model and localStorage booking service.
 
-Goal: replace the obsolete WordPress skeleton with a clean React + Vite starter app and preserve the project documentation.
+Goal: define booking statuses, add fake demo bookings, and create beginner-friendly localStorage helpers without adding UI or backend features.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
 - Phase 1 WordPress skeleton: completed but abandoned after the React pivot.
+- Phase 1 Restart: React app skeleton.
 
 ## Next Phase
-Phase 2: React data model and localStorage booking service.
+Phase 3: Public booking form.
 
-Only start this after the React app skeleton runs locally.
+Only start this after the Phase 2 data model and localStorage helpers are validated.
 
 ## Current Blockers
 - Git is not available in the current PowerShell path.

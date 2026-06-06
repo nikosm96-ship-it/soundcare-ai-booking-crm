@@ -1,13 +1,14 @@
 # Test Plan
 
-## Current Phase: Phase 1 Restart
+## Current Phase: Phase 2
 
 Manual checks:
-- Confirm the old WordPress files are removed during the React restart.
-- Confirm React + Vite files exist.
-- Confirm documentation remains in `docs/`.
-- Confirm the app runs locally.
-- Confirm no booking form, localStorage, AI, analytics, or backend feature is added yet.
+- Confirm booking statuses are defined in one shared data file.
+- Confirm fake demo bookings exist and use only fake data.
+- Confirm localStorage helpers can load, save, and reset bookings.
+- Confirm invalid JSON in localStorage returns demo bookings instead of crashing.
+- Confirm the React skeleton still runs locally.
+- Confirm no booking form, dashboard UI, analytics UI, AI logic, backend API, authentication, payments, or external libraries are added yet.
 
 ## Phase 1 Restart: React Skeleton Checks
 
@@ -34,6 +35,8 @@ npm run dev
 - Confirm demo bookings load.
 - Confirm localStorage helpers can save and load data.
 - Confirm invalid JSON in localStorage does not crash the app.
+- Confirm empty localStorage returns the demo bookings.
+- Confirm `resetBookings()` clears saved bookings and returns demo bookings.
 
 ## Phase 3: Booking Form Checks
 

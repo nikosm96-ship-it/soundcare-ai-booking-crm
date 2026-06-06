@@ -10,9 +10,9 @@ The old WordPress PHP skeleton has been removed.
 
 ## Current Phase
 
-Phase 1 Restart: React app skeleton.
+Phase 2: booking data model and localStorage helpers.
 
-The project now has a clean React + Vite structure only. This phase intentionally does not add booking submission, dashboard workflows, AI logic, backend APIs, localStorage, or external database integrations.
+The project has a clean React + Vite structure plus beginner-friendly booking status constants, fake demo bookings, and localStorage helper functions. This phase intentionally does not add the public booking form, admin dashboard UI, analytics UI, AI logic, backend APIs, authentication, payments, or external database integrations.
 
 ## Local Development
 
