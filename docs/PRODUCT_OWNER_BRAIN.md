@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 18: Supabase demo insert integration completed.
+Phase 19: Supabase integration QA and documentation cleanup completed.
 
-Goal: connect fake/demo booking form submissions to Supabase insert when publishable environment variables are configured, while keeping localStorage fallback and avoiding public dashboard reads/status updates.
+Goal: verify that fake/demo booking submissions reach Supabase in the deployed app, document the proof, and keep dashboard reads/status updates localStorage-only until an auth/admin plan exists.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -59,9 +59,10 @@ Goal: connect fake/demo booking form submissions to Supabase insert when publish
 - Phase 16: Supabase setup planning and migration draft.
 - Phase 17: Persistence repository layer with localStorage still active.
 - Phase 18: Supabase demo insert with localStorage fallback.
+- Phase 19: Supabase integration QA and documentation cleanup.
 
 ## Next Phase
-Optional Phase 19: authenticated admin read/status update planning.
+Optional Phase 20: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -88,6 +89,7 @@ Expected deployment settings:
 - Supabase setup planning and draft SQL are complete in `docs/SUPABASE_SETUP_PLAN.md` and `docs/supabase/bookings-migration-draft.sql`.
 - Persistence repository layer is complete in `src/services/bookingRepository.js`.
 - Supabase demo insert is implemented with localStorage fallback and publishable-key-only config.
+- Supabase live insert verification is documented in `docs/SUPABASE_VERIFICATION.md`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.

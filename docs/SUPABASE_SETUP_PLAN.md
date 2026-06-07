@@ -62,6 +62,8 @@ docs/supabase/public-demo-insert-policy.sql
 
 This policy allows anonymous fake/demo booking inserts only. It does not allow public reading, updating, or deleting booking rows.
 
+Phase 19 verification notes are recorded in [Supabase Verification](SUPABASE_VERIFICATION.md).
+
 ## RLS Requirements
 
 Row Level Security must be enabled because Supabase can expose tables in the `public` schema through its Data API. RLS gives the project a database-level safety boundary so browser requests only see or change rows when explicit policies allow it.

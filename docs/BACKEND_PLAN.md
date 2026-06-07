@@ -214,4 +214,12 @@ Status: Completed in Phase 18 for fake/demo insert only. Dashboard reads and sta
 
 ### Phase 19: Admin Read And Status Updates
 
-Add authenticated admin read/update only after a dedicated auth and RLS phase is approved.
+Original idea: add authenticated admin read/update only after a dedicated auth and RLS phase is approved.
+
+Status: Phase 19 was used first for Supabase integration QA and documentation cleanup. The live app has verified fake/demo Supabase inserts, but dashboard reads and status updates remain localStorage-only.
+
+See [Supabase Verification](SUPABASE_VERIFICATION.md).
+
+### Phase 20: Admin Read And Status Updates Planning
+
+Decide whether to add authenticated admin read/update before moving dashboard reads or status updates to Supabase.

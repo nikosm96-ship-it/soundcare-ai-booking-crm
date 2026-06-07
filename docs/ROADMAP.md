@@ -205,13 +205,27 @@ Completed:
 ## Next Optional Phase
 
 ### Phase 19: Admin Read And Status Updates
+Goal: verify the Phase 18 Supabase insert integration before any dashboard read/status update work.
+
+Completed:
+- Added `docs/SUPABASE_VERIFICATION.md`.
+- Confirmed Vercel environment variables are configured for Supabase demo inserts.
+- Confirmed the live app still loads after redeploy.
+- Confirmed fake live form submissions reach the Supabase `bookings` table.
+- Confirmed an external browser-safe REST insert returned HTTP `201`.
+- Clarified that dashboard reads, analytics, status updates, reset behavior, and mock assistant booking selections remain localStorage-only for now.
+- Kept public read, public update/delete, auth, payments, real AI, secret/service keys, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
+
+## Next Optional Phase
+
+### Phase 20: Admin Read And Status Updates Planning
 Goal: decide whether to add authenticated admin access before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:
 - Do not expose all bookings publicly.
 - Choose an auth/admin model before adding Supabase select/update policies.
 - Keep service/secret keys out of frontend code and Vercel public variables.
-- Add tests for any Supabase read/update adapter behavior.
+- Add tests for any future Supabase read/update adapter behavior.
 - Keep localStorage fallback until Supabase admin behavior is verified.
 
 ## Future Optional Improvements

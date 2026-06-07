@@ -1,6 +1,27 @@
 # Test Plan
 
-## Current Phase: Phase 18
+## Current Phase: Phase 19
+
+Supabase integration QA checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm `docs/SUPABASE_VERIFICATION.md` exists.
+- Confirm the verification doc records Vercel env vars by name only, without secret values.
+- Confirm the verification doc records a fake live-app submission appearing in Supabase.
+- Confirm the verification doc records external REST insert status `201`.
+- Confirm the verification doc says dashboard reads, analytics, status updates, reset behavior, and mock assistant booking selections remain localStorage-only.
+- Run `npm run test`.
+- Run `npm run build`.
+- Confirm live URL returns HTTP `200` and includes `SoundCare AI Booking CRM`.
+- Run `git status` and review changed files.
+- Confirm expected visible UI change is `no`.
+- Confirm actual visible UI change is `no`.
+- Confirm no app behavior, public read policy, public update/delete policy, auth, payment flow, real AI call, `.env` file, secret/service key, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 19 validation notes:
+- Phase 19 is documentation/verification cleanup only.
+- No screenshot is required because no app source or CSS files changed.
+
+## Phase 18 Supabase Demo Insert Checks
 
 Supabase demo insert checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

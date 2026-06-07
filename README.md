@@ -118,6 +118,8 @@ Phase 17 adds a small booking repository layer in `src/services/bookingRepositor
 
 Phase 18 connects fake/demo booking form submissions to Supabase insert when safe publishable environment variables are configured. localStorage remains the fallback and the dashboard/status updates remain localStorage-only until an auth/admin phase is approved.
 
+Phase 19 documents the live Supabase verification in [Supabase Verification](docs/SUPABASE_VERIFICATION.md): Vercel environment variables are configured, the app was redeployed, fake submissions reached Supabase, and an external browser-safe insert returned HTTP `201`.
+
 ## Safety And Demo Data
 
 This project is a portfolio demo only. Use fake/demo data only.
@@ -129,6 +131,8 @@ The app does not provide medical advice, diagnosis, treatment recommendations, c
 For presentation flow, screenshot planning, limitations, and interview talking points, see [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md).
 
 For ready-to-use CV, LinkedIn, portfolio case-study, and interview copy, see [Portfolio Copy](docs/PORTFOLIO_COPY.md).
+
+For Supabase setup proof, current data flow, and backend limitations, see [Supabase Verification](docs/SUPABASE_VERIFICATION.md).
 
 Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
 

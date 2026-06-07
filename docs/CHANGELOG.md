@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.19.0 - 2026-06-07
+- Completed Phase 19 Supabase integration QA and documentation cleanup.
+- Added `docs/SUPABASE_VERIFICATION.md` with live setup, table, RLS, deployment, data flow, safety boundary, limitation, and next-step notes.
+- Documented that Vercel environment variables are configured for Supabase demo inserts.
+- Documented that a fake booking submitted through the live app appeared in the Supabase `bookings` table.
+- Documented that an external browser-safe REST insert returned HTTP `201`.
+- Clarified that dashboard reads, analytics, status updates, reset behavior, and mock assistant booking selections remain localStorage-only until an auth/admin phase is approved.
+- Kept app behavior, UI, public read, public update/delete, auth, payments, real AI, secret/service keys, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.18.0 - 2026-06-07
 - Completed Phase 18 Supabase demo insert integration.
 - Installed `@supabase/supabase-js`.
