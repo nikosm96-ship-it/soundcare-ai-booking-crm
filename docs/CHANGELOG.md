@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.17.0 - 2026-06-07
+- Completed Phase 17 persistence repository layer.
+- Added `src/services/bookingRepository.js` as the booking persistence boundary used by the React components.
+- Added repository tests for localStorage-backed get/add/status-update/reset behavior.
+- Added mapping tests for frontend camelCase booking objects and future Supabase/Postgres snake_case rows.
+- Updated analytics, booking form, mock assistant, and dashboard components to use the repository instead of importing localStorage helpers directly.
+- Captured `docs/screenshots/phase-17-visual-check.png` to confirm the UI stayed visually unchanged after the internal persistence refactor.
+- Kept browser localStorage as the active persistence layer.
+- Kept visible UI, Supabase client code, backend APIs, environment files, secrets, authentication, payments, real AI calls, production dependencies, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.16.0 - 2026-06-07
 - Completed Phase 16 Supabase setup planning and migration draft.
 - Added `docs/SUPABASE_SETUP_PLAN.md` for later manual Supabase project setup, RLS decisions, environment variable names, localStorage continuity, fake/demo data warnings, and Phase 17 guidance.

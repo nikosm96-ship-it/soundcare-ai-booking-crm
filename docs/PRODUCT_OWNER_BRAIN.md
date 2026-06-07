@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 16: Supabase setup planning and migration draft completed.
+Phase 17: persistence repository layer completed.
 
-Goal: document later manual Supabase setup and draft the `bookings` table SQL migration without changing app features, browser-only behavior, localStorage, real AI, auth, payments, production dependencies, real patient data, or medical claims.
+Goal: add a small booking persistence boundary before any Supabase connection, keeping localStorage active and the visible UI unchanged.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -57,16 +57,18 @@ Goal: document later manual Supabase setup and draft the `bookings` table SQL mi
 - Phase 14: Automated test coverage for existing MVP behavior.
 - Phase 15: Backend/data persistence planning for a future Supabase database integration.
 - Phase 16: Supabase setup planning and migration draft.
+- Phase 17: Persistence repository layer with localStorage still active.
 
 ## Next Phase
-Optional Phase 17: persistence repository layer.
+Optional Phase 18: Supabase demo insert.
 
 Suggested scope:
-- Add a small booking persistence repository/service boundary.
-- Keep localStorage as the active implementation.
-- Add tests for mapping current frontend camelCase booking fields to future Supabase snake_case fields.
-- Keep Supabase client installation, real database calls, auth, payments, real AI, and real patient data out of scope until separately approved.
-- No visible UI change.
+- Install Supabase client only if approved.
+- Configure environment variable expectations without committing `.env` files.
+- Connect fake/demo booking form submissions to Supabase insert.
+- Keep localStorage fallback behavior.
+- Keep dashboard reads/status updates localStorage-only until auth/admin RLS is approved.
+- Keep auth, payments, real AI, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
 
 Expected deployment settings:
 - Framework: Vite.
@@ -84,6 +86,7 @@ Expected deployment settings:
 - Automated test coverage is in place for the core browser-only MVP behavior.
 - Backend persistence planning is complete in `docs/BACKEND_PLAN.md`.
 - Supabase setup planning and draft SQL are complete in `docs/SUPABASE_SETUP_PLAN.md` and `docs/supabase/bookings-migration-draft.sql`.
+- Persistence repository layer is complete in `src/services/bookingRepository.js`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -116,3 +119,4 @@ The MVP is complete when:
 15. Automated tests cover the core existing MVP behavior.
 16. Backend persistence planning exists for a future Supabase database phase.
 17. Supabase setup planning and a reviewed draft SQL migration exist before any frontend connection.
+18. A repository layer exists so React components do not depend directly on localStorage helpers.

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BOOKING_STATUSES } from '../data/bookingStatus.js';
-import { getBookings } from '../services/bookingStorage.js';
+import { getBookings } from '../services/bookingRepository.js';
 
 const analyticsCards = [
   {

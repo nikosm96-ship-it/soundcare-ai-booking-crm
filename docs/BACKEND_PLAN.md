@@ -204,6 +204,8 @@ Status: Completed in Phase 16 documentation and draft SQL only.
 
 Add a frontend repository/service abstraction while keeping localStorage as the active implementation. Add tests for field mapping and fallback behavior.
 
+Status: Completed in Phase 17 with `src/services/bookingRepository.js` and repository mapping tests. localStorage remains the active implementation.
+
 ### Phase 18: Supabase Demo Insert
 
 Install the Supabase client only after approval, configure environment variables outside Git, and connect fake/demo booking form submissions to Supabase insert while retaining localStorage fallback.

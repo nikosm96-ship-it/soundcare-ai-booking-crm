@@ -1,6 +1,30 @@
 # Test Plan
 
-## Current Phase: Phase 16
+## Current Phase: Phase 17
+
+Repository and mapping checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is React + Vite from `package.json` and `vite.config.js`.
+- Confirm `src/services/bookingRepository.js` exists.
+- Confirm analytics, booking form, mock assistant, and dashboard components import booking persistence from `bookingRepository.js`.
+- Confirm `bookingStorage.js` remains the localStorage implementation behind the repository.
+- Confirm repository tests cover get/add/status-update/reset behavior.
+- Confirm mapping tests cover frontend camelCase booking fields and future snake_case database fields.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run the app locally and confirm it still loads.
+- Capture a visual check screenshot because app source files changed: `docs/screenshots/phase-17-visual-check.png`.
+- Confirm expected visible UI change is `no`.
+- Confirm actual visible UI change is `no`.
+- Run `git status` and review changed files.
+- Confirm no Supabase client code, backend API, auth, payment flow, production dependency, real AI call, `.env` file, secret, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 17 validation notes:
+- Phase 17 changes the internal persistence boundary, not the user-facing workflow.
+- localStorage remains the active persistence layer.
+- The repository prepares the codebase for a later Supabase adapter without connecting Supabase yet.
+
+## Phase 16 Supabase Setup Planning Checks
 
 Documentation checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

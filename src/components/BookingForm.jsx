@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BOOKING_STATUSES } from '../data/bookingStatus.js';
-import { getBookings, saveBookings } from '../services/bookingStorage.js';
+import { addBooking } from '../services/bookingRepository.js';
 
 const serviceOptions = [
   'Hearing test',
@@ -85,8 +85,7 @@ export default function BookingForm({ onBookingSaved }) {
       updatedAt: timestamp,
     };
 
-    const bookings = getBookings();
-    saveBookings([...bookings, newBooking]);
+    addBooking(newBooking);
 
     setFormValues(initialFormValues);
     setErrors({});

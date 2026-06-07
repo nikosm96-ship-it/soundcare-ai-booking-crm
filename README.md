@@ -17,6 +17,7 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - Public booking form for fake/demo appointment requests.
 - Required-field validation for name, email, and service.
 - Browser localStorage persistence for demo bookings.
+- Booking repository layer that keeps localStorage behind a clean persistence boundary.
 - CRM-style booking dashboard with status updates.
 - Reset demo bookings action.
 - Analytics overview for total and status-based booking counts.
@@ -91,6 +92,8 @@ No environment variables or secrets are required for the current portfolio MVP. 
 Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md). This is planning only: the current app still has no backend connection, Supabase client code, environment variables, authentication, payments, or real patient data.
 
 Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md). The app still uses browser localStorage only.
+
+Phase 17 adds a small booking repository layer in `src/services/bookingRepository.js`. This keeps localStorage as the active implementation while preparing a cleaner boundary for a later Supabase adapter.
 
 ## Safety And Demo Data
 

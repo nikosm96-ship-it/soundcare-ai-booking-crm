@@ -3,8 +3,8 @@ import { bookingStatusList } from '../data/bookingStatus.js';
 import {
   getBookings,
   resetBookings,
-  saveBookings,
-} from '../services/bookingStorage.js';
+  updateBookingStatus,
+} from '../services/bookingRepository.js';
 
 function displayValue(value) {
   return value || 'Not provided';
@@ -18,19 +18,7 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
   }, [refreshKey]);
 
   function handleStatusChange(bookingId, nextStatus) {
-    const updatedBookings = bookings.map((booking) => {
-      if (booking.id !== bookingId) {
-        return booking;
-      }
-
-      return {
-        ...booking,
-        status: nextStatus,
-        updatedAt: new Date().toISOString(),
-      };
-    });
-
-    saveBookings(updatedBookings);
+    const updatedBookings = updateBookingStatus(bookingId, nextStatus);
     setBookings(updatedBookings);
 
     if (onBookingsChanged) {

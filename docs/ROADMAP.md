@@ -177,17 +177,30 @@ Completed:
 - Kept localStorage as the active app persistence layer.
 - Did not add Supabase client code, backend APIs, environment files, secrets, auth, payments, real AI calls, real patient data, production dependencies, or visible UI changes.
 
-## Next Optional Phase
-
 ### Phase 17: Persistence Repository Layer
 Goal: add a small booking persistence repository/service boundary while keeping localStorage as the active implementation.
 
+Completed:
+- Added `src/services/bookingRepository.js` as the persistence boundary used by React components.
+- Kept localStorage as the active implementation behind that boundary.
+- Added tests for repository get/add/status-update/reset behavior.
+- Added mapping tests for current frontend camelCase booking fields and future snake_case database fields.
+- Kept the visible UI unchanged.
+- Did not install `@supabase/supabase-js`.
+- Did not add backend APIs, authentication, payments, real AI calls, secrets, `.env` files, production dependencies, or real patient data.
+
+## Next Optional Phase
+
+### Phase 18: Supabase Demo Insert
+Goal: connect fake/demo booking form submissions to Supabase insert after explicit approval, while retaining localStorage fallback.
+
 Suggested acceptance criteria:
-- Keep the React app browser-only and visibly unchanged.
-- Keep localStorage as the active persistence layer.
-- Add mapping tests for current camelCase booking fields and future snake_case database fields.
-- Avoid installing `@supabase/supabase-js` until a later approved integration phase.
-- Do not add backend APIs, authentication, payments, real AI calls, secrets, `.env` files, or real patient data.
+- Install `@supabase/supabase-js` only if approved.
+- Add environment variable documentation and checks without committing `.env` files.
+- Keep public insert limited to fake/demo submissions only.
+- Keep dashboard/admin read and status updates localStorage-only until auth/RLS is approved.
+- Keep fallback behavior so the demo still works if Supabase settings are missing.
+- Do not add auth, payments, real AI calls, real patient data, medical advice, diagnosis, or treatment recommendations.
 
 ## Future Optional Improvements
 

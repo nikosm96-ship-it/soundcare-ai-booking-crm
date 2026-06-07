@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { getBookings } from '../services/bookingStorage.js';
+import { getBookings } from '../services/bookingRepository.js';
 
 const draftTypes = [
   'Appointment reminder',
