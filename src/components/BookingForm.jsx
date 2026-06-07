@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BOOKING_STATUSES } from '../data/bookingStatus.js';
-import { addBooking } from '../services/bookingRepository.js';
+import { createBookingRequest } from '../services/bookingRepository.js';
 
 const serviceOptions = [
   'Hearing test',
@@ -48,6 +48,7 @@ function validateBookingForm(values) {
 export default function BookingForm({ onBookingSaved }) {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
+  const [isSaving, setIsSaving] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 
   function handleChange(event) {
@@ -59,7 +60,7 @@ export default function BookingForm({ onBookingSaved }) {
     }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const validationErrors = validateBookingForm(formValues);
@@ -85,14 +86,20 @@ export default function BookingForm({ onBookingSaved }) {
       updatedAt: timestamp,
     };
 
-    addBooking(newBooking);
+    setIsSaving(true);
 
-    setFormValues(initialFormValues);
-    setErrors({});
-    setSuccessMessage('Your demo booking request has been saved.');
+    try {
+      await createBookingRequest(newBooking);
 
-    if (onBookingSaved) {
-      onBookingSaved();
+      setFormValues(initialFormValues);
+      setErrors({});
+      setSuccessMessage('Your demo booking request has been saved.');
+
+      if (onBookingSaved) {
+        onBookingSaved();
+      }
+    } finally {
+      setIsSaving(false);
     }
   }
 
@@ -225,8 +232,8 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
         </div>
 
-        <button className="primary-button" type="submit">
-          Save demo booking
+        <button className="primary-button" type="submit" disabled={isSaving}>
+          {isSaving ? 'Saving demo booking...' : 'Save demo booking'}
         </button>
       </form>
     </section>

@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.18.0 - 2026-06-07
+- Completed Phase 18 Supabase demo insert integration.
+- Installed `@supabase/supabase-js`.
+- Added `src/services/supabaseClient.js` using `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Updated `src/services/bookingRepository.js` so fake/demo booking requests save to localStorage and attempt Supabase insert when configured.
+- Added fallback behavior so missing Supabase config or insert errors do not break local demo booking saves.
+- Added `bookingToDatabaseInsertRow()` to omit local-only ids and timestamps from Supabase inserts, letting Postgres generate UUID/timestamps.
+- Updated the booking form submit path to use the async repository request flow.
+- Added `.env.example` and updated `.gitignore` so `.env.local` stays out of Git.
+- Added `docs/supabase/public-demo-insert-policy.sql` to record the manually applied insert-only RLS policy.
+- Captured `docs/screenshots/phase-18-visual-check.png` to confirm the app still loads normally with localStorage fallback when Supabase env vars are not configured locally.
+- Kept public read, dashboard reads, status updates, auth, payments, real AI, secret/service keys, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.17.0 - 2026-06-07
 - Completed Phase 17 persistence repository layer.
 - Added `src/services/bookingRepository.js` as the booking persistence boundary used by the React components.

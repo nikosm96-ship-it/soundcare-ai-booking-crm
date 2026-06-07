@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 17: persistence repository layer completed.
+Phase 18: Supabase demo insert integration completed.
 
-Goal: add a small booking persistence boundary before any Supabase connection, keeping localStorage active and the visible UI unchanged.
+Goal: connect fake/demo booking form submissions to Supabase insert when publishable environment variables are configured, while keeping localStorage fallback and avoiding public dashboard reads/status updates.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -58,23 +58,23 @@ Goal: add a small booking persistence boundary before any Supabase connection, k
 - Phase 15: Backend/data persistence planning for a future Supabase database integration.
 - Phase 16: Supabase setup planning and migration draft.
 - Phase 17: Persistence repository layer with localStorage still active.
+- Phase 18: Supabase demo insert with localStorage fallback.
 
 ## Next Phase
-Optional Phase 18: Supabase demo insert.
+Optional Phase 19: authenticated admin read/status update planning.
 
 Suggested scope:
-- Install Supabase client only if approved.
-- Configure environment variable expectations without committing `.env` files.
-- Connect fake/demo booking form submissions to Supabase insert.
-- Keep localStorage fallback behavior.
-- Keep dashboard reads/status updates localStorage-only until auth/admin RLS is approved.
-- Keep auth, payments, real AI, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
+- Decide whether the dashboard should move to Supabase only after admin authentication exists.
+- Design admin read/update policies before writing them.
+- Keep public read disabled.
+- Keep service/secret keys out of frontend code.
+- Keep payments, real AI, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
 
 Expected deployment settings:
 - Framework: Vite.
 - Build command: `npm run build`.
 - Output directory: `dist`.
-- Environment variables: none required for the current portfolio MVP.
+- Environment variables: optional for Supabase insert, required only when enabling remote demo inserts.
 - Live URL: `https://soundcare-ai-booking-crm.vercel.app/`.
 
 ## Current Blockers
@@ -87,6 +87,7 @@ Expected deployment settings:
 - Backend persistence planning is complete in `docs/BACKEND_PLAN.md`.
 - Supabase setup planning and draft SQL are complete in `docs/SUPABASE_SETUP_PLAN.md` and `docs/supabase/bookings-migration-draft.sql`.
 - Persistence repository layer is complete in `src/services/bookingRepository.js`.
+- Supabase demo insert is implemented with localStorage fallback and publishable-key-only config.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.

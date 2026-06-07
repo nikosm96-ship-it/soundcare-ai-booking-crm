@@ -54,6 +54,14 @@ docs/supabase/bookings-migration-draft.sql
 
 The draft creates the `bookings` table, adds a status check constraint aligned with `src/data/bookingStatus.js`, drafts an optional `updated_at` trigger with its helper function outside the exposed `public` schema, enables Row Level Security, and leaves public access disabled until a later approved phase.
 
+Phase 18 adds a separate public demo insert policy draft:
+
+```text
+docs/supabase/public-demo-insert-policy.sql
+```
+
+This policy allows anonymous fake/demo booking inserts only. It does not allow public reading, updating, or deleting booking rows.
+
 ## RLS Requirements
 
 Row Level Security must be enabled because Supabase can expose tables in the `public` schema through its Data API. RLS gives the project a database-level safety boundary so browser requests only see or change rows when explicit policies allow it.

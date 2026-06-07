@@ -210,6 +210,8 @@ Status: Completed in Phase 17 with `src/services/bookingRepository.js` and repos
 
 Install the Supabase client only after approval, configure environment variables outside Git, and connect fake/demo booking form submissions to Supabase insert while retaining localStorage fallback.
 
+Status: Completed in Phase 18 for fake/demo insert only. Dashboard reads and status updates remain localStorage-only until auth/admin RLS is approved.
+
 ### Phase 19: Admin Read And Status Updates
 
 Add authenticated admin read/update only after a dedicated auth and RLS phase is approved.

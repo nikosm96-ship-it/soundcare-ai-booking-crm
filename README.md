@@ -32,8 +32,9 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - JavaScript
 - CSS
 - Browser localStorage
+- Supabase for optional fake/demo booking inserts
 
-No external UI libraries, backend APIs, authentication, payments, database services, or real AI API calls are used in this phase.
+No external UI libraries, authentication, payments, admin backend reads, or real AI API calls are used in this phase.
 
 ## Run Locally
 
@@ -61,6 +62,21 @@ Run the automated tests:
 npm run test
 ```
 
+Optional Supabase demo insert setup:
+
+```bash
+cp .env.example .env.local
+```
+
+Then add the project URL and publishable key from Supabase:
+
+```text
+VITE_SUPABASE_URL=https://your-project-ref.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+```
+
+Use only the publishable browser-safe key. Never use a secret or service role key in the React app, `.env.local`, Vercel frontend variables, or Git.
+
 If the build command fails in PowerShell with `Access is denied`, try:
 
 ```bash
@@ -85,7 +101,12 @@ Use these settings:
 - Build command: `npm run build`
 - Output directory: `dist`
 
-No environment variables or secrets are required for the current portfolio MVP. The deployed app remains browser-only and uses fake/demo data with browser localStorage.
+The deployed app can run without environment variables because localStorage remains the fallback. To enable Supabase demo inserts on Vercel, configure:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_PUBLISHABLE_KEY`
+
+Do not configure or expose a secret/service role key.
 
 ## Backend Planning
 
@@ -94,6 +115,8 @@ Phase 15 documents a future Supabase persistence path in [Backend Persistence Pl
 Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md). The app still uses browser localStorage only.
 
 Phase 17 adds a small booking repository layer in `src/services/bookingRepository.js`. This keeps localStorage as the active implementation while preparing a cleaner boundary for a later Supabase adapter.
+
+Phase 18 connects fake/demo booking form submissions to Supabase insert when safe publishable environment variables are configured. localStorage remains the fallback and the dashboard/status updates remain localStorage-only until an auth/admin phase is approved.
 
 ## Safety And Demo Data
 
@@ -111,13 +134,13 @@ Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots
 
 ## Current Limitations
 
-- Data is stored in browser localStorage only.
+- Submitted fake/demo bookings can be inserted into Supabase when publishable environment variables are configured.
+- localStorage remains the fallback and the dashboard data source for now.
 - The AI assistant is mock/template-based only.
-- There is no backend yet.
+- There is no authenticated admin backend workflow yet.
 - There is no real AI API integration.
 - There is no authentication or role-based access.
 - There are no payments.
-- There is no production database.
 
 ## Project Docs
 

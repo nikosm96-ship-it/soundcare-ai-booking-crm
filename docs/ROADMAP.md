@@ -189,18 +189,30 @@ Completed:
 - Did not install `@supabase/supabase-js`.
 - Did not add backend APIs, authentication, payments, real AI calls, secrets, `.env` files, production dependencies, or real patient data.
 
-## Next Optional Phase
-
 ### Phase 18: Supabase Demo Insert
 Goal: connect fake/demo booking form submissions to Supabase insert after explicit approval, while retaining localStorage fallback.
 
+Completed:
+- Installed `@supabase/supabase-js`.
+- Added a browser-safe Supabase client using `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Connected fake/demo booking form submissions to Supabase insert when environment variables are configured.
+- Kept localStorage fallback behavior so the demo still works if Supabase settings are missing or insert fails.
+- Added insert mapping that omits local-only ids and timestamps so Supabase can generate UUID/timestamps.
+- Kept public insert limited by the Phase 18 Supabase policy.
+- Kept dashboard/admin read and status updates localStorage-only until auth/RLS is approved.
+- Did not add auth, payments, real AI calls, secret/service keys, real patient data, medical advice, diagnosis, or treatment recommendations.
+
+## Next Optional Phase
+
+### Phase 19: Admin Read And Status Updates
+Goal: decide whether to add authenticated admin access before dashboard reads/status updates move from localStorage to Supabase.
+
 Suggested acceptance criteria:
-- Install `@supabase/supabase-js` only if approved.
-- Add environment variable documentation and checks without committing `.env` files.
-- Keep public insert limited to fake/demo submissions only.
-- Keep dashboard/admin read and status updates localStorage-only until auth/RLS is approved.
-- Keep fallback behavior so the demo still works if Supabase settings are missing.
-- Do not add auth, payments, real AI calls, real patient data, medical advice, diagnosis, or treatment recommendations.
+- Do not expose all bookings publicly.
+- Choose an auth/admin model before adding Supabase select/update policies.
+- Keep service/secret keys out of frontend code and Vercel public variables.
+- Add tests for any Supabase read/update adapter behavior.
+- Keep localStorage fallback until Supabase admin behavior is verified.
 
 ## Future Optional Improvements
 

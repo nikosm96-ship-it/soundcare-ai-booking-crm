@@ -3,7 +3,9 @@ import { demoBookings } from '../data/demoBookings.js';
 import {
   addBooking,
   bookingFromDatabaseRow,
+  bookingToDatabaseInsertRow,
   bookingToDatabaseRow,
+  createBookingRequest,
   getBookings,
   resetBookings,
   updateBookingStatus,
@@ -32,6 +34,32 @@ describe('booking repository', () => {
     const updatedBookings = addBooking(fakeBooking);
 
     expect(updatedBookings).toHaveLength(demoBookings.length + 1);
+    expect(getBookings()).toEqual([...demoBookings, fakeBooking]);
+  });
+
+  test('createBookingRequest() saves locally when Supabase is not configured', async () => {
+    const result = await createBookingRequest(fakeBooking, {
+      supabaseClient: null,
+    });
+
+    expect(result.remoteStatus).toBe('skipped');
+    expect(getBookings()).toEqual([...demoBookings, fakeBooking]);
+  });
+
+  test('createBookingRequest() keeps local fallback if Supabase insert fails', async () => {
+    const failingClient = {
+      from: () => ({
+        insert: async () => ({
+          error: new Error('Demo Supabase insert failed'),
+        }),
+      }),
+    };
+
+    const result = await createBookingRequest(fakeBooking, {
+      supabaseClient: failingClient,
+    });
+
+    expect(result.remoteStatus).toBe('failed');
     expect(getBookings()).toEqual([...demoBookings, fakeBooking]);
   });
 
@@ -67,6 +95,27 @@ describe('booking repository', () => {
       status: 'New',
       created_at: '2026-06-07T12:00:00.000Z',
       updated_at: '2026-06-07T12:00:00.000Z',
+    });
+  });
+
+  test('bookingToDatabaseInsertRow() omits local-only id and timestamps for Supabase inserts', () => {
+    expect(
+      bookingToDatabaseInsertRow({
+        ...fakeBooking,
+        customerPhone: '',
+        preferredDate: '',
+        preferredTime: '',
+        notes: '',
+      }),
+    ).toEqual({
+      customer_name: 'Nikos Repository Demo',
+      customer_email: 'nikos.repository@example.com',
+      customer_phone: null,
+      service: 'Hearing test',
+      preferred_date: null,
+      preferred_time: null,
+      notes: null,
+      status: 'New',
     });
   });
 

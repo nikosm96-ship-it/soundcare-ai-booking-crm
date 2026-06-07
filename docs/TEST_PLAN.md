@@ -1,6 +1,35 @@
 # Test Plan
 
-## Current Phase: Phase 17
+## Current Phase: Phase 18
+
+Supabase demo insert checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is React + Vite from `package.json` and `vite.config.js`.
+- Confirm `@supabase/supabase-js` is installed.
+- Confirm `src/services/supabaseClient.js` uses `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Confirm `.env.example` exists and contains placeholder values only.
+- Confirm `.gitignore` ignores `.env.local` and `.env.*.local`.
+- Confirm no real `.env` or `.env.local` files are tracked by Git.
+- Confirm `docs/supabase/public-demo-insert-policy.sql` documents insert-only anonymous RLS behavior.
+- Confirm `bookingToDatabaseInsertRow()` does not send local-only ids or timestamps to Supabase insert.
+- Confirm `createBookingRequest()` saves locally when Supabase config is missing.
+- Confirm `createBookingRequest()` keeps local fallback if Supabase insert fails.
+- Confirm booking form submissions use the repository request flow.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run the app locally and confirm it still loads.
+- Capture a visual check screenshot because app source files changed: `docs/screenshots/phase-18-visual-check.png`.
+- Confirm expected visible UI change is `minimal`.
+- Confirm actual visible UI change is only the temporary submit button saving state.
+- Run `git status` and review changed files.
+- Confirm no public read, dashboard database read, status database update, auth, payment flow, real AI call, `.env` file, secret/service key, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 18 validation notes:
+- Supabase insert works only when Vite/Vercel publishable env vars are configured.
+- localStorage remains the fallback and dashboard source for now.
+- Dashboard/admin database reads and status updates remain out of scope until auth/admin RLS is approved.
+
+## Phase 17 Repository And Mapping Checks
 
 Repository and mapping checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
