@@ -120,7 +120,7 @@ Completed:
 - Kept localStorage/demo mode as the current browser-only data layer.
 - Did not add backend APIs, real AI calls, authentication, payments, new libraries, or real patient data.
 
-## Next Phase
+## Recently Completed Phases
 
 ### Phase 12: First Public Deployment
 Goal: deploy the existing portfolio MVP to a public static hosting target after explicit approval.
@@ -133,16 +133,27 @@ Completed:
 - Added a small SVG favicon to avoid a deployed favicon 404.
 - Confirmed no secrets, backend APIs, real AI calls, authentication, payments, or real patient data were introduced.
 
-## Next Phase
-
 ### Phase 13: Portfolio Final Review
 Goal: review the live deployment and GitHub repository as a portfolio artifact before sharing it publicly.
 
-Planned acceptance criteria:
-- Review live URL, README, screenshots, and walkthrough as a visitor/interviewer would.
-- Confirm GitHub repository presentation is clean.
-- Confirm the deployed app remains browser-only with fake/demo data.
-- Prepare a short portfolio description Nikos can use on CV, LinkedIn, or a personal portfolio site.
+Completed:
+- Reviewed the React + Vite project structure, README, portfolio walkthrough, screenshots folder, and documented live deployment URL.
+- Added `docs/PORTFOLIO_COPY.md` with CV, LinkedIn, case-study, feature, tech stack, learning, interview, limitation, improvement, live demo, and GitHub repo copy.
+- Linked the portfolio copy document from README.
+- Confirmed the deployed app remains documented as browser-only with fake/demo data.
+- Kept app features, backend APIs, real AI calls, authentication, payments, external libraries, and real patient data out of scope.
+
+## Next Optional Phase
+
+### Phase 14: Automated Test Coverage
+Goal: add focused automated tests for the existing portfolio MVP behavior without expanding product scope.
+
+Suggested acceptance criteria:
+- Add tests for required booking form validation.
+- Add tests for local booking persistence helpers.
+- Add tests for dashboard status updates and analytics counts.
+- Add tests confirming mock assistant output remains administrative and includes the safety line.
+- Keep backend APIs, real AI calls, authentication, payments, external libraries beyond the chosen test tooling, and real patient data out of scope.
 
 ## Future Optional Improvements
 

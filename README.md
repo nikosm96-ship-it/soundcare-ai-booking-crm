@@ -84,6 +84,8 @@ The app does not provide medical advice, diagnosis, treatment recommendations, c
 
 For presentation flow, screenshot planning, limitations, and interview talking points, see [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md).
 
+For ready-to-use CV, LinkedIn, portfolio case-study, and interview copy, see [Portfolio Copy](docs/PORTFOLIO_COPY.md).
+
 Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
 
 ## Current Limitations

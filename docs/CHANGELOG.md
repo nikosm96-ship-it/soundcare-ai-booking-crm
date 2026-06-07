@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.1 - 2026-06-07
+- Completed Phase 13 portfolio final review and sharing preparation.
+- Added `docs/PORTFOLIO_COPY.md` with project title, portfolio summary, CV/LinkedIn copy, case-study paragraph, feature bullets, tech stack, learning notes, interview talking points, limitations, suggested next improvements, live demo link, and GitHub repo link.
+- Linked the new portfolio copy document from README.
+- Updated roadmap, product owner notes, and test plan for Phase 13 completion and the next optional test coverage phase.
+- Confirmed existing screenshots remain in `docs/screenshots/` and are referenced by the portfolio walkthrough.
+- Kept app features, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.13.0 - 2026-06-07
 - Completed Phase 12 first public deployment to Vercel.
 - Published the live demo at `https://soundcare-ai-booking-crm.vercel.app/`.

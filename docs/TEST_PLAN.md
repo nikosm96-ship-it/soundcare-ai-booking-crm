@@ -1,6 +1,25 @@
 # Test Plan
 
-## Current Phase: Phase 12
+## Current Phase: Phase 13
+
+Manual checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is React + Vite from `package.json` and `vite.config.js`.
+- Review README as a portfolio visitor and confirm it includes the live demo link and links to portfolio docs.
+- Review `docs/PORTFOLIO_WALKTHROUGH.md` and confirm it references the screenshot checklist.
+- Confirm `docs/screenshots/` exists and still contains the existing screenshot set.
+- Confirm `docs/PORTFOLIO_COPY.md` exists and includes project title, summary, CV/LinkedIn copy, case-study paragraph, feature bullets, tech stack, learning notes, interview talking points, limitations, suggested improvements, live demo link, and GitHub repo link.
+- Confirm the live deployment URL is documented: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Run `npm run build`.
+- Run `git status` and review changed files.
+- Confirm no app feature, backend API, real AI call, authentication, payment flow, external library, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 13 validation notes:
+- Phase 13 is documentation and portfolio-copy work only.
+- GitHub repo link for sharing: `https://github.com/nikosm96-ship-it/soundcare-ai-booking-crm`.
+- Suggested next optional phase: add focused automated tests for the existing MVP behavior.
+
+## Phase 12 Deployment Checks
 
 Manual checks:
 - Open the live Vercel URL: `https://soundcare-ai-booking-crm.vercel.app/`.
