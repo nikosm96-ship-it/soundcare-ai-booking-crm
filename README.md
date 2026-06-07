@@ -6,9 +6,9 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Portfolio-ready MVP deployed publicly on Vercel.
+Portfolio-ready junior MVP deployed publicly on Vercel.
 
-The MVP is browser-only and designed for portfolio review. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
+The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
@@ -110,15 +110,17 @@ Do not configure or expose a secret/service role key.
 
 ## Backend Planning
 
-Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md). This is planning only: the current app still has no backend connection, Supabase client code, environment variables, authentication, payments, or real patient data.
+Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md).
 
-Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md). The app still uses browser localStorage only.
+Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md).
 
 Phase 17 adds a small booking repository layer in `src/services/bookingRepository.js`. This keeps localStorage as the active implementation while preparing a cleaner boundary for a later Supabase adapter.
 
 Phase 18 connects fake/demo booking form submissions to Supabase insert when safe publishable environment variables are configured. localStorage remains the fallback and the dashboard/status updates remain localStorage-only until an auth/admin phase is approved.
 
 Phase 19 documents the live Supabase verification in [Supabase Verification](docs/SUPABASE_VERIFICATION.md): Vercel environment variables are configured, the app was redeployed, fake submissions reached Supabase, and an external browser-safe insert returned HTTP `201`.
+
+Phase 20 adds the final junior-portfolio presentation guide in [Interview Readiness](docs/INTERVIEW_READINESS.md). This is the recommended pause point before adding larger production features such as authenticated admin access.
 
 ## Safety And Demo Data
 
@@ -133,6 +135,8 @@ For presentation flow, screenshot planning, limitations, and interview talking p
 For ready-to-use CV, LinkedIn, portfolio case-study, and interview copy, see [Portfolio Copy](docs/PORTFOLIO_COPY.md).
 
 For Supabase setup proof, current data flow, and backend limitations, see [Supabase Verification](docs/SUPABASE_VERIFICATION.md).
+
+For final demo flow, interview answers, and what not to overclaim, see [Interview Readiness](docs/INTERVIEW_READINESS.md).
 
 Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
 

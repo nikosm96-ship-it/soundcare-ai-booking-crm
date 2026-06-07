@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.20.0 - 2026-06-07
+- Completed Phase 20 interview readiness and portfolio pause-point cleanup.
+- Added `docs/INTERVIEW_READINESS.md` with a final junior-portfolio demo script, one-minute explanation, three-minute walkthrough, interview answers, safety boundaries, and what not to overclaim.
+- Updated README, portfolio copy, portfolio walkthrough, roadmap, product owner notes, and test plan to reflect the current state: deployed React + Vite MVP, localStorage dashboard workflow, Supabase fake/demo insert proof, automated tests, and clear limitations.
+- Marked the project as a good pause point for a junior portfolio before any larger authenticated admin/backend phase.
+- Kept app behavior, UI, public read, public update/delete, auth, payments, real AI, secret/service keys, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.19.0 - 2026-06-07
 - Completed Phase 19 Supabase integration QA and documentation cleanup.
 - Added `docs/SUPABASE_VERIFICATION.md` with live setup, table, RLS, deployment, data flow, safety boundary, limitation, and next-step notes.

@@ -1,9 +1,9 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready React + Vite MVP.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP.
 
-The current version is intentionally browser-only. It uses fake/demo booking data, browser localStorage, and safe template-based administrative draft text. It does not include backend APIs, real AI calls, authentication, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
+The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
 
@@ -202,8 +202,6 @@ Completed:
 - Kept dashboard/admin read and status updates localStorage-only until auth/RLS is approved.
 - Did not add auth, payments, real AI calls, secret/service keys, real patient data, medical advice, diagnosis, or treatment recommendations.
 
-## Next Optional Phase
-
 ### Phase 19: Admin Read And Status Updates
 Goal: verify the Phase 18 Supabase insert integration before any dashboard read/status update work.
 
@@ -216,10 +214,27 @@ Completed:
 - Clarified that dashboard reads, analytics, status updates, reset behavior, and mock assistant booking selections remain localStorage-only for now.
 - Kept public read, public update/delete, auth, payments, real AI, secret/service keys, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
 
+### Phase 20: Interview Readiness And Pause Point
+Goal: prepare the final junior-portfolio presentation guide and decide where to stop for now.
+
+Completed:
+- Added `docs/INTERVIEW_READINESS.md`.
+- Documented a one-minute explanation and three-minute demo flow.
+- Documented interview answers about React + Vite, localStorage, Supabase insert-only persistence, repository boundaries, mock AI, testing, and deployment.
+- Documented what not to overclaim.
+- Marked the current project as a good pause point for a junior portfolio.
+- Kept app source, UI behavior, Supabase policies, auth, payments, real AI, real patient data, medical advice, diagnosis, and treatment recommendations out of scope.
+
+## Recommended Pause
+
+This is a good stopping point for now. The project is useful, understandable, deployed, tested, documented, and not overbuilt for a junior role.
+
+Future work should happen only if it improves the portfolio story or matches a specific job requirement.
+
 ## Next Optional Phase
 
-### Phase 20: Admin Read And Status Updates Planning
-Goal: decide whether to add authenticated admin access before dashboard reads/status updates move from localStorage to Supabase.
+### Phase 21: Authenticated Admin Planning
+Goal: decide whether a future authenticated admin workflow is worth adding before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:
 - Do not expose all bookings publicly.
@@ -232,7 +247,6 @@ Suggested acceptance criteria:
 
 These are intentionally out of scope until the portfolio MVP is deployed and reviewed:
 
-- Backend/database, such as Supabase or a small Node API.
 - Authentication and role-based access.
 - Real AI assistant integration with strict safety boundaries.
 - Export/reporting features.

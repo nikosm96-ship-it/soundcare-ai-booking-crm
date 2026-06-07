@@ -1,6 +1,30 @@
 # Test Plan
 
-## Current Phase: Phase 19
+## Current Phase: Phase 20
+
+Interview readiness and pause-point checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm `docs/INTERVIEW_READINESS.md` exists.
+- Confirm it includes a one-minute explanation and three-minute demo flow.
+- Confirm it explains why localStorage remains the dashboard source.
+- Confirm it explains why Supabase is insert-only for fake/demo booking requests.
+- Confirm it explains why authenticated admin access should come before Supabase dashboard reads/status updates.
+- Confirm it includes what not to overclaim.
+- Confirm README links to the interview readiness guide.
+- Confirm portfolio copy and walkthrough reflect the current Supabase insert proof without claiming a full production backend.
+- Run `npm run test`.
+- Run `npm run build`.
+- Confirm live URL returns HTTP `200` and includes `SoundCare AI Booking CRM`.
+- Run `git status` and review changed files.
+- Confirm expected visible UI change is `no`.
+- Confirm actual visible UI change is `no`.
+- Confirm no app behavior, public read policy, public update/delete policy, auth, payment flow, real AI call, `.env` file, secret/service key, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 20 validation notes:
+- Phase 20 is documentation/readiness cleanup only.
+- No screenshot is required because no app source or CSS files changed.
+
+## Phase 19 Supabase Integration QA Checks
 
 Supabase integration QA checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 19: Supabase integration QA and documentation cleanup completed.
+Phase 20: Interview readiness and portfolio pause point completed.
 
-Goal: verify that fake/demo booking submissions reach Supabase in the deployed app, document the proof, and keep dashboard reads/status updates localStorage-only until an auth/admin plan exists.
+Goal: prepare the final junior-portfolio demo script, interview answers, safety boundaries, and stop point without adding more product complexity.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -60,9 +60,10 @@ Goal: verify that fake/demo booking submissions reach Supabase in the deployed a
 - Phase 17: Persistence repository layer with localStorage still active.
 - Phase 18: Supabase demo insert with localStorage fallback.
 - Phase 19: Supabase integration QA and documentation cleanup.
+- Phase 20: Interview readiness and portfolio pause point.
 
 ## Next Phase
-Optional Phase 20: authenticated admin read/status update planning.
+Optional Phase 21: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -90,6 +91,7 @@ Expected deployment settings:
 - Persistence repository layer is complete in `src/services/bookingRepository.js`.
 - Supabase demo insert is implemented with localStorage fallback and publishable-key-only config.
 - Supabase live insert verification is documented in `docs/SUPABASE_VERIFICATION.md`.
+- Interview/demo readiness is documented in `docs/INTERVIEW_READINESS.md`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -123,3 +125,5 @@ The MVP is complete when:
 16. Backend persistence planning exists for a future Supabase database phase.
 17. Supabase setup planning and a reviewed draft SQL migration exist before any frontend connection.
 18. A repository layer exists so React components do not depend directly on localStorage helpers.
+19. Supabase demo insert works for fake booking submissions without exposing secret keys.
+20. Nikos has a clear interview/demo script and knows what not to overclaim.
