@@ -54,10 +54,22 @@ Build the app:
 npm run build
 ```
 
+Run the automated tests:
+
+```bash
+npm run test
+```
+
 If the build command fails in PowerShell with `Access is denied`, try:
 
 ```bash
 node node_modules/vite/bin/vite.js build
+```
+
+If the test command fails in PowerShell with `Access is denied`, try:
+
+```bash
+node node_modules/vitest/vitest.mjs run
 ```
 
 ## Deployment

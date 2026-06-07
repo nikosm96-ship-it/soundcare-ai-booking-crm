@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.14.0 - 2026-06-07
+- Completed Phase 14 automated test coverage for existing MVP behavior.
+- Added Vitest, jsdom, and React Testing Library as dev-only test tooling.
+- Added focused tests for booking localStorage helpers, analytics summary counts, mock assistant administrative safety-line output, and booking form required-field validation.
+- Added `npm run test` and documented the test command in README and the test plan.
+- Captured a desktop visual check screenshot at `docs/screenshots/phase-14-visual-check.png`.
+- Added `docs/AGENT_REPORT_TEMPLATE.md` to standardize future Coding Agent reports, warnings, validation details, and visual checks.
+- Kept app features, backend APIs, real AI calls, authentication, payments, production dependencies, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and UI redesign out of scope.
+
 ## 0.13.1 - 2026-06-07
 - Completed Phase 13 portfolio final review and sharing preparation.
 - Added `docs/PORTFOLIO_COPY.md` with project title, portfolio summary, CV/LinkedIn copy, case-study paragraph, feature bullets, tech stack, learning notes, interview talking points, limitations, suggested next improvements, live demo link, and GitHub repo link.

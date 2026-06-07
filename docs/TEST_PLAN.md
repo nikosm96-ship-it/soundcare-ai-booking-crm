@@ -1,23 +1,24 @@
 # Test Plan
 
-## Current Phase: Phase 13
+## Current Phase: Phase 14
 
-Manual checks:
+Automated checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
 - Confirm the project is React + Vite from `package.json` and `vite.config.js`.
-- Review README as a portfolio visitor and confirm it includes the live demo link and links to portfolio docs.
-- Review `docs/PORTFOLIO_WALKTHROUGH.md` and confirm it references the screenshot checklist.
-- Confirm `docs/screenshots/` exists and still contains the existing screenshot set.
-- Confirm `docs/PORTFOLIO_COPY.md` exists and includes project title, summary, CV/LinkedIn copy, case-study paragraph, feature bullets, tech stack, learning notes, interview talking points, limitations, suggested improvements, live demo link, and GitHub repo link.
-- Confirm the live deployment URL is documented: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Run `npm run test`.
+- Confirm booking localStorage helper tests cover empty storage fallback, invalid JSON fallback, save/load, and reset behavior.
+- Confirm analytics tests cover total bookings and status counts.
+- Confirm mock assistant tests cover the required safety line: `This message is a non-medical administrative draft.`
+- Confirm booking form tests cover empty-submit required validation for name, email, and service.
 - Run `npm run build`.
+- Run the app locally and confirm it still loads with no expected visible UI change.
 - Run `git status` and review changed files.
-- Confirm no app feature, backend API, real AI call, authentication, payment flow, external library, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+- Confirm no app feature, backend API, real AI call, authentication, payment flow, production dependency, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
 
-Phase 13 validation notes:
-- Phase 13 is documentation and portfolio-copy work only.
-- GitHub repo link for sharing: `https://github.com/nikosm96-ship-it/soundcare-ai-booking-crm`.
-- Suggested next optional phase: add focused automated tests for the existing MVP behavior.
+Phase 14 validation notes:
+- Test tooling is dev-only: Vitest, jsdom, and React Testing Library.
+- Screenshot target: `docs/screenshots/phase-14-visual-check.png`.
+- Phase 14 is expected to have no visible UI change.
 
 ## Phase 12 Deployment Checks
 

@@ -120,8 +120,6 @@ Completed:
 - Kept localStorage/demo mode as the current browser-only data layer.
 - Did not add backend APIs, real AI calls, authentication, payments, new libraries, or real patient data.
 
-## Recently Completed Phases
-
 ### Phase 12: First Public Deployment
 Goal: deploy the existing portfolio MVP to a public static hosting target after explicit approval.
 
@@ -143,17 +141,27 @@ Completed:
 - Confirmed the deployed app remains documented as browser-only with fake/demo data.
 - Kept app features, backend APIs, real AI calls, authentication, payments, external libraries, and real patient data out of scope.
 
-## Next Optional Phase
-
 ### Phase 14: Automated Test Coverage
 Goal: add focused automated tests for the existing portfolio MVP behavior without expanding product scope.
 
+Completed:
+- Added Vitest, jsdom, and React Testing Library as dev-only test tooling.
+- Added `npm run test`.
+- Tested booking localStorage helper fallback, save/load, and reset behavior.
+- Tested analytics total and status counts.
+- Tested mock assistant output includes the required non-medical administrative draft safety line.
+- Tested booking form empty-submit validation for name, email, and service.
+- Confirmed the app still loads with no expected visible UI change.
+
+## Next Optional Phase
+
+### Phase 15: Backend/Data Persistence Planning
+Goal: decide whether the next portfolio step should stay frontend-only or introduce a small backend/data layer.
+
 Suggested acceptance criteria:
-- Add tests for required booking form validation.
-- Add tests for local booking persistence helpers.
-- Add tests for dashboard status updates and analytics counts.
-- Add tests confirming mock assistant output remains administrative and includes the safety line.
-- Keep backend APIs, real AI calls, authentication, payments, external libraries beyond the chosen test tooling, and real patient data out of scope.
+- Document the backend option and the frontend-only option.
+- Keep the next step fake/demo-data safe.
+- Do not add real patient data, authentication, payments, or real AI integration without a separate approved phase.
 
 ## Future Optional Improvements
 
@@ -163,5 +171,4 @@ These are intentionally out of scope until the portfolio MVP is deployed and rev
 - Authentication and role-based access.
 - Real AI assistant integration with strict safety boundaries.
 - Export/reporting features.
-- Automated tests.
 - More dashboard filtering and sorting.

@@ -31,11 +31,12 @@ The project must teach the "why" behind each step, not only produce code.
 - Each phase must have acceptance criteria and validation steps.
 - The Coding Agent should make small scoped changes, inspect files first, and avoid unrelated refactors.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
+- Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 13: Portfolio final review and sharing preparation completed.
+Phase 14: Automated test coverage completed.
 
-Goal: prepare the existing React + Vite portfolio MVP for sharing by reviewing the visitor-facing docs and adding reusable portfolio, CV, LinkedIn, and interview copy without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: add focused automated tests for existing MVP behavior without changing app features, backend, real AI, auth, payments, production dependencies, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -53,15 +54,15 @@ Goal: prepare the existing React + Vite portfolio MVP for sharing by reviewing t
 - Phase 11: Deployment preparation.
 - Phase 12: First public Vercel deployment.
 - Phase 13: Portfolio final review and sharing preparation.
+- Phase 14: Automated test coverage for existing MVP behavior.
 
 ## Next Phase
-Optional Phase 14: automated test coverage for the existing MVP behavior.
+Optional Phase 15: backend/data persistence planning.
 
 Suggested scope:
-- Booking form validation tests.
-- localStorage booking helper tests.
-- Dashboard status update and analytics count tests.
-- Mock assistant administrative safety-line tests.
+- Decide whether the next portfolio step should remain frontend-only or introduce a simple backend.
+- If backend is selected, define a small fake/demo-safe data model first.
+- Keep real patient data, authentication, payments, and real AI integration out of scope until separately approved.
 - No new product features, backend APIs, real AI calls, authentication, payments, or real patient data.
 
 Expected deployment settings:
@@ -77,6 +78,7 @@ Expected deployment settings:
 - Deployment preparation is complete.
 - Public Vercel deployment is complete.
 - Portfolio sharing copy is complete in `docs/PORTFOLIO_COPY.md`.
+- Automated test coverage is in place for the core browser-only MVP behavior.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -105,3 +107,4 @@ The MVP is complete when:
 12. Portfolio screenshots are captured and documented.
 13. The MVP is deployed publicly and linked from README/docs.
 14. Portfolio sharing copy is ready for CV, LinkedIn, portfolio pages, and interviews.
+15. Automated tests cover the core existing MVP behavior.
