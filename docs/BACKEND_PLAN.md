@@ -148,6 +148,11 @@ Phase 16 can create the Supabase setup without changing visible UI:
 8. Add environment variable documentation without committing secrets.
 9. Keep localStorage as fallback/demo mode until Supabase is verified.
 
+Phase 16 planning artifacts:
+
+- [Supabase Setup Plan](SUPABASE_SETUP_PLAN.md)
+- [Bookings Migration Draft](supabase/bookings-migration-draft.sql)
+
 ## Frontend Integration Plan
 
 The frontend should move in small steps:
@@ -192,6 +197,8 @@ Important portfolio safety decision: the first Supabase implementation should no
 ### Phase 16: Supabase Setup Planning And Migration Draft
 
 Create the database setup plan, draft SQL migration, RLS policy proposal, and environment variable documentation. Do not connect the frontend until policies and fake/demo data rules are approved.
+
+Status: Completed in Phase 16 documentation and draft SQL only.
 
 ### Phase 17: Persistence Repository Layer
 

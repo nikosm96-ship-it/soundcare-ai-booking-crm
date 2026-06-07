@@ -1,6 +1,41 @@
 # Test Plan
 
-## Current Phase: Phase 15
+## Current Phase: Phase 16
+
+Documentation checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is React + Vite from `package.json` and `vite.config.js`.
+- Confirm `docs/BACKEND_PLAN.md` exists.
+- Confirm `docs/SUPABASE_SETUP_PLAN.md` exists.
+- Confirm `docs/supabase/bookings-migration-draft.sql` exists.
+- Confirm the draft SQL creates `public.bookings` if not exists.
+- Confirm the draft SQL includes `create extension if not exists pgcrypto`.
+- Confirm the draft SQL includes `id uuid primary key default gen_random_uuid()`.
+- Confirm the draft SQL includes `customer_name`, `customer_email`, `customer_phone`, `service`, `preferred_date`, `preferred_time`, `notes`, `status`, `created_at`, and `updated_at`.
+- Confirm the draft SQL includes a status check for `New`, `Contacted`, `Scheduled`, `Completed`, `Follow-up`, and `Cancelled`.
+- Confirm the draft SQL includes an optional `updated_at` trigger draft.
+- Confirm the draft SQL enables Row Level Security on `public.bookings`.
+- Confirm the draft SQL documents no public select/update/delete by default, public insert requiring explicit approval, and future admin read/write requiring auth/admin planning.
+- Confirm the setup plan explains later manual Supabase dashboard setup.
+- Confirm the setup plan documents `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Confirm the setup plan warns against service role keys in frontend code and committed `.env` files.
+- Confirm the setup plan says localStorage remains active for now.
+- Confirm README links to `docs/SUPABASE_SETUP_PLAN.md`.
+- Confirm `docs/BACKEND_PLAN.md` links to the setup plan and migration draft.
+- Confirm roadmap, changelog, product owner notes, and test plan mention Phase 16.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run `git status` and review changed files.
+- Confirm expected visible UI change is `no`.
+- Confirm actual visible UI change is `no`.
+- Confirm no app feature, Supabase client code, backend API, auth, payment flow, production dependency, real AI call, `.env` file, secret, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 16 validation notes:
+- Phase 16 is planning/documentation only.
+- The current app remains browser-only and uses browser localStorage.
+- No screenshot is required unless app files change.
+
+## Phase 15 Backend/Data Persistence Planning Checks
 
 Documentation checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

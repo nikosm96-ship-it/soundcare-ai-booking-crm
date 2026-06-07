@@ -90,6 +90,8 @@ No environment variables or secrets are required for the current portfolio MVP. 
 
 Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md). This is planning only: the current app still has no backend connection, Supabase client code, environment variables, authentication, payments, or real patient data.
 
+Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md). The app still uses browser localStorage only.
+
 ## Safety And Demo Data
 
 This project is a portfolio demo only. Use fake/demo data only.

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.16.0 - 2026-06-07
+- Completed Phase 16 Supabase setup planning and migration draft.
+- Added `docs/SUPABASE_SETUP_PLAN.md` for later manual Supabase project setup, RLS decisions, environment variable names, localStorage continuity, fake/demo data warnings, and Phase 17 guidance.
+- Added `docs/supabase/bookings-migration-draft.sql` with a draft `bookings` table, UUID default, status check constraint, optional `updated_at` trigger, RLS enablement, and conservative access notes.
+- Linked the setup plan and migration draft from README and `docs/BACKEND_PLAN.md`.
+- Aligned `package.json` and `package-lock.json` version metadata with the Phase 16 changelog version.
+- Updated roadmap, product owner notes, and test plan for Phase 16 completion and suggested Phase 17 persistence repository work.
+- Kept the app browser-only with localStorage as the active persistence layer.
+- Kept app behavior, visible UI, Supabase client code, backend APIs, environment files, secrets, authentication, payments, real AI calls, production dependencies, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.15.0 - 2026-06-07
 - Completed Phase 15 backend/data persistence planning.
 - Added `docs/BACKEND_PLAN.md` for a future Supabase `bookings` table, field types, status mapping, fake/demo data rules, security/privacy notes, RLS planning, environment variable rules, migration/setup plan, frontend integration path, risks, decisions, and recommended next phases.

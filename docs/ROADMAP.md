@@ -165,18 +165,29 @@ Completed:
 - Kept the app browser-only with localStorage as the current persistence layer.
 - Did not add Supabase client code, backend APIs, environment files, secrets, auth, payments, real AI calls, real patient data, production dependencies, or visible UI changes.
 
-## Next Optional Phase
-
 ### Phase 16: Supabase Setup Planning And Migration Draft
 Goal: prepare the Supabase project setup and database migration plan without changing app behavior.
 
+Completed:
+- Added `docs/SUPABASE_SETUP_PLAN.md`.
+- Added `docs/supabase/bookings-migration-draft.sql`.
+- Drafted the `bookings` table, status constraint, optional `updated_at` trigger, and RLS enablement.
+- Documented conservative RLS boundaries: no public read/update/delete by default, public insert requires explicit approval, and admin read/write requires a future auth/admin phase.
+- Documented future environment variable names without creating `.env` files or adding secrets.
+- Kept localStorage as the active app persistence layer.
+- Did not add Supabase client code, backend APIs, environment files, secrets, auth, payments, real AI calls, real patient data, production dependencies, or visible UI changes.
+
+## Next Optional Phase
+
+### Phase 17: Persistence Repository Layer
+Goal: add a small booking persistence repository/service boundary while keeping localStorage as the active implementation.
+
 Suggested acceptance criteria:
-- Draft the `bookings` table SQL migration from `docs/BACKEND_PLAN.md`.
-- Enable RLS in the proposed migration.
-- Propose conservative RLS policies before any public insert or admin access is enabled.
-- Document environment variable names without committing `.env` files or secrets.
-- Keep localStorage as the active app persistence layer.
-- Do not add real patient data, authentication, payments, or real AI integration without a separate approved phase.
+- Keep the React app browser-only and visibly unchanged.
+- Keep localStorage as the active persistence layer.
+- Add mapping tests for current camelCase booking fields and future snake_case database fields.
+- Avoid installing `@supabase/supabase-js` until a later approved integration phase.
+- Do not add backend APIs, authentication, payments, real AI calls, secrets, `.env` files, or real patient data.
 
 ## Future Optional Improvements
 
