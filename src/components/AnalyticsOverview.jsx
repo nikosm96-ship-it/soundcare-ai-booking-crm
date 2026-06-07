@@ -62,7 +62,7 @@ export default function AnalyticsOverview({ refreshKey }) {
   return (
     <section className="analytics-overview" aria-labelledby="analytics-title">
       <div className="section-heading">
-        <p className="phase-label">Phase 5: Basic analytics</p>
+        <p className="phase-label">Demo analytics</p>
         <h2 id="analytics-title">Analytics overview</h2>
         <p>
           See a simple count of fake booking requests by status. These numbers

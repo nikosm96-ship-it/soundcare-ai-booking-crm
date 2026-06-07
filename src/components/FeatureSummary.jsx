@@ -21,7 +21,7 @@ export default function FeatureSummary() {
   return (
     <section className="feature-summary" aria-labelledby="feature-summary-title">
       <div className="feature-summary__heading">
-        <p className="phase-label">Phase 7: Portfolio polish</p>
+        <p className="phase-label">Portfolio MVP</p>
         <h2 id="feature-summary-title">What this MVP includes</h2>
       </div>
 

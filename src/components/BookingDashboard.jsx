@@ -50,7 +50,7 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
     <section className="booking-dashboard" aria-labelledby="dashboard-title">
       <div className="section-heading section-heading--with-action">
         <div>
-          <p className="phase-label">Phase 4: CRM booking dashboard</p>
+          <p className="phase-label">CRM overview</p>
           <h2 id="dashboard-title">Booking dashboard</h2>
           <p>
             Review fake demo bookings, change each request status, and reset the

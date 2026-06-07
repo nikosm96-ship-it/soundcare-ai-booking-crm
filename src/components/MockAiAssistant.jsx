@@ -107,7 +107,7 @@ export default function MockAiAssistant({ refreshKey }) {
   return (
     <section className="mock-ai-assistant" aria-labelledby="mock-ai-title">
       <div className="section-heading">
-        <p className="phase-label">Phase 6: Mock AI assistant</p>
+        <p className="phase-label">Administrative assistant</p>
         <h2 id="mock-ai-title">Mock AI Assistant</h2>
         <p>
           Generate safe administrative draft text from fake demo booking data.

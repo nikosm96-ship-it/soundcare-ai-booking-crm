@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.2 - 2026-06-07
+- Replaced internal phase labels in the visible app UI with portfolio-friendly product labels.
+- Refreshed the portfolio screenshot set so screenshots match the current UI copy.
+- Kept app behavior, backend APIs, real AI calls, authentication, payments, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.12.1 - 2026-06-07
 - Completed a pre-deployment project audit pass after Phase 10.
 - Removed the unused `src/components/PlaceholderPanel.jsx` skeleton component.

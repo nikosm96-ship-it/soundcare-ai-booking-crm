@@ -100,7 +100,7 @@ export default function BookingForm({ onBookingSaved }) {
   return (
     <section className="booking-form-section" aria-labelledby="booking-form-title">
       <div className="section-heading">
-        <p className="phase-label">Phase 3: Public booking request</p>
+        <p className="phase-label">Booking workflow</p>
         <h2 id="booking-form-title">Request a demo appointment</h2>
         <p>
           Submit fake portfolio data only. This demo stores booking requests in

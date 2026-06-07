@@ -6,7 +6,7 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Phase 10: portfolio screenshots captured and documented.
+Portfolio-ready MVP with screenshots captured and documented.
 
 The MVP is browser-only and designed for portfolio review. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
 
