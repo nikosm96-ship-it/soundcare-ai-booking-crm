@@ -1,84 +1,133 @@
 # Roadmap
 
-## Phase 0: Project Foundation
-Goal: Create project documentation and define the MVP.
+## Project Status
+SoundCare AI Booking CRM is currently a portfolio-ready React + Vite MVP.
 
-Status: Completed for the original WordPress direction, then updated for the React pivot.
+The current version is intentionally browser-only. It uses fake/demo booking data, browser localStorage, and safe template-based administrative draft text. It does not include backend APIs, real AI calls, authentication, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
-## Phase 1 Restart: React App Skeleton
-Goal: Remove the obsolete WordPress plugin skeleton and create a clean React + Vite starter app.
+## Completed Phases
 
-Acceptance criteria:
-- React + Vite app structure exists.
-- Old WordPress PHP/admin/public plugin files are removed.
-- Documentation remains in `docs/`.
-- App runs with `npm run dev`.
-- First screen is a simple app shell for SoundCare AI Booking CRM.
-- No booking form, AI logic, analytics, backend, or localStorage feature exists yet.
+### Phase 0: Project Foundation
+Goal: Create initial project documentation and define the MVP direction.
 
-## Phase 2: Data Model and Local Storage
-Goal: Define the booking shape and local persistence helpers.
+Status: Completed for the original WordPress direction, then superseded by the React pivot.
 
-Acceptance criteria:
-- Booking fields are defined in one place.
-- Demo booking data exists.
-- localStorage load/save helpers exist.
-- The app can read bookings from the service layer.
+### Phase 1 Restart: React App Skeleton
+Goal: Replace the obsolete WordPress plugin skeleton with a clean React + Vite starter app.
 
-## Phase 3: Public Booking Form
-Goal: Add the visitor booking form.
+Completed:
+- React + Vite app structure.
+- Documentation preserved in `docs/`.
+- Obsolete WordPress PHP/plugin files removed.
+- Simple SoundCare AI Booking CRM app shell.
 
-Acceptance criteria:
-- Form collects customer name, email, phone, service, preferred date/time, and notes.
-- Required fields are validated.
-- Valid submissions create bookings with status `New`.
-- Bookings are saved in localStorage.
-- User sees clear success/error feedback.
+### Phase 2: Data Model And Local Storage
+Goal: Define the booking data model, demo bookings, booking statuses, and localStorage helpers.
 
-## Phase 4: Admin Booking Dashboard
-Goal: Let the clinic admin view and manage bookings.
+Completed:
+- Booking status constants.
+- Fake/demo booking records.
+- `getBookings()`, `saveBookings(bookings)`, and `resetBookings()` helpers.
+- Invalid localStorage JSON fallback to demo bookings.
 
-Acceptance criteria:
-- Dashboard lists bookings.
-- Bookings can be filtered by status and service.
-- Admin can update booking status.
-- Empty states are clear.
+### Phase 3: Public Booking Form
+Goal: Add a public fake/demo booking request form.
 
-## Phase 5: Basic Analytics
-Goal: Add simple CRM metrics.
+Completed:
+- Customer name, email, phone, service, preferred date/time, and notes fields.
+- Required-field validation for name, email, and service.
+- New fake bookings saved to localStorage with `New` status.
+- Success and validation feedback.
 
-Acceptance criteria:
-- Total bookings count is shown.
-- Counts by status are shown.
-- Counts by service are shown.
-- Upcoming appointment requests are shown.
+### Phase 4: CRM Booking Dashboard
+Goal: Let the demo admin review and update booking requests.
 
-## Phase 6: Mock AI Assistant
-Goal: Add safe mock AI output.
+Completed:
+- Booking list from localStorage/demo data.
+- Per-booking status dropdown.
+- Persisted status updates.
+- Reset demo bookings action.
+- Clear empty state.
 
-Acceptance criteria:
-- Admin can generate a customer summary.
-- Admin can generate a suggested next action.
-- Admin can generate a follow-up message.
-- Output does not provide medical advice.
+### Phase 5: Basic Analytics
+Goal: Show simple booking metrics from the existing booking data.
 
-## Phase 7: README and Screenshots
-Goal: Prepare the GitHub portfolio presentation.
+Completed:
+- Total bookings count.
+- Counts by booking status.
+- Analytics refresh after booking submissions, status changes, and demo reset.
 
-Acceptance criteria:
-- README includes setup, features, screenshots, architecture, safety note, and learning outcomes.
-- Test plan is complete.
-- Nikos can explain the project flow.
+### Phase 6: Mock AI Assistant
+Goal: Add safe mock AI-style administrative draft generation.
 
-## Phase 8: Optional Backend
-Goal: Add a real backend only if the React MVP is stable.
+Completed:
+- Booking selector.
+- Draft type and tone controls.
+- Template-based administrative draft generation.
+- Required non-medical administrative safety line.
+- Clear draft action.
+- No real AI calls, API keys, backend calls, or message sending.
 
-Possible options:
-- Supabase
-- Node/Express API
-- Other lightweight backend chosen later
+### Phase 7: Portfolio Polish
+Goal: Improve portfolio presentation without turning the app into a marketing landing page.
 
-Acceptance criteria:
-- Backend choice is documented before implementation.
-- Local mock mode still works.
-- No secrets are committed.
+Completed:
+- Feature summary.
+- Footer safety notes.
+- Header and layout polish.
+- Responsive layout improvements.
+- README and docs updates.
+
+### Phase 8: Final QA
+Goal: Test the full MVP flow before portfolio documentation.
+
+Completed:
+- Desktop and mobile layout checks.
+- Booking submission flow.
+- Analytics refresh flow.
+- Dashboard status update flow.
+- localStorage persistence check.
+- Reset demo bookings check.
+- Mock assistant safety check.
+- Production build validation.
+
+### Phase 9: Portfolio Walkthrough
+Goal: Prepare a clear explanation for interviews and portfolio review.
+
+Completed:
+- `docs/PORTFOLIO_WALKTHROUGH.md`.
+- Elevator pitch, feature walkthrough, limitations, interview talking points, and next improvements.
+- README link to the walkthrough.
+
+### Phase 10: Portfolio Screenshots
+Goal: Capture and document portfolio screenshots.
+
+Completed:
+- Screenshot set in `docs/screenshots/`.
+- README and walkthrough references to screenshots.
+- Fake/demo data only.
+- No app feature expansion.
+
+## Next Phase
+
+### Phase 11: Deployment Preparation
+Goal: prepare the project for a first public portfolio deployment.
+
+Planned acceptance criteria:
+- Choose the deployment target.
+- Confirm the build command and output directory.
+- Keep secrets out of the repo.
+- Keep localStorage/demo mode working after deployment.
+- Add deployment notes to README/docs.
+- Do not add backend APIs, real AI calls, authentication, payments, or real patient data during deployment preparation.
+
+## Future Optional Improvements
+
+These are intentionally out of scope until the portfolio MVP is deployed and reviewed:
+
+- Backend/database, such as Supabase or a small Node API.
+- Authentication and role-based access.
+- Real AI assistant integration with strict safety boundaries.
+- Export/reporting features.
+- Automated tests.
+- More dashboard filtering and sorting.

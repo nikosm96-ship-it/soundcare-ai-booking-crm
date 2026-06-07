@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.1 - 2026-06-07
+- Completed a pre-deployment project audit pass after Phase 10.
+- Removed the unused `src/components/PlaceholderPanel.jsx` skeleton component.
+- Aligned `package.json` and `package-lock.json` version metadata with the current changelog version range.
+- Updated the roadmap to match the actual React portfolio MVP phases and current next step.
+- Kept app features, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and deployment out of scope.
+
 ## 0.12.0 - 2026-06-07
 - Completed Phase 10 portfolio screenshot capture and documentation.
 - Added `docs/screenshots/first-screen.png`, `analytics-overview.png`, `booking-form.png`, `crm-dashboard.png`, `status-change.png`, `mock-ai-draft.png`, `mobile-layout.png`, and `footer-safety-note.png`.
