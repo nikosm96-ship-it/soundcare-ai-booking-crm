@@ -4,27 +4,27 @@ import { getBookings } from '../services/bookingRepository.js';
 
 const analyticsCards = [
   {
-    label: 'Total bookings',
+    label: 'Total Bookings',
     getValue: (summary) => summary.total,
   },
   {
-    label: 'New bookings',
+    label: 'New',
     status: BOOKING_STATUSES.NEW,
   },
   {
-    label: 'Scheduled bookings',
+    label: 'Scheduled',
     status: BOOKING_STATUSES.SCHEDULED,
   },
   {
-    label: 'Completed bookings',
+    label: 'Completed',
     status: BOOKING_STATUSES.COMPLETED,
   },
   {
-    label: 'Follow-up bookings',
+    label: 'Follow-up',
     status: BOOKING_STATUSES.FOLLOW_UP,
   },
   {
-    label: 'Cancelled bookings',
+    label: 'Cancelled',
     status: BOOKING_STATUSES.CANCELLED,
   },
 ];
@@ -61,13 +61,8 @@ export default function AnalyticsOverview({ refreshKey }) {
 
   return (
     <section className="analytics-overview" aria-labelledby="analytics-title">
-      <div className="section-heading">
-        <p className="phase-label">Demo analytics</p>
-        <h2 id="analytics-title">Analytics overview</h2>
-        <p>
-          See a simple count of fake booking requests by status. These numbers
-          come from the same browser localStorage data as the dashboard.
-        </p>
+      <div className="section-heading section-heading--compact">
+        <h2 id="analytics-title">Overview</h2>
       </div>
 
       <div className="analytics-grid">

@@ -4,22 +4,23 @@
 SoundCare AI Booking CRM
 
 ## One-Sentence Portfolio Summary
-SoundCare AI Booking CRM is a React + Vite portfolio MVP that demonstrates a booking and CRM workflow for a fake hearing-care clinic, including local dashboard persistence, Supabase demo booking inserts, status tracking, analytics, and safe mock administrative draft generation.
+SoundCare AI Booking CRM is a React + Vite portfolio MVP that demonstrates a professional booking and CRM workflow for a fake hearing-care clinic, including a client appointment page, internal dashboard, local dashboard persistence, Supabase demo booking inserts, status tracking, analytics, and safe administrative draft generation.
 
 ## Short CV/LinkedIn Description
-Built and deployed a React + Vite portfolio MVP for a demo hearing-care booking CRM. The app includes a public booking form, localStorage-backed dashboard state, Supabase demo inserts, CRM-style status updates, simple analytics, automated tests, and a safe template-based mock AI assistant using fake/demo data only.
+Built and deployed a React + Vite portfolio MVP for a demo hearing-care booking CRM. The app includes a polished client booking page, internal admin dashboard, localStorage-backed dashboard state, Supabase demo inserts, CRM-style status updates, simple analytics, automated tests, and a safe template-based administrative draft assistant using fake/demo data only.
 
 ## Portfolio Case Study Paragraph
-SoundCare AI Booking CRM was built as a focused junior portfolio project to show how a small healthcare-adjacent business could collect booking requests, track follow-up status, and prepare administrative communication without overbuilding. I chose React + Vite to keep the MVP fast, beginner-friendly, and easy to deploy. The project uses browser localStorage for dashboard state, Supabase for fake/demo booking inserts, React state for analytics updates, and template-based mock assistant output instead of real AI calls. A key part of the project is the safety boundary: it avoids real patient data, medical advice, clinical claims, public booking reads, authentication, payments, and secret keys in the frontend while still presenting a realistic product workflow that can be explained clearly in an interview.
+SoundCare AI Booking CRM was built as a focused junior portfolio project to show how a small healthcare-adjacent business could collect booking requests, track follow-up status, and prepare administrative communication without overbuilding. I chose React + Vite to keep the MVP fast, beginner-friendly, and easy to deploy. The project uses browser localStorage for dashboard state, Supabase for fake/demo booking inserts, React state for analytics updates, and template-based administrative draft output instead of real AI calls. Phase 21 redesigned the visible UI into a professional two-view product surface: a public appointment request page and an internal admin dashboard. A key part of the project is the safety boundary: it avoids real patient data, medical advice, clinical claims, public booking reads, authentication, payments, and secret keys in the frontend while still presenting a realistic product workflow that can be explained clearly in an interview.
 
 ## Feature Bullets
 - Public booking request form with required-field validation.
+- Professional two-view UI with client booking and admin dashboard experiences.
 - Browser localStorage persistence for fake/demo bookings.
 - Optional Supabase insert persistence for fake/demo booking requests.
 - CRM-style dashboard for reviewing bookings and updating statuses.
 - Analytics overview that updates from the same local booking data.
 - Reset demo data action for repeatable portfolio walkthroughs.
-- Mock AI Assistant that generates safe administrative draft text only.
+- Administrative Draft Assistant that generates safe administrative draft text only.
 - Portfolio documentation, screenshot set, live demo link, and clear limitations.
 
 ## Tech Stack

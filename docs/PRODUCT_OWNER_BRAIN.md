@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 20: Interview readiness and portfolio pause point completed.
+Phase 21: Professional UI redesign completed.
 
-Goal: prepare the final junior-portfolio demo script, interview answers, safety boundaries, and stop point without adding more product complexity.
+Goal: make the app feel like a professional hearing-care booking CRM while preserving the existing frontend data flow, localStorage fallback, optional Supabase insert proof, tests, and safety boundaries.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -61,9 +61,10 @@ Goal: prepare the final junior-portfolio demo script, interview answers, safety 
 - Phase 18: Supabase demo insert with localStorage fallback.
 - Phase 19: Supabase integration QA and documentation cleanup.
 - Phase 20: Interview readiness and portfolio pause point.
+- Phase 21: Professional two-view UI redesign.
 
 ## Next Phase
-Optional Phase 21: authenticated admin read/status update planning.
+Optional Phase 22: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -92,6 +93,7 @@ Expected deployment settings:
 - Supabase demo insert is implemented with localStorage fallback and publishable-key-only config.
 - Supabase live insert verification is documented in `docs/SUPABASE_VERIFICATION.md`.
 - Interview/demo readiness is documented in `docs/INTERVIEW_READINESS.md`.
+- Phase 21 screenshots are captured in `docs/screenshots/phase-21-client-booking-page.png`, `docs/screenshots/phase-21-admin-dashboard-page.png`, and `docs/screenshots/phase-21-mobile-booking-page.png`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -103,6 +105,7 @@ Expected deployment settings:
 - Never store or use real patient data.
 - Do not add Next.js, Laravel, Docker, payments, or complex CI/CD.
 - Supabase is the preferred future backend option, but it must be introduced in a separate approved phase with RLS, fake/demo data rules, environment variables, and no frontend service role key.
+- The visible app UI should avoid implementation/portfolio wording; those explanations belong in docs and interview material.
 
 ## Definition of Done for MVP
 The MVP is complete when:

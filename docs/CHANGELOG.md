@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.21.0 - 2026-06-07
+- Completed Phase 21 professional UI redesign.
+- Reworked the app into two simple state-driven views: `Book Appointment` for clients and `Admin Dashboard` for internal review.
+- Replaced visible portfolio/demo implementation copy in the app UI with SoundCare Hearing Care product copy.
+- Redesigned the public booking page with a professional header, large appointment hero, CSS clinic/reception visual, polished form card, success confirmation, help section, and urgent-care safety note.
+- Redesigned the admin surface with a dark teal sidebar, topbar, overview analytics cards, booking table, professional status badges, styled status controls, and renamed Administrative Draft Assistant.
+- Preserved booking validation, localStorage fallback, Supabase insert attempt, dashboard listing, status updates, analytics refresh, and the required assistant safety line.
+- Added UI guardrail tests for the new client/admin views, success confirmation, and forbidden visible wording.
+- Captured `docs/screenshots/phase-21-client-booking-page.png`, `docs/screenshots/phase-21-admin-dashboard-page.png`, and `docs/screenshots/phase-21-mobile-booking-page.png`.
+- Kept authentication, payments, real AI API calls, backend API routes, production medical claims, real patient data, diagnosis, treatment recommendations, and HIPAA/GDPR claims out of scope.
+
 ## 0.20.0 - 2026-06-07
 - Completed Phase 20 interview readiness and portfolio pause-point cleanup.
 - Added `docs/INTERVIEW_READINESS.md` with a final junior-portfolio demo script, one-minute explanation, three-minute walkthrough, interview answers, safety boundaries, and what not to overclaim.

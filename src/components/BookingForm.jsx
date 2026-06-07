@@ -93,7 +93,7 @@ export default function BookingForm({ onBookingSaved }) {
 
       setFormValues(initialFormValues);
       setErrors({});
-      setSuccessMessage('Your demo booking request has been saved.');
+      setSuccessMessage('received');
 
       if (onBookingSaved) {
         onBookingSaved();
@@ -106,24 +106,25 @@ export default function BookingForm({ onBookingSaved }) {
   return (
     <section className="booking-form-section" aria-labelledby="booking-form-title">
       <div className="section-heading">
-        <p className="phase-label">Booking workflow</p>
-        <h2 id="booking-form-title">Request a demo appointment</h2>
+        <h2 id="booking-form-title">Appointment request form</h2>
         <p>
-          Submit fake portfolio data only. This demo stores booking requests in
-          your browser localStorage.
+          Share your contact details and preferred appointment window. Required
+          fields are marked with an asterisk.
         </p>
       </div>
 
       <form className="booking-form" onSubmit={handleSubmit} noValidate>
         {successMessage ? (
-          <p className="form-message form-message--success" role="status">
-            {successMessage}
-          </p>
+          <div className="confirmation-card" role="status">
+            <h3>Thank you!</h3>
+            <p>Your appointment request has been received.</p>
+            <p>Our team will review your request and contact you soon.</p>
+          </div>
         ) : null}
 
         <div className="form-grid">
           <label className="form-field" htmlFor="customerName">
-            <span>Name *</span>
+            <span>Full Name *</span>
             <input
               id="customerName"
               name="customerName"
@@ -143,7 +144,7 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
 
           <label className="form-field" htmlFor="customerEmail">
-            <span>Email *</span>
+            <span>Email Address *</span>
             <input
               id="customerEmail"
               name="customerEmail"
@@ -163,7 +164,7 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
 
           <label className="form-field" htmlFor="customerPhone">
-            <span>Phone</span>
+            <span>Phone Number</span>
             <input
               id="customerPhone"
               name="customerPhone"
@@ -220,20 +221,20 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
 
           <label className="form-field form-field--full" htmlFor="notes">
-            <span>Notes</span>
+            <span>Additional Notes</span>
             <textarea
               id="notes"
               name="notes"
               rows="4"
               value={formValues.notes}
               onChange={handleChange}
-              placeholder="Use fake notes only, for example: morning appointment preferred."
+              placeholder="Morning appointment preferred, accessibility requests, or scheduling details."
             />
           </label>
         </div>
 
         <button className="primary-button" type="submit" disabled={isSaving}>
-          {isSaving ? 'Saving demo booking...' : 'Save demo booking'}
+          {isSaving ? 'Sending request...' : 'Request Appointment'}
         </button>
       </form>
     </section>

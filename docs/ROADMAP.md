@@ -1,11 +1,22 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI.
 
-The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
+The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It now presents a public `Book Appointment` view and an internal `Admin Dashboard` view. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
+
+### Phase 21: Professional UI Redesign
+Goal: Redesign the visible product surface as a professional hearing-care booking CRM.
+
+Completed:
+- Two-view state navigation for `Book Appointment` and `Admin Dashboard`.
+- Public appointment request page with SoundCare Hearing Care branding, hero copy, CSS clinic/reception visual, polished form, confirmation state, help section, and urgent-care safety note.
+- Admin dashboard with dark teal sidebar, topbar, analytics cards, booking table, status badges, status update controls, and Administrative Draft Assistant.
+- Visible UI copy cleanup to remove portfolio/demo implementation wording from the app surface.
+- Phase 21 screenshots for desktop client, desktop admin, and mobile booking views.
+- Tests and build updated for the redesigned UI.
 
 ### Phase 0: Project Foundation
 Goal: Create initial project documentation and define the MVP direction.

@@ -10,6 +10,38 @@ function displayValue(value) {
   return value || 'Not provided';
 }
 
+function formatDateTime(booking) {
+  const date = displayValue(booking.preferredDate);
+  const time = displayValue(booking.preferredTime);
+
+  return `${date} ${time}`;
+}
+
+function formatCreatedDate(value) {
+  if (!value) {
+    return displayValue(value);
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return displayValue(value);
+  }
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).format(date);
+}
+
+function statusClassName(status) {
+  return `status-badge status-badge--${status.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+}
+
 export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
   const [bookings, setBookings] = useState(() => getBookings());
 
@@ -38,82 +70,74 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
     <section className="booking-dashboard" aria-labelledby="dashboard-title">
       <div className="section-heading section-heading--with-action">
         <div>
-          <p className="phase-label">CRM overview</p>
-          <h2 id="dashboard-title">Booking dashboard</h2>
-          <p>
-            Review fake demo bookings, change each request status, and reset the
-            browser data back to the demo records.
-          </p>
+          <h2 id="dashboard-title">Recent bookings</h2>
+          <p>Review requests, contact details, appointment preferences, and current scheduling status.</p>
         </div>
 
-        <button className="secondary-button" type="button" onClick={handleResetBookings}>
-          Reset demo bookings
-        </button>
+        <div className="admin-utilities" aria-label="Admin utilities">
+          <span>Admin utilities</span>
+          <button className="utility-button" type="button" onClick={handleResetBookings}>
+            Restore booking list
+          </button>
+        </div>
       </div>
 
       {bookings.length > 0 ? (
-        <div className="booking-list">
-          {bookings.map((booking) => (
-            <article className="booking-card" key={booking.id}>
-              <div className="booking-card__header">
-                <div>
-                  <h3>{displayValue(booking.customerName)}</h3>
-                  <p>{displayValue(booking.service)}</p>
-                </div>
-
-                <label className="status-control" htmlFor={`status-${booking.id}`}>
-                  <span>Status</span>
-                  <select
-                    id={`status-${booking.id}`}
-                    value={booking.status}
-                    onChange={(event) =>
-                      handleStatusChange(booking.id, event.target.value)
-                    }
-                  >
-                    {bookingStatusList.map((status) => (
-                      <option key={status} value={status}>
-                        {status}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
-
-              <dl className="booking-details">
-                <div>
-                  <dt>Email</dt>
-                  <dd>{displayValue(booking.customerEmail)}</dd>
-                </div>
-                <div>
-                  <dt>Phone</dt>
-                  <dd>{displayValue(booking.customerPhone)}</dd>
-                </div>
-                <div>
-                  <dt>Preferred date</dt>
-                  <dd>{displayValue(booking.preferredDate)}</dd>
-                </div>
-                <div>
-                  <dt>Preferred time</dt>
-                  <dd>{displayValue(booking.preferredTime)}</dd>
-                </div>
-                <div className="booking-details__full">
-                  <dt>Notes</dt>
-                  <dd>{displayValue(booking.notes)}</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>{displayValue(booking.status)}</dd>
-                </div>
-                <div>
-                  <dt>Created at</dt>
-                  <dd>{displayValue(booking.createdAt)}</dd>
-                </div>
-              </dl>
-            </article>
-          ))}
+        <div className="booking-table-wrap">
+          <table className="booking-table">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Date &amp; Time</th>
+                <th>Contact</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bookings.map((booking) => (
+                <tr key={booking.id}>
+                  <td>
+                    <strong>{displayValue(booking.customerName)}</strong>
+                  </td>
+                  <td>{displayValue(booking.service)}</td>
+                  <td>{formatDateTime(booking)}</td>
+                  <td>
+                    <span>{displayValue(booking.customerEmail)}</span>
+                    <small>{displayValue(booking.customerPhone)}</small>
+                  </td>
+                  <td>
+                    <span className={statusClassName(booking.status)}>
+                      {displayValue(booking.status)}
+                    </span>
+                    <label className="status-control" htmlFor={`status-${booking.id}`}>
+                      <span>Update status</span>
+                      <select
+                        id={`status-${booking.id}`}
+                        value={booking.status}
+                        onChange={(event) =>
+                          handleStatusChange(booking.id, event.target.value)
+                        }
+                      >
+                        {bookingStatusList.map((status) => (
+                          <option key={status} value={status}>
+                            {status}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </td>
+                  <td>{displayValue(booking.notes)}</td>
+                  <td>{formatCreatedDate(booking.createdAt)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       ) : (
-        <p className="empty-state">No demo bookings are saved yet.</p>
+        <p className="empty-state">No bookings are saved yet.</p>
       )}
     </section>
   );

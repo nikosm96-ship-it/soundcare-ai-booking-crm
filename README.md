@@ -1,29 +1,29 @@
 # SoundCare AI Booking CRM
 
-SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect demo booking requests, persist them in the browser, track CRM-style statuses, show simple analytics, and generate safe mock administrative draft text.
+SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect booking requests, present a professional client-facing appointment page, persist dashboard data in the browser, track CRM-style statuses, show simple analytics, and generate safe administrative draft text.
 
 This is the active React app version of the project. The earlier WordPress plugin direction was abandoned on 2026-06-06 and the old PHP skeleton was removed.
 
 ## Current Status
 
-Portfolio-ready junior MVP deployed publicly on Vercel.
+Portfolio-ready junior MVP deployed publicly on Vercel, with a professional two-view UI redesign completed in Phase 21.
 
-The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
+The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, and mobile booking page.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
 ## Features
 
-- Public booking form for fake/demo appointment requests.
+- Public booking page for appointment requests.
 - Required-field validation for name, email, and service.
 - Browser localStorage persistence for demo bookings.
 - Booking repository layer that keeps localStorage behind a clean persistence boundary.
-- CRM-style booking dashboard with status updates.
+- Admin dashboard with a dark teal sidebar, overview cards, booking table, status badges, and status updates.
 - Reset demo bookings action.
 - Analytics overview for total and status-based booking counts.
-- Mock AI Assistant that creates administrative draft text from fake booking data.
+- Administrative Draft Assistant that creates safe scheduling draft text from booking data.
 - Beginner-friendly React component structure and plain CSS styling.
-- Portfolio safety notes for fake data and non-medical use.
+- UI copy cleaned so implementation/demo wording stays out of the visible product surface.
 
 ## Tech Stack
 
@@ -35,6 +35,12 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - Supabase for optional fake/demo booking inserts
 
 No external UI libraries, authentication, payments, admin backend reads, or real AI API calls are used in this phase.
+
+## Phase 21 Screenshots
+
+- `docs/screenshots/phase-21-client-booking-page.png`
+- `docs/screenshots/phase-21-admin-dashboard-page.png`
+- `docs/screenshots/phase-21-mobile-booking-page.png`
 
 ## Run Locally
 

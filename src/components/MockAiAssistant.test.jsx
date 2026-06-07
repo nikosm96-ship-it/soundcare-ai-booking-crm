@@ -14,4 +14,17 @@ describe('MockAiAssistant', () => {
       'This message is a non-medical administrative draft.',
     );
   });
+
+  test('generated admin draft avoids portfolio implementation wording', async () => {
+    const user = userEvent.setup();
+    render(<MockAiAssistant refreshKey={0} />);
+
+    await user.click(screen.getByRole('button', { name: /generate draft/i }));
+
+    const draftText = screen.getByLabelText(/generated draft/i).value.toLowerCase();
+
+    expect(draftText).not.toContain('demo');
+    expect(draftText).not.toContain('fake');
+    expect(draftText).not.toContain('mock ai');
+  });
 });

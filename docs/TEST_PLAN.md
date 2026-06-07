@@ -1,6 +1,37 @@
 # Test Plan
 
-## Current Phase: Phase 20
+## Current Phase: Phase 21
+
+Professional UI redesign checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm this is still a React + Vite app from `package.json` and `vite.config.js`.
+- Confirm the app has a `Book Appointment` client view and an `Admin Dashboard` view using React state navigation.
+- Confirm the client view shows SoundCare Hearing Care branding, `Request an Appointment`, the appointment request form, help/contact copy, and urgent-care safety note.
+- Confirm the admin view shows a dark teal sidebar, topbar, overview cards, recent bookings table, status badges, status update controls, and Administrative Draft Assistant.
+- Submit a fake booking request and confirm the success confirmation appears.
+- Confirm the admin dashboard shows the submitted booking.
+- Confirm changing a status updates the row and analytics.
+- Confirm generated administrative draft output includes `This message is a non-medical administrative draft.`
+- Confirm the visible app UI does not include: demo, fake, portfolio, MVP, mock AI, localStorage, Supabase, Vercel, recruiter.
+- Confirm docs still explain portfolio/demo safety boundaries clearly.
+- Confirm screenshots exist:
+  - `docs/screenshots/phase-21-client-booking-page.png`
+  - `docs/screenshots/phase-21-admin-dashboard-page.png`
+  - `docs/screenshots/phase-21-mobile-booking-page.png`
+- Run `npm run test`.
+- Run `npm run build`.
+- Run the app locally and check desktop/mobile browser rendering.
+- Check browser console for errors.
+- Confirm no horizontal overflow on mobile.
+- Run `git status` and review changed files.
+- Confirm no authentication, payments, real AI API, backend API routes, production medical claims, real patient data, diagnosis, treatment recommendations, or HIPAA/GDPR claims were added.
+
+Phase 21 validation notes:
+- Expected visible UI change is `yes`.
+- Actual visible UI change is `yes`: the app is now a professional two-view booking CRM surface.
+- Existing behavior remains: validation, booking submission, localStorage fallback, Supabase insert attempt when configured, dashboard listing, status updates, analytics refresh, and administrative draft safety line.
+
+## Phase 20
 
 Interview readiness and pause-point checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

@@ -1,7 +1,7 @@
 # Portfolio Walkthrough
 
 ## Project Elevator Pitch
-SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It demonstrates how a small frontend application can collect demo booking requests, persist dashboard data in the browser, insert fake booking requests into Supabase, track CRM-style statuses, show simple analytics, and generate safe mock administrative draft text. The project stays intentionally small so the portfolio version can focus on React fundamentals, product thinking, deployment, testing, and clear safety boundaries.
+SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It demonstrates how a small frontend application can present a professional client booking page, collect demo booking requests, persist dashboard data in the browser, insert fake booking requests into Supabase, track CRM-style statuses, show simple analytics, and generate safe administrative draft text. The project stays intentionally small so the portfolio version can focus on React fundamentals, product thinking, deployment, testing, UI polish, and clear safety boundaries.
 
 ## Problem And Goal
 The MVP demonstrates a common small-business problem: a clinic needs a simple way to collect booking requests, review them, track follow-up status, and prepare administrative communication without using scattered notes or spreadsheets.
@@ -10,11 +10,14 @@ A hearing-care booking CRM is a useful portfolio scenario because it combines re
 
 ## Feature Walkthrough
 
-### Feature Summary
-Start with the top feature summary to explain the app at a glance. Point out that the MVP covers booking requests, CRM tracking, analytics, and a mock AI draft assistant without adding a full admin backend or real AI calls.
+### Client Booking View
+Start with the `Book Appointment` view. Point out the SoundCare Hearing Care branding, appointment hero, clinic-inspired visual panel, polished request form, contact/help area, and urgent-care safety note.
 
 ### Booking Form
-Show how a visitor can submit a fake booking request with required name, email, and service fields. Explain that the form validates required inputs, saves demo booking data locally for the dashboard, and can insert fake requests into Supabase when browser-safe environment variables are configured.
+Show how a visitor can submit a fake booking request with required full name, email address, and service fields. Explain that the form validates required inputs, saves demo booking data locally for the dashboard, can insert fake requests into Supabase when browser-safe environment variables are configured, and shows the `Thank you!` confirmation after submission.
+
+### Admin Dashboard View
+Use the `Admin Dashboard` navigation button to switch to the internal view. Point out the dark teal sidebar, overview cards, recent bookings table, status badges, and admin topbar.
 
 ### Analytics Overview
 Use the analytics cards to show how app state becomes useful operational information. Explain that the counts update from the same local booking data used by the dashboard.
@@ -28,11 +31,11 @@ Change a booking status during the walkthrough and show the analytics updating a
 ### Reset Demo Bookings
 Use the reset action to return the app to a clean demo state. Explain that this makes the project easy to present repeatedly without keeping personal or real patient data.
 
-### Mock AI Assistant
-Generate a mock assistant draft from a fake booking. Explain that this is template-based administrative text only, with no API key, no real AI model, no message sending, and no medical advice.
+### Administrative Draft Assistant
+Generate an administrative draft from a fake booking. Explain that this is template-based administrative text only, with no API key, no real AI model, no message sending, and no medical advice.
 
-### Footer Safety Notes
-End the walkthrough by pointing to the footer safety notes. Use them to explain that the app is a portfolio MVP, uses fake/demo data only, and does not provide medical advice.
+### Safety Notes
+End the walkthrough by pointing to the client urgent-care note and footer safety copy. Use the docs to explain that the app is a portfolio MVP, uses fake/demo data only, and does not provide medical advice.
 
 ## Screenshots Checklist
 - `screenshots/first-screen.png` - first screen / header + feature summary
@@ -43,6 +46,9 @@ End the walkthrough by pointing to the footer safety notes. Use them to explain 
 - `screenshots/mock-ai-draft.png` - Mock AI Assistant generated administrative draft
 - `screenshots/mobile-layout.png` - mobile layout check
 - `screenshots/footer-safety-note.png` - footer safety note
+- `screenshots/phase-21-client-booking-page.png` - redesigned client booking page
+- `screenshots/phase-21-admin-dashboard-page.png` - redesigned admin dashboard page
+- `screenshots/phase-21-mobile-booking-page.png` - mobile booking page
 
 ## Interview Talking Points
 - React + Vite was chosen because it is fast to set up, beginner-friendly, and well suited for a focused frontend portfolio MVP.

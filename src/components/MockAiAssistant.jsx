@@ -17,9 +17,9 @@ const toneOpeners = {
 };
 
 const toneClosings = {
-  Professional: 'Thank you, SoundCare Demo Team',
-  Friendly: 'Thanks, SoundCare Demo Team',
-  Brief: 'SoundCare Demo Team',
+  Professional: 'Thank you, SoundCare Team',
+  Friendly: 'Thanks, SoundCare Team',
+  Brief: 'SoundCare Team',
 };
 
 function displayValue(value, fallback) {
@@ -48,10 +48,10 @@ function createDraftBody({ booking, draftType, tone }) {
   const closing = toneClosings[tone];
 
   const templates = {
-    'Appointment reminder': `${opener} ${customerName},\n\nThis is a reminder for your demo ${service} booking preferred for ${dateTime}. Please reply with any administrative scheduling questions or updates.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
-    'Follow-up message': `${opener} ${customerName},\n\nThank you for your demo ${service} booking request. We are following up to confirm the preferred appointment details: ${dateTime}. Please let us know if the contact or scheduling details need to be updated.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
-    'Missing information request': `${opener} ${customerName},\n\nWe are reviewing your demo ${service} booking request and need a little more administrative information before confirming the appointment. Please reply with any missing contact details or scheduling preferences.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
-    'Reschedule request': `${opener} ${customerName},\n\nWe received your demo ${service} booking preference for ${dateTime}. If you need to reschedule, please reply with a new preferred date and time.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
+    'Appointment reminder': `${opener} ${customerName},\n\nThis is a reminder for your ${service} booking preferred for ${dateTime}. Please reply with any administrative scheduling questions or updates.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
+    'Follow-up message': `${opener} ${customerName},\n\nThank you for your ${service} booking request. We are following up to confirm the preferred appointment details: ${dateTime}. Please let us know if the contact or scheduling details need to be updated.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
+    'Missing information request': `${opener} ${customerName},\n\nWe are reviewing your ${service} booking request and need a little more administrative information before confirming the appointment. Please reply with any missing contact details or scheduling preferences.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
+    'Reschedule request': `${opener} ${customerName},\n\nWe received your ${service} booking preference for ${dateTime}. If you need to reschedule, please reply with a new preferred date and time.\n\nThis message is a non-medical administrative draft.\n\n${closing}`,
   };
 
   if (tone === 'Brief') {
@@ -105,14 +105,10 @@ export default function MockAiAssistant({ refreshKey }) {
   }
 
   return (
-    <section className="mock-ai-assistant" aria-labelledby="mock-ai-title">
+    <section className="mock-ai-assistant" aria-labelledby="draft-assistant-title">
       <div className="section-heading">
-        <p className="phase-label">Administrative assistant</p>
-        <h2 id="mock-ai-title">Mock AI Assistant</h2>
-        <p>
-          Generate safe administrative draft text from fake demo booking data.
-          No real AI, API keys, backend calls, or message sending are used.
-        </p>
+        <h2 id="draft-assistant-title">Administrative Draft Assistant</h2>
+        <p>Create scheduling draft text from the selected booking request.</p>
       </div>
 
       {bookings.length > 0 ? (
@@ -205,7 +201,7 @@ export default function MockAiAssistant({ refreshKey }) {
         </div>
       ) : (
         <p className="empty-state">
-          No demo bookings are available for draft generation.
+          No bookings are available for draft generation.
         </p>
       )}
     </section>
