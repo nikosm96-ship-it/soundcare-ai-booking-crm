@@ -1,6 +1,34 @@
 # Test Plan
 
-## Current Phase: Phase 9
+## Current Phase: Phase 10
+
+Manual checks:
+- Confirm `docs/screenshots/` exists.
+- Confirm these screenshots exist and are readable:
+  - `first-screen.png`
+  - `analytics-overview.png`
+  - `booking-form.png`
+  - `crm-dashboard.png`
+  - `status-change.png`
+  - `mock-ai-draft.png`
+  - `mobile-layout.png`
+  - `footer-safety-note.png`
+- Confirm the local app loads without a Vite/framework error overlay before capture.
+- Confirm browser console warnings/errors are empty or explained.
+- Confirm screenshots use fake/demo data only.
+- Confirm `mock-ai-draft.png` shows administrative draft text only and includes `This message is a non-medical administrative draft.`
+- Confirm `mobile-layout.png` has no clipped text, overlapping content, or horizontal overflow.
+- Confirm no app features, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or deployment were added.
+- If only screenshots/docs changed, `npm run build` is optional.
+
+Phase 10 validation notes:
+- Captured screenshots from the local Vite app at `http://127.0.0.1:5173`.
+- Desktop captures used a clear desktop viewport for the first screen and section screenshots.
+- Mobile capture used a narrow mobile viewport and confirmed `scrollWidth` matched `clientWidth`.
+- Screenshot data came from built-in fake demo bookings plus one fake portfolio booking: `Alex Demo <alex.demo@example.com>`.
+- App status copy was adjusted for screenshot readiness, so build validation was run after the app file change.
+
+## Phase 9 Documentation Checks
 
 Manual checks:
 - Review `docs/PORTFOLIO_WALKTHROUGH.md`.

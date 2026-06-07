@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.0 - 2026-06-07
+- Completed Phase 10 portfolio screenshot capture and documentation.
+- Added `docs/screenshots/first-screen.png`, `analytics-overview.png`, `booking-form.png`, `crm-dashboard.png`, `status-change.png`, `mock-ai-draft.png`, `mobile-layout.png`, and `footer-safety-note.png`.
+- Updated the portfolio walkthrough, README, product owner notes, and test plan to reference the captured screenshot set.
+- Updated the app status label to read as portfolio-ready instead of an internal QA phase during screenshot review.
+- Verified the local app loaded without framework error overlays or console warnings/errors during screenshot capture.
+- Verified the mobile capture had no horizontal overflow.
+- Used fake/demo data only, including the built-in demo records and `Alex Demo <alex.demo@example.com>`.
+- Kept app features, UI, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and deployment out of scope.
+
 ## 0.11.0 - 2026-06-07
 - Completed Phase 9 portfolio walkthrough and screenshot preparation documentation.
 - Added `docs/PORTFOLIO_WALKTHROUGH.md` with elevator pitch, problem/goal framing, feature walkthrough, screenshot checklist, interview talking points, limitations, and next improvements.

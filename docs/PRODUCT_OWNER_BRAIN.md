@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 9: Portfolio walkthrough and screenshot preparation docs.
+Phase 10: Portfolio screenshot capture and documentation.
 
-Goal: prepare a clear portfolio presentation path, screenshot checklist, interview talking points, limitations, and next-step story without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: capture readable portfolio screenshots into `docs/screenshots/` and document the screenshot set without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -48,13 +48,14 @@ Goal: prepare a clear portfolio presentation path, screenshot checklist, intervi
 - Phase 6: Mock AI assistant.
 - Phase 7: Portfolio polish and presentation readiness.
 - Phase 8: Final QA pass and portfolio-readiness review.
+- Phase 9: Portfolio walkthrough and screenshot preparation docs.
 
 ## Next Phase
-Capture portfolio screenshots and prepare deployment only after Phase 9 documentation is validated.
+Prepare deployment only after the Phase 10 screenshot set is reviewed.
 
 ## Current Blockers
 - Local PATH was adjusted so PowerShell 7, Node/npm, and Git are available from new terminals.
-- Portfolio screenshots have not been captured yet.
+- Portfolio screenshots have been captured into `docs/screenshots/`.
 - Deployment has not started yet.
 
 ## Important Decisions
@@ -81,3 +82,4 @@ The MVP is complete when:
 9. Test plan is completed.
 10. Nikos can explain the project in an interview.
 11. Portfolio walkthrough and screenshot checklist are ready.
+12. Portfolio screenshots are captured and documented.

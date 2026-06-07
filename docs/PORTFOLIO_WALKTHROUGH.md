@@ -35,14 +35,14 @@ Generate a mock assistant draft from a fake booking. Explain that this is templa
 End the walkthrough by pointing to the footer safety notes. Use them to explain that the app is a portfolio MVP, uses fake/demo data only, and does not provide medical advice.
 
 ## Screenshots Checklist
-- First screen / header + feature summary
-- Analytics overview
-- Booking form
-- Dashboard with bookings
-- Status change interaction
-- Mock AI Assistant generated draft
-- Mobile layout
-- Footer safety note
+- `screenshots/first-screen.png` - first screen / header + feature summary
+- `screenshots/analytics-overview.png` - analytics overview
+- `screenshots/booking-form.png` - booking form with fake portfolio data
+- `screenshots/crm-dashboard.png` - dashboard with fake demo bookings
+- `screenshots/status-change.png` - status change interaction after updating a fake booking
+- `screenshots/mock-ai-draft.png` - Mock AI Assistant generated administrative draft
+- `screenshots/mobile-layout.png` - mobile layout check
+- `screenshots/footer-safety-note.png` - footer safety note
 
 ## Interview Talking Points
 - React + Vite was chosen because it is fast to set up, beginner-friendly, and well suited for a focused frontend portfolio MVP.

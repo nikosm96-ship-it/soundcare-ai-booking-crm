@@ -6,9 +6,9 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Phase 8: final QA pass and portfolio-readiness review.
+Phase 10: portfolio screenshots captured and documented.
 
-The MVP is browser-only and designed for portfolio review. The final QA pass confirms the first screen stays focused on the working app, then presents the core features, booking form, analytics, mock assistant, and CRM dashboard in a readable layout.
+The MVP is browser-only and designed for portfolio review. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
 
 ## Features
 
@@ -67,6 +67,8 @@ The app does not provide medical advice, diagnosis, treatment recommendations, c
 ## Portfolio Walkthrough
 
 For presentation flow, screenshot planning, limitations, and interview talking points, see [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md).
+
+Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
 
 ## Current Limitations
 
