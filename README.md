@@ -86,6 +86,10 @@ Use these settings:
 
 No environment variables or secrets are required for the current portfolio MVP. The deployed app remains browser-only and uses fake/demo data with browser localStorage.
 
+## Backend Planning
+
+Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md). This is planning only: the current app still has no backend connection, Supabase client code, environment variables, authentication, payments, or real patient data.
+
 ## Safety And Demo Data
 
 This project is a portfolio demo only. Use fake/demo data only.
@@ -112,4 +116,4 @@ Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots
 
 ## Project Docs
 
-See `docs/` for the product spec, roadmap, decisions log, prompt log, test plan, changelog, and learning notes.
+See `docs/` for the backend plan, product spec, roadmap, decisions log, prompt log, test plan, changelog, and learning notes.

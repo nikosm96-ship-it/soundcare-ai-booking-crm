@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.15.0 - 2026-06-07
+- Completed Phase 15 backend/data persistence planning.
+- Added `docs/BACKEND_PLAN.md` for a future Supabase `bookings` table, field types, status mapping, fake/demo data rules, security/privacy notes, RLS planning, environment variable rules, migration/setup plan, frontend integration path, risks, decisions, and recommended next phases.
+- Linked the backend plan from README.
+- Updated roadmap, product owner notes, and test plan for Phase 15 completion and Phase 16 Supabase setup planning.
+- Kept the app browser-only with localStorage as the active persistence layer.
+- Kept app behavior, visible UI, Supabase client code, backend APIs, environment files, secrets, authentication, payments, real AI calls, production dependencies, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.14.0 - 2026-06-07
 - Completed Phase 14 automated test coverage for existing MVP behavior.
 - Added Vitest, jsdom, and React Testing Library as dev-only test tooling.

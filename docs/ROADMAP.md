@@ -153,14 +153,29 @@ Completed:
 - Tested booking form empty-submit validation for name, email, and service.
 - Confirmed the app still loads with no expected visible UI change.
 
+### Phase 15: Backend/Data Persistence Planning
+Goal: plan a future Supabase database persistence layer without connecting a backend yet.
+
+Completed:
+- Added `docs/BACKEND_PLAN.md`.
+- Documented why localStorage is enough for the current portfolio MVP but not enough for a future cross-browser booking workflow.
+- Selected Supabase as the preferred future backend option.
+- Proposed a `bookings` table, fields, Postgres/Supabase types, and status mapping from the current booking constants.
+- Documented fake/demo data policy, privacy notes, RLS planning notes, environment variable rules, migration/setup plan, frontend integration plan, out-of-scope items, risks, decisions, and recommended next phases.
+- Kept the app browser-only with localStorage as the current persistence layer.
+- Did not add Supabase client code, backend APIs, environment files, secrets, auth, payments, real AI calls, real patient data, production dependencies, or visible UI changes.
+
 ## Next Optional Phase
 
-### Phase 15: Backend/Data Persistence Planning
-Goal: decide whether the next portfolio step should stay frontend-only or introduce a small backend/data layer.
+### Phase 16: Supabase Setup Planning And Migration Draft
+Goal: prepare the Supabase project setup and database migration plan without changing app behavior.
 
 Suggested acceptance criteria:
-- Document the backend option and the frontend-only option.
-- Keep the next step fake/demo-data safe.
+- Draft the `bookings` table SQL migration from `docs/BACKEND_PLAN.md`.
+- Enable RLS in the proposed migration.
+- Propose conservative RLS policies before any public insert or admin access is enabled.
+- Document environment variable names without committing `.env` files or secrets.
+- Keep localStorage as the active app persistence layer.
 - Do not add real patient data, authentication, payments, or real AI integration without a separate approved phase.
 
 ## Future Optional Improvements

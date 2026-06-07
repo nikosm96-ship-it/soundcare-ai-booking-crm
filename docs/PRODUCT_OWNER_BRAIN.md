@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 14: Automated test coverage completed.
+Phase 15: backend/data persistence planning completed.
 
-Goal: add focused automated tests for existing MVP behavior without changing app features, backend, real AI, auth, payments, production dependencies, real patient data, or medical claims.
+Goal: document a future Supabase persistence path without changing app features, browser-only behavior, localStorage, real AI, auth, payments, production dependencies, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -55,15 +55,18 @@ Goal: add focused automated tests for existing MVP behavior without changing app
 - Phase 12: First public Vercel deployment.
 - Phase 13: Portfolio final review and sharing preparation.
 - Phase 14: Automated test coverage for existing MVP behavior.
+- Phase 15: Backend/data persistence planning for a future Supabase database integration.
 
 ## Next Phase
-Optional Phase 15: backend/data persistence planning.
+Optional Phase 16: Supabase setup planning and migration draft.
 
 Suggested scope:
-- Decide whether the next portfolio step should remain frontend-only or introduce a simple backend.
-- If backend is selected, define a small fake/demo-safe data model first.
+- Use `docs/BACKEND_PLAN.md` as the source of truth.
+- Draft a Supabase `bookings` table migration and RLS policy proposal.
+- Document environment variable setup without committing `.env` files or secrets.
+- Keep localStorage as the active persistence layer until Supabase behavior is approved and verified.
 - Keep real patient data, authentication, payments, and real AI integration out of scope until separately approved.
-- No new product features, backend APIs, real AI calls, authentication, payments, or real patient data.
+- No new product features, broad admin access, backend APIs, real AI calls, authentication, payments, or real patient data.
 
 Expected deployment settings:
 - Framework: Vite.
@@ -79,6 +82,7 @@ Expected deployment settings:
 - Public Vercel deployment is complete.
 - Portfolio sharing copy is complete in `docs/PORTFOLIO_COPY.md`.
 - Automated test coverage is in place for the core browser-only MVP behavior.
+- Backend persistence planning is complete in `docs/BACKEND_PLAN.md`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -89,6 +93,7 @@ Expected deployment settings:
 - Start with mock AI output before optional real API integration.
 - Never store or use real patient data.
 - Do not add Next.js, Laravel, Docker, payments, or complex CI/CD.
+- Supabase is the preferred future backend option, but it must be introduced in a separate approved phase with RLS, fake/demo data rules, environment variables, and no frontend service role key.
 
 ## Definition of Done for MVP
 The MVP is complete when:
@@ -108,3 +113,4 @@ The MVP is complete when:
 13. The MVP is deployed publicly and linked from README/docs.
 14. Portfolio sharing copy is ready for CV, LinkedIn, portfolio pages, and interviews.
 15. Automated tests cover the core existing MVP behavior.
+16. Backend persistence planning exists for a future Supabase database phase.

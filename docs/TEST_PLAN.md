@@ -1,6 +1,33 @@
 # Test Plan
 
-## Current Phase: Phase 14
+## Current Phase: Phase 15
+
+Documentation checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is React + Vite from `package.json` and `vite.config.js`.
+- Confirm `docs/BACKEND_PLAN.md` exists.
+- Confirm the backend plan documents the purpose of backend persistence and why localStorage is not enough for a future booking workflow.
+- Confirm Supabase is documented as the preferred future backend option.
+- Confirm the proposed table name is `bookings`.
+- Confirm the proposed fields include `id`, `customer_name`, `customer_email`, `customer_phone`, `service`, `preferred_date`, `preferred_time`, `notes`, `status`, `created_at`, and `updated_at`.
+- Confirm suggested Postgres/Supabase data types are listed.
+- Confirm status values map from `src/data/bookingStatus.js`.
+- Confirm fake/demo data policy, security/privacy notes, RLS planning notes, environment variable plan, migration/setup plan, frontend integration plan, out-of-scope list, risks, decisions, and recommended next phases are included.
+- Confirm README links to `docs/BACKEND_PLAN.md`.
+- Confirm roadmap, changelog, product owner notes, and test plan mention Phase 15.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run `git status` and review changed files.
+- Confirm expected visible UI change is `no`.
+- Confirm actual visible UI change is `no`.
+- Confirm no app feature, Supabase client code, backend API, auth, payment flow, production dependency, real AI call, `.env` file, secret, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 15 validation notes:
+- Phase 15 is planning/documentation only.
+- The current app remains browser-only and uses browser localStorage.
+- No screenshot is required unless app files change.
+
+## Phase 14 Automated Test Coverage Checks
 
 Automated checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
