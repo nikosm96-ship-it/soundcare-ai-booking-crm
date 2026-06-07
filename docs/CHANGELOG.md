@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased - 2026-06-07
+- Completed Phase 11 deployment preparation documentation.
+- Confirmed the app is React + Vite with `npm run build` as the production build command and `dist` as the static output directory.
+- Documented recommended static deployment settings for Vercel or Netlify.
+- Confirmed no `.env` files or tracked secrets are present.
+- Kept app features, backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, and automatic deployment out of scope.
+
 ## 0.12.2 - 2026-06-07
 - Replaced internal phase labels in the visible app UI with portfolio-friendly product labels.
 - Refreshed the portfolio screenshot set so screenshots match the current UI copy.

@@ -108,18 +108,28 @@ Completed:
 - Fake/demo data only.
 - No app feature expansion.
 
-## Next Phase
-
 ### Phase 11: Deployment Preparation
 Goal: prepare the project for a first public portfolio deployment.
 
+Completed:
+- Confirmed the project is a React + Vite app.
+- Confirmed the local production build command is `npm run build`.
+- Confirmed the deployment output directory is `dist`.
+- Confirmed no `.env` files or tracked secrets are present.
+- Added deployment notes to README/docs.
+- Kept localStorage/demo mode as the current browser-only data layer.
+- Did not add backend APIs, real AI calls, authentication, payments, new libraries, or real patient data.
+
+## Next Phase
+
+### Phase 12: First Public Deployment
+Goal: deploy the existing portfolio MVP to a public static hosting target after explicit approval.
+
 Planned acceptance criteria:
-- Choose the deployment target.
-- Confirm the build command and output directory.
-- Keep secrets out of the repo.
-- Keep localStorage/demo mode working after deployment.
-- Add deployment notes to README/docs.
-- Do not add backend APIs, real AI calls, authentication, payments, or real patient data during deployment preparation.
+- Deploy the current static Vite build to the chosen platform.
+- Confirm the deployed URL loads the app.
+- Confirm booking form, dashboard, analytics, and mock assistant still work with fake/demo localStorage data.
+- Confirm no secrets, backend APIs, real AI calls, authentication, payments, or real patient data are introduced.
 
 ## Future Optional Improvements
 

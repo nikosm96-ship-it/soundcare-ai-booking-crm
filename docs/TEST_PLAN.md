@@ -1,6 +1,29 @@
 # Test Plan
 
-## Current Phase: Phase 10
+## Current Phase: Phase 11
+
+Manual checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm the project is a React + Vite app from `package.json` and `vite.config.js`.
+- Run `npm run build`.
+- Confirm deployment settings:
+  - Framework: Vite.
+  - Build command: `npm run build`.
+  - Output directory: `dist`.
+- Confirm no `.env` files exist in the project tree.
+- Confirm no `.env` files are tracked by Git.
+- Confirm README includes a short deployment section.
+- Confirm roadmap, changelog, product owner notes, and test plan mention Phase 11 deployment preparation.
+- Run Git status and review the changed files.
+- Confirm no backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or automatic deployment were added.
+
+Phase 11 validation notes:
+- Deployment preparation is documentation-only.
+- Recommended hosting target is a static Vite deployment on Vercel or Netlify.
+- The current portfolio MVP does not require environment variables or secrets.
+- The deployed app should remain browser-only and use fake/demo localStorage data.
+
+## Phase 10 Screenshot Checks
 
 Manual checks:
 - Confirm `docs/screenshots/` exists.

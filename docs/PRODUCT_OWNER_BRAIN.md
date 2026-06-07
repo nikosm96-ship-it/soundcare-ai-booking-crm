@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 10: Portfolio screenshot capture and documentation.
+Phase 11: Deployment preparation completed.
 
-Goal: capture readable portfolio screenshots into `docs/screenshots/` and document the screenshot set without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: prepare the existing React + Vite portfolio MVP for a first public static deployment without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -49,14 +49,23 @@ Goal: capture readable portfolio screenshots into `docs/screenshots/` and docume
 - Phase 7: Portfolio polish and presentation readiness.
 - Phase 8: Final QA pass and portfolio-readiness review.
 - Phase 9: Portfolio walkthrough and screenshot preparation docs.
+- Phase 10: Portfolio screenshot capture and documentation.
+- Phase 11: Deployment preparation.
 
 ## Next Phase
-Prepare deployment only after the Phase 10 screenshot set is reviewed.
+Phase 12: first public static deployment, only when explicitly requested.
+
+Expected deployment settings:
+- Framework: Vite.
+- Build command: `npm run build`.
+- Output directory: `dist`.
+- Environment variables: none required for the current portfolio MVP.
 
 ## Current Blockers
 - Local PATH was adjusted so PowerShell 7, Node/npm, and Git are available from new terminals.
 - Portfolio screenshots have been captured into `docs/screenshots/`.
-- Deployment has not started yet.
+- Deployment preparation is complete.
+- Public deployment has not started yet.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.

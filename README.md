@@ -58,6 +58,18 @@ If the build command fails in PowerShell with `Access is denied`, try:
 node node_modules/vite/bin/vite.js build
 ```
 
+## Deployment
+
+Recommended deployment target: Vercel or Netlify as a static Vite site.
+
+Use these settings:
+
+- Framework: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
+
+No environment variables or secrets are required for the current portfolio MVP. The deployed app remains browser-only and uses fake/demo data with browser localStorage.
+
 ## Safety And Demo Data
 
 This project is a portfolio demo only. Use fake/demo data only.
