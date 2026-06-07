@@ -125,11 +125,24 @@ Completed:
 ### Phase 12: First Public Deployment
 Goal: deploy the existing portfolio MVP to a public static hosting target after explicit approval.
 
+Completed:
+- Deployed the current static Vite app to Vercel.
+- Published live URL: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Confirmed the deployed URL loads the app.
+- Confirmed booking form, dashboard, analytics, and mock assistant work with fake/demo localStorage data.
+- Added a small SVG favicon to avoid a deployed favicon 404.
+- Confirmed no secrets, backend APIs, real AI calls, authentication, payments, or real patient data were introduced.
+
+## Next Phase
+
+### Phase 13: Portfolio Final Review
+Goal: review the live deployment and GitHub repository as a portfolio artifact before sharing it publicly.
+
 Planned acceptance criteria:
-- Deploy the current static Vite build to the chosen platform.
-- Confirm the deployed URL loads the app.
-- Confirm booking form, dashboard, analytics, and mock assistant still work with fake/demo localStorage data.
-- Confirm no secrets, backend APIs, real AI calls, authentication, payments, or real patient data are introduced.
+- Review live URL, README, screenshots, and walkthrough as a visitor/interviewer would.
+- Confirm GitHub repository presentation is clean.
+- Confirm the deployed app remains browser-only with fake/demo data.
+- Prepare a short portfolio description Nikos can use on CV, LinkedIn, or a personal portfolio site.
 
 ## Future Optional Improvements
 

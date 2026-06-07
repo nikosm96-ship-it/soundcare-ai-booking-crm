@@ -6,9 +6,11 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Portfolio-ready MVP with screenshots captured and documented.
+Portfolio-ready MVP deployed publicly on Vercel.
 
 The MVP is browser-only and designed for portfolio review. The screenshot set in `docs/screenshots/` captures the first screen, analytics, booking form, CRM dashboard, status update, mock assistant draft, mobile layout, and footer safety note.
+
+Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
 ## Features
 
@@ -59,6 +61,8 @@ node node_modules/vite/bin/vite.js build
 ```
 
 ## Deployment
+
+Current deployment: [Vercel live demo](https://soundcare-ai-booking-crm.vercel.app/).
 
 Recommended deployment target: Vercel or Netlify as a static Vite site.
 

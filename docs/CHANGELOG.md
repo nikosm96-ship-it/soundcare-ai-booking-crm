@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased - 2026-06-07
+## 0.13.0 - 2026-06-07
+- Completed Phase 12 first public deployment to Vercel.
+- Published the live demo at `https://soundcare-ai-booking-crm.vercel.app/`.
+- Validated the deployed app loads, accepts a fake booking submission, updates analytics and dashboard state, and generates a safe mock administrative draft.
+- Added a small SVG favicon to avoid the deployed browser favicon 404.
+- Updated README and project docs with the live deployment URL.
 - Completed Phase 11 deployment preparation documentation.
 - Confirmed the app is React + Vite with `npm run build` as the production build command and `dist` as the static output directory.
 - Documented recommended static deployment settings for Vercel or Netlify.

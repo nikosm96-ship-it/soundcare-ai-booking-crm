@@ -33,9 +33,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Nikos should read the output and bring back logs, screenshots, changed files, and errors.
 
 ## Current Phase
-Phase 11: Deployment preparation completed.
+Phase 12: First public deployment completed.
 
-Goal: prepare the existing React + Vite portfolio MVP for a first public static deployment without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
+Goal: publish the existing React + Vite portfolio MVP as a public static Vercel deployment without changing app features, backend, real AI, auth, payments, external libraries, real patient data, or medical claims.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -51,21 +51,23 @@ Goal: prepare the existing React + Vite portfolio MVP for a first public static 
 - Phase 9: Portfolio walkthrough and screenshot preparation docs.
 - Phase 10: Portfolio screenshot capture and documentation.
 - Phase 11: Deployment preparation.
+- Phase 12: First public Vercel deployment.
 
 ## Next Phase
-Phase 12: first public static deployment, only when explicitly requested.
+Phase 13: portfolio final review and sharing preparation.
 
 Expected deployment settings:
 - Framework: Vite.
 - Build command: `npm run build`.
 - Output directory: `dist`.
 - Environment variables: none required for the current portfolio MVP.
+- Live URL: `https://soundcare-ai-booking-crm.vercel.app/`.
 
 ## Current Blockers
 - Local PATH was adjusted so PowerShell 7, Node/npm, and Git are available from new terminals.
 - Portfolio screenshots have been captured into `docs/screenshots/`.
 - Deployment preparation is complete.
-- Public deployment has not started yet.
+- Public Vercel deployment is complete.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -92,3 +94,4 @@ The MVP is complete when:
 10. Nikos can explain the project in an interview.
 11. Portfolio walkthrough and screenshot checklist are ready.
 12. Portfolio screenshots are captured and documented.
+13. The MVP is deployed publicly and linked from README/docs.

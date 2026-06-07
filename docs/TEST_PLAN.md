@@ -1,8 +1,27 @@
 # Test Plan
 
-## Current Phase: Phase 11
+## Current Phase: Phase 12
 
 Manual checks:
+- Open the live Vercel URL: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Confirm the deployed app loads with the `SoundCare AI Booking CRM` title.
+- Confirm the initial demo analytics total is `4`.
+- Submit a fake booking and confirm the success message appears.
+- Confirm analytics update from `4` to `5`.
+- Confirm the dashboard includes the submitted fake booking.
+- Generate a mock assistant draft and confirm it includes `This message is a non-medical administrative draft.`
+- Confirm the deployed app has no favicon 404 after the favicon update is deployed.
+- Confirm README and project docs include the live URL.
+- Confirm no backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims were added.
+
+Phase 12 validation notes:
+- Live URL: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Hosting platform: Vercel.
+- The app remains browser-only and uses fake/demo localStorage data.
+- The current portfolio MVP does not require environment variables or secrets.
+
+## Phase 11 Deployment Preparation Checks
+
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
 - Confirm the project is a React + Vite app from `package.json` and `vite.config.js`.
 - Run `npm run build`.
@@ -16,12 +35,6 @@ Manual checks:
 - Confirm roadmap, changelog, product owner notes, and test plan mention Phase 11 deployment preparation.
 - Run Git status and review the changed files.
 - Confirm no backend APIs, real AI calls, authentication, payments, external libraries, real patient data, medical advice, diagnosis, treatment recommendations, clinical claims, or automatic deployment were added.
-
-Phase 11 validation notes:
-- Deployment preparation is documentation-only.
-- Recommended hosting target is a static Vite deployment on Vercel or Netlify.
-- The current portfolio MVP does not require environment variables or secrets.
-- The deployed app should remain browser-only and use fake/demo localStorage data.
 
 ## Phase 10 Screenshot Checks
 
