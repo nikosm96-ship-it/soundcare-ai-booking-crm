@@ -146,6 +146,8 @@ For Supabase setup proof, current data flow, and backend limitations, see [Supab
 
 For final demo flow, interview answers, and what not to overclaim, see [Interview Readiness](docs/INTERVIEW_READINESS.md).
 
+For how AI assistance was used responsibly during planning, implementation prompts, review, validation, and documentation, see [AI-Assisted Development](docs/AI_ASSISTED_DEVELOPMENT.md).
+
 Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
 
 ## Current Limitations

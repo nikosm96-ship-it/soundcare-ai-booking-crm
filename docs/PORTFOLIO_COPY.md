@@ -40,6 +40,7 @@ SoundCare AI Booking CRM was built as a focused junior portfolio project to show
 - I learned how documentation, screenshots, deployment notes, and limitations make a portfolio project easier to review.
 - I practiced explaining tradeoffs, such as why mock AI and localStorage were better choices for the first MVP.
 - I learned why backend reads and updates should wait for authentication and access-control planning.
+- I learned how to use AI assistance responsibly by planning small phases, reviewing generated output, running tests/builds, checking screenshots, and documenting what was and was not built.
 
 ## Interview Talking Points
 - Why React + Vite was chosen for a fast frontend MVP.
@@ -50,6 +51,7 @@ SoundCare AI Booking CRM was built as a focused junior portfolio project to show
 - How the mock assistant is intentionally template-based and administrative only.
 - How the project avoids real patient data, medical claims, public admin database access, secret keys, and message sending.
 - How phased delivery helped keep the project understandable and portfolio-ready.
+- How AI assistance supported planning, prompts, debugging, review, and documentation while the developer still made scope decisions, validated flows, and reviewed tradeoffs.
 - What would change if this became a real production application.
 
 ## Current Limitations
@@ -74,3 +76,6 @@ SoundCare AI Booking CRM was built as a focused junior portfolio project to show
 
 ## GitHub Repo Link
 [https://github.com/nikosm96-ship-it/soundcare-ai-booking-crm](https://github.com/nikosm96-ship-it/soundcare-ai-booking-crm)
+
+## Related Documentation
+[AI-Assisted Development](AI_ASSISTED_DEVELOPMENT.md)

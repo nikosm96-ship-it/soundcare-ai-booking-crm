@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.23.0 - 2026-06-08
+- Completed Phase 23 AI-assisted development documentation.
+- Added `docs/AI_ASSISTED_DEVELOPMENT.md` explaining how AI assistance supported planning, implementation prompts, local debugging, review, validation, documentation, and portfolio storytelling.
+- Documented what the developer still owned: product decisions, scope choices, output review, manual browser testing, screenshot checks, validation commands, Git status review, and tradeoff explanations.
+- Summarized the phase-based workflow from React pivot through validation polish.
+- Documented key tradeoffs around React + Vite, localStorage-first persistence, Supabase insert-only proof, mock administrative assistant behavior, fake/demo data, no auth/payments, and the professional UI redesign.
+- Linked the AI-assisted development note from README, portfolio copy, interview readiness, roadmap, product owner notes, and test plan.
+- Kept app source code, UI, CSS, dependencies, Supabase logic, auth, payments, real AI, backend APIs, and real patient data out of scope.
+
 ## 0.22.0 - 2026-06-08
 - Completed Phase 22 professional booking form validation polish.
 - Made full name, email address, phone number, service, preferred date, and preferred time required on the client appointment request form.

@@ -7,6 +7,17 @@ The current version is intentionally scoped for a junior portfolio. It uses fake
 
 ## Completed Phases
 
+### Phase 23: AI-Assisted Development Documentation
+Goal: Explain how AI assistance was used during the project in a professional, honest, junior-developer-friendly way.
+
+Completed:
+- Added `docs/AI_ASSISTED_DEVELOPMENT.md`.
+- Documented how AI supported planning, implementation prompts, local debugging, output review, validation, documentation, and portfolio storytelling.
+- Documented what the developer still owned: scope, product decisions, manual testing, screenshot review, output review, Git status checks, and tradeoff explanations.
+- Summarized the phase-based workflow and key technical/product tradeoffs.
+- Reinforced safety and privacy boundaries, including no real patient data, medical advice, diagnosis, treatment recommendations, frontend secret keys, or public Supabase admin reads/status updates.
+- Kept app source, UI, CSS, dependencies, Supabase logic, auth, payments, real AI, backend APIs, and real patient data unchanged.
+
 ### Phase 22: Professional Booking Form Validation Polish
 Goal: Improve the client appointment request form so validation feels realistic and production-aware.
 
@@ -255,7 +266,7 @@ Future work should happen only if it improves the portfolio story or matches a s
 
 ## Next Optional Phase
 
-### Phase 23: Authenticated Admin Planning
+### Phase 24: Authenticated Admin Planning
 Goal: decide whether a future authenticated admin workflow is worth adding before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:
