@@ -1,11 +1,24 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI, polished client booking validation, and client-friendly booking save feedback.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite app with a professional two-view booking CRM UI, polished client booking validation, client-friendly booking save feedback, final QA, refreshed screenshots, and live deployment verification.
 
-The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It now presents a public `Book Appointment` view and an internal `Admin Dashboard` view. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
+The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase only as browser-safe fake/demo booking insert proof, and safe template-based administrative draft text. It presents a public `Book Appointment` view and an internal `Admin Dashboard` view. Admin dashboard reads and status updates remain local-only until auth/RLS role design is added. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
+
+### Phase 25: Final Portfolio QA
+Goal: Complete final QA, live deployment check, portfolio readiness review, screenshot refresh, and documentation polish without adding new features.
+
+Completed:
+- Confirmed the real project folder and React + Vite project shape.
+- Ran the full automated test suite and production build.
+- Verified local browser flows for validation, invalid email, valid booking submission, dashboard listing, analytics update, status update, administrative draft safety line, mobile overflow, and clean console.
+- Verified the live Vercel deployment at `https://soundcare-ai-booking-crm.vercel.app/`.
+- Submitted one fake/test booking on the live app and confirmed success feedback, dashboard update, analytics update, clean visible UI wording, clean console, and usable mobile layout.
+- Captured `docs/screenshots/phase-25-final-client-page.png`, `docs/screenshots/phase-25-final-admin-dashboard.png`, and `docs/screenshots/phase-25-final-mobile-page.png`.
+- Polished portfolio documentation and reconfirmed fake/demo data, no medical advice, Supabase insert-only proof, and local-only admin reads/status updates until auth/RLS role design.
+- Kept app features, UI redesign, auth, payments, real AI, backend admin reads, schema changes, new libraries, real patient data, diagnosis, treatment recommendations, and clinical claims out of scope.
 
 ### Phase 24: Booking Save Feedback
 Goal: Improve the booking form success confirmation so clients understand whether the appointment request was saved online or received while online saving is unavailable.
@@ -279,7 +292,7 @@ Future work should happen only if it improves the portfolio story or matches a s
 
 ## Next Optional Phase
 
-### Phase 25: Authenticated Admin Planning
+### Phase 26: Authenticated Admin Planning
 Goal: decide whether a future authenticated admin workflow is worth adding before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:

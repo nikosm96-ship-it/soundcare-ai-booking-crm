@@ -3,12 +3,12 @@
 ## Purpose
 This document is the final presentation guide for SoundCare AI Booking CRM as a junior portfolio project.
 
-The goal is to explain the project clearly without making it sound bigger than it is. The app is a polished MVP that demonstrates React, form handling, production-aware validation, state updates, local persistence, a small Supabase insert proof, testing, deployment, professional UI redesign, and responsible product boundaries.
+The goal is to explain the project clearly without making it sound bigger than it is. The app is a polished junior portfolio React + Vite app that demonstrates form handling, production-aware validation, state updates, local persistence, a small Supabase browser-safe insert proof, testing, deployment, professional UI, and responsible product boundaries.
 
 Phase 23 adds a dedicated AI-assisted development note so the project can be discussed honestly: AI helped with planning, implementation prompts, debugging, review, validation structure, and documentation, while the developer still owned scope, testing, screenshots, tradeoffs, and final decisions.
 
 ## One-Minute Explanation
-SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It has a professional client appointment request page and an internal admin dashboard. A visitor can submit a fake booking request, the app saves it locally for the dashboard, analytics update from the same booking data, and an administrative draft assistant can generate safe scheduling text. The deployed version also proves that fake booking submissions can be inserted into Supabase using browser-safe environment variables, while dashboard reads and status updates stay local until an authenticated admin phase exists.
+SoundCare AI Booking CRM is a junior portfolio React + Vite app for a fake hearing-care clinic booking workflow. It has a professional client appointment request page and an internal admin dashboard. A visitor can submit a fake booking request, the app saves it locally for the dashboard, analytics update from the same booking data, and an administrative draft assistant can generate safe scheduling text. The deployed version also proves that fake booking submissions can be inserted into Supabase using browser-safe environment variables, while dashboard reads and status updates stay local until authenticated admin access and RLS role design exist.
 
 ## Three-Minute Demo Flow
 1. Open the live app: `https://soundcare-ai-booking-crm.vercel.app/`.
@@ -63,12 +63,12 @@ The best next step would be authenticated admin access, then Supabase read/updat
 ## Current Safety Boundary
 - Fake/demo data only.
 - Public form can insert fake/demo bookings into Supabase when environment variables are configured.
-- Dashboard reads, analytics, status updates, reset behavior, and mock assistant selection remain localStorage-only.
+- Dashboard reads, analytics, status updates, reset behavior, and mock assistant selection remain localStorage-only until auth/RLS role design is added.
 - No secret or service role key is used in the frontend.
 - No auth, payments, real AI call, message sending, real patient data, or medical advice.
 
 ## Recommended Portfolio Line
-Built and deployed a React + Vite booking CRM portfolio MVP with professional booking form validation, localStorage-backed dashboard state, analytics, a safe mock assistant, automated tests, and Supabase demo insert persistence using browser-safe configuration.
+Built and deployed a junior portfolio React + Vite booking CRM app with professional booking form validation, localStorage-backed dashboard state, analytics, a safe mock assistant, automated tests, and Supabase browser-safe insert proof.
 
 ## AI-Assisted Development Note
 For a fuller explanation of how AI assistance was used and reviewed, see [AI-Assisted Development](AI_ASSISTED_DEVELOPMENT.md).

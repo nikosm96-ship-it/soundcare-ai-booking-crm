@@ -1,7 +1,7 @@
 # Product Owner Brain
 
 ## Project Goal
-SoundCare AI Booking CRM is a React portfolio MVP for a demo hearing-care clinic. It will show that Nikos can build a practical frontend application with React, state management, forms, validation, dashboard UI, local data persistence, and a safe mock AI-assistant module.
+SoundCare AI Booking CRM is a junior portfolio React + Vite app for a demo hearing-care clinic. It shows that Nikos can build a practical frontend application with React, state management, forms, validation, dashboard UI, local data persistence, Supabase browser-safe insert proof, and a safe mock AI-assistant module.
 
 ## Target Job Alignment
 This project is designed for junior software developer roles, with stronger focus on React/frontend skills after the pivot.
@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 24: booking save feedback completed.
+Phase 25: final QA, live deployment check, portfolio readiness review, screenshot refresh, and documentation polish completed.
 
-Goal: improve the appointment request success confirmation so clients can tell whether the request was saved online or received while online saving is unavailable.
+Goal: confirm the finished app is portfolio-ready without adding features or widening scope.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -65,9 +65,10 @@ Goal: improve the appointment request success confirmation so clients can tell w
 - Phase 22: Professional booking form validation polish.
 - Phase 23: AI-assisted development documentation.
 - Phase 24: Booking save feedback in the client success confirmation.
+- Phase 25: Final QA, live Vercel check, screenshot refresh, documentation polish, and security/privacy sanity check.
 
 ## Next Phase
-Optional Phase 25: authenticated admin read/status update planning.
+Optional Phase 26: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -100,6 +101,7 @@ Expected deployment settings:
 - Phase 22 validation screenshot is captured in `docs/screenshots/phase-22-booking-validation.png`.
 - AI-assisted development documentation is complete in `docs/AI_ASSISTED_DEVELOPMENT.md`.
 - Phase 24 booking save-status screenshot is captured in `docs/screenshots/phase-24-booking-save-status.png`.
+- Phase 25 final screenshots are captured in `docs/screenshots/phase-25-final-client-page.png`, `docs/screenshots/phase-25-final-admin-dashboard.png`, and `docs/screenshots/phase-25-final-mobile-page.png`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -139,3 +141,4 @@ The MVP is complete when:
 21. The client booking form validates all required appointment request fields with professional messages.
 22. Nikos can explain how AI assistance was used without overclaiming what AI or the developer did.
 23. The booking success confirmation explains whether the request was saved to the booking system or received while online saving is unavailable.
+24. Final local and live QA confirms the portfolio app works, the live deployment is available, screenshots are refreshed, and documentation clearly states Supabase is insert-proof only while admin reads/status updates remain local-only until auth/RLS role design is added.

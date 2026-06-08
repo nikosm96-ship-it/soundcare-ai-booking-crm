@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.25.0 - 2026-06-08
+- Completed Phase 25 final portfolio QA and documentation polish.
+- Confirmed the real project folder is the React + Vite SoundCare AI Booking CRM repository, not the old Codex folder.
+- Ran the full Vitest suite and production build through direct Node fallback commands because `npm` was not available on PATH in this shell.
+- Verified local browser flows: client booking page, admin dashboard, required validation, invalid email validation, valid booking submission, success feedback, dashboard listing, analytics refresh, status update, administrative draft safety line, mobile overflow, and clean console.
+- Verified the live Vercel deployment at `https://soundcare-ai-booking-crm.vercel.app/`.
+- Submitted one fake/test booking on the live app and confirmed success feedback, dashboard update, analytics update, clean visible UI wording, clean console, and usable mobile layout.
+- Refreshed final portfolio screenshots:
+  - `docs/screenshots/phase-25-final-client-page.png`
+  - `docs/screenshots/phase-25-final-admin-dashboard.png`
+  - `docs/screenshots/phase-25-final-mobile-page.png`
+- Reconfirmed the portfolio boundaries: junior React + Vite app, professional client booking page and admin dashboard, Supabase only as browser-safe booking insert proof, local-only admin reads/status updates until auth/RLS role design, fake/demo data only, and no medical advice.
+- Kept app source, UI redesign, authentication, payments, real AI, backend admin reads, Supabase schema changes, new libraries, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.24.0 - 2026-06-08
 - Completed Phase 24 booking save feedback polish.
 - Updated the booking form success confirmation so it still clearly confirms the appointment request was received.

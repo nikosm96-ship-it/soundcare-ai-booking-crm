@@ -1,6 +1,37 @@
 # Test Plan
 
-## Current Phase: Phase 24
+## Current Phase: Phase 25
+
+Final QA and portfolio readiness checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm this is the React + Vite SoundCare AI Booking CRM project.
+- Run the full test suite.
+- Run the production build.
+- Run the app locally and verify the client booking page, admin dashboard, empty-submit validation, invalid email validation, valid booking submission, success feedback, dashboard listing, analytics update, status update, administrative draft safety line, mobile overflow, and clean browser console.
+- Open the live deployment: `https://soundcare-ai-booking-crm.vercel.app/`.
+- Submit one clearly fake/test booking only.
+- Confirm live success feedback, dashboard update, analytics update, clean browser console, and usable mobile layout.
+- Confirm the visible app UI does not include: demo, fake, MVP, portfolio, mock AI, localStorage, Supabase, Vercel, recruiter.
+- Capture final screenshots:
+  - `docs/screenshots/phase-25-final-client-page.png`
+  - `docs/screenshots/phase-25-final-admin-dashboard.png`
+  - `docs/screenshots/phase-25-final-mobile-page.png`
+- Confirm documentation clearly says this is a junior portfolio React + Vite app with a professional client booking page and admin dashboard.
+- Confirm documentation says booking requests can be submitted.
+- Confirm documentation says Supabase is used only as browser-safe booking insert proof.
+- Confirm documentation says admin dashboard reads/status updates remain local-only until auth/RLS role design is added.
+- Confirm documentation says no real patient data should be used and no medical advice is provided.
+- Confirm the live deployment URL is documented.
+- Confirm no `.env` files are tracked, no secret Supabase key is committed, no service role key is committed, and no real patient data appears in source/docs/screenshots.
+- Run Git status and review changed files.
+- Confirm no authentication, payments, real AI, backend admin reads, new libraries, schema changes, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 25 validation notes:
+- Expected visible UI change is `no`.
+- Phase 25 is final QA, screenshot refresh, live deployment check, and documentation polish only.
+- Existing behavior remains: booking submission, local fallback, optional online insert attempt, dashboard listing, status updates, analytics refresh, and administrative draft safety line.
+
+## Phase 24
 
 Booking save feedback checks:
 - Confirm the booking form still shows `Your appointment request has been received.` after a valid submit.

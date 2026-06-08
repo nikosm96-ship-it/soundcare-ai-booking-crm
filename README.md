@@ -1,14 +1,14 @@
 # SoundCare AI Booking CRM
 
-SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect booking requests, present a professional client-facing appointment page, persist dashboard data in the browser, track CRM-style statuses, show simple analytics, and generate safe administrative draft text.
+SoundCare AI Booking CRM is a junior portfolio React + Vite app for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect booking requests, present a professional client-facing appointment page, persist dashboard data in the browser, track CRM-style statuses, show simple analytics, and generate safe administrative draft text.
 
 This is the active React app version of the project. The earlier WordPress plugin direction was abandoned on 2026-06-06 and the old PHP skeleton was removed.
 
 ## Current Status
 
-Portfolio-ready junior MVP deployed publicly on Vercel, with booking save feedback polish completed in Phase 24.
+Portfolio-ready junior React + Vite app deployed publicly on Vercel, with final QA, live deployment review, screenshot refresh, and documentation polish completed in Phase 25.
 
-The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The booking confirmation now tells clients whether the request was saved to the booking system or received while online saving is unavailable. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, mobile booking page, Phase 22 booking validation check, and Phase 24 booking save-status check.
+The app is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase only as browser-safe booking insert proof. Admin dashboard reads and status updates remain local-only until authentication and RLS role design are added. The current UI has a professional public `Book Appointment` view and an internal `Admin Dashboard` view. Booking requests can be submitted, and the booking confirmation tells clients whether the request was saved to the booking system or received while online saving is unavailable. The screenshot set in `docs/screenshots/` includes final Phase 25 client, admin dashboard, and mobile screenshots.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
@@ -18,7 +18,7 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - Required-field validation for full name, email address, phone number, service, preferred date, and preferred time.
 - Email format validation with client-facing error messages.
 - Booking success confirmation with client-friendly save-status feedback.
-- Browser localStorage persistence for demo bookings.
+- Browser localStorage persistence for local dashboard bookings.
 - Booking repository layer that keeps localStorage behind a clean persistence boundary.
 - Admin dashboard with a dark teal sidebar, overview cards, booking table, status badges, and status updates.
 - Reset demo bookings action.
@@ -34,17 +34,15 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - JavaScript
 - CSS
 - Browser localStorage
-- Supabase for optional fake/demo booking inserts
+- Supabase only for browser-safe fake/demo booking insert proof
 
 No external UI libraries, authentication, payments, admin backend reads, or real AI API calls are used in this phase.
 
 ## Screenshots
 
-- `docs/screenshots/phase-21-client-booking-page.png`
-- `docs/screenshots/phase-21-admin-dashboard-page.png`
-- `docs/screenshots/phase-21-mobile-booking-page.png`
-- `docs/screenshots/phase-22-booking-validation.png`
-- `docs/screenshots/phase-24-booking-save-status.png`
+- `docs/screenshots/phase-25-final-client-page.png`
+- `docs/screenshots/phase-25-final-admin-dashboard.png`
+- `docs/screenshots/phase-25-final-mobile-page.png`
 
 ## Run Locally
 
@@ -134,9 +132,11 @@ Phase 20 adds the final junior-portfolio presentation guide in [Interview Readin
 
 Phase 24 improves the booking request confirmation so clients see whether the appointment request was saved to the booking system or received while online saving is unavailable. Dashboard and analytics refresh still use the existing local workflow after submit.
 
+Phase 25 completes the final portfolio QA pass: local tests/build, local browser QA, live Vercel QA, screenshot refresh, documentation polish, and security/privacy sanity checks. No new features were added.
+
 ## Safety And Demo Data
 
-This project is a portfolio demo only. Use fake/demo data only.
+This project is a junior portfolio demo only. Use fake/demo data only. Do not enter real patient data.
 
 The app does not provide medical advice, diagnosis, treatment recommendations, clinical claims, or message sending. The mock assistant is limited to administrative draft text about scheduling and booking details.
 
@@ -157,6 +157,8 @@ Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots
 ## Current Limitations
 
 - Submitted fake/demo bookings can be inserted into Supabase when publishable environment variables are configured.
+- Supabase is used only as browser-safe booking insert proof.
+- Admin dashboard reads and status updates remain local-only until auth/RLS role design is added.
 - localStorage remains the fallback and the dashboard data source for now.
 - The AI assistant is mock/template-based only.
 - There is no authenticated admin backend workflow yet.

@@ -1,7 +1,7 @@
 # Portfolio Walkthrough
 
 ## Project Elevator Pitch
-SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It demonstrates how a small frontend application can present a professional client booking page, collect demo booking requests, persist dashboard data in the browser, insert fake booking requests into Supabase, track CRM-style statuses, show simple analytics, and generate safe administrative draft text. The project stays intentionally small so the portfolio version can focus on React fundamentals, product thinking, deployment, testing, UI polish, and clear safety boundaries.
+SoundCare AI Booking CRM is a junior portfolio React + Vite app for a fake hearing-care clinic booking workflow. It demonstrates how a small frontend application can present a professional client booking page, collect booking requests, persist dashboard data in the browser, use Supabase only as browser-safe booking insert proof, track CRM-style statuses, show simple analytics, and generate safe administrative draft text. The project stays intentionally small so the portfolio version can focus on React fundamentals, product thinking, deployment, testing, UI polish, and clear safety boundaries.
 
 ## Problem And Goal
 The MVP demonstrates a common small-business problem: a clinic needs a simple way to collect booking requests, review them, track follow-up status, and prepare administrative communication without using scattered notes or spreadsheets.
@@ -14,7 +14,7 @@ A hearing-care booking CRM is a useful portfolio scenario because it combines re
 Start with the `Book Appointment` view. Point out the SoundCare Hearing Care branding, appointment hero, clinic-inspired visual panel, polished request form, contact/help area, and urgent-care safety note.
 
 ### Booking Form
-Show how a visitor can submit a fake booking request with required full name, email address, and service fields. Explain that the form validates required inputs, saves demo booking data locally for the dashboard, can insert fake requests into Supabase when browser-safe environment variables are configured, and shows the `Thank you!` confirmation after submission.
+Show how a visitor can submit a fake booking request with required full name, email address, phone number, service, preferred date, and preferred time fields. Explain that the form validates required inputs, saves booking data locally for the dashboard, can insert fake requests into Supabase when browser-safe environment variables are configured, and shows the `Thank you!` confirmation after submission.
 
 ### Admin Dashboard View
 Use the `Admin Dashboard` navigation button to switch to the internal view. Point out the dark teal sidebar, overview cards, recent bookings table, status badges, and admin topbar.
@@ -49,11 +49,14 @@ End the walkthrough by pointing to the client urgent-care note and footer safety
 - `screenshots/phase-21-client-booking-page.png` - redesigned client booking page
 - `screenshots/phase-21-admin-dashboard-page.png` - redesigned admin dashboard page
 - `screenshots/phase-21-mobile-booking-page.png` - mobile booking page
+- `screenshots/phase-25-final-client-page.png` - final client booking page
+- `screenshots/phase-25-final-admin-dashboard.png` - final admin dashboard
+- `screenshots/phase-25-final-mobile-page.png` - final mobile booking page
 
 ## Interview Talking Points
 - React + Vite was chosen because it is fast to set up, beginner-friendly, and well suited for a focused frontend portfolio MVP.
 - localStorage was used first because the early React MVP needed simple browser persistence before backend setup, accounts, hosting, or database management.
-- Supabase was added later only for fake/demo inserts, while dashboard reads and status updates remain local until authenticated admin access exists.
+- Supabase was added later only for browser-safe fake/demo insert proof, while dashboard reads and status updates remain local until authenticated admin access and RLS role design exist.
 - The AI assistant is mock/template-based because the goal is to demonstrate product thinking and safe UI behavior before adding cost, privacy, API-key handling, or model-risk concerns.
 - Safety and privacy were handled by using fake/demo data only, avoiding real patient records, limiting assistant output to administrative draft text, and stating clearly that the app is not medical advice.
 - The project was planned and shipped in phases so each step had a small scope, acceptance criteria, and validation path.
@@ -62,6 +65,7 @@ End the walkthrough by pointing to the client urgent-care note and footer safety
 ## Limitations
 - Dashboard/admin workflow still uses browser localStorage.
 - Supabase is insert-only for fake/demo booking requests in the current deployed version.
+- Admin dashboard reads and status updates remain local-only until auth/RLS role design is added.
 - No real AI yet.
 - No authentication.
 - No payments.
