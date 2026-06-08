@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 23: AI-assisted development documentation completed.
+Phase 24: booking save feedback completed.
 
-Goal: document how AI assistance was used during the project in an honest, recruiter-friendly way that still emphasizes developer ownership, review, validation, and product judgment.
+Goal: improve the appointment request success confirmation so clients can tell whether the request was saved online or received while online saving is unavailable.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -64,9 +64,10 @@ Goal: document how AI assistance was used during the project in an honest, recru
 - Phase 21: Professional two-view UI redesign.
 - Phase 22: Professional booking form validation polish.
 - Phase 23: AI-assisted development documentation.
+- Phase 24: Booking save feedback in the client success confirmation.
 
 ## Next Phase
-Optional Phase 24: authenticated admin read/status update planning.
+Optional Phase 25: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -98,6 +99,7 @@ Expected deployment settings:
 - Phase 21 screenshots are captured in `docs/screenshots/phase-21-client-booking-page.png`, `docs/screenshots/phase-21-admin-dashboard-page.png`, and `docs/screenshots/phase-21-mobile-booking-page.png`.
 - Phase 22 validation screenshot is captured in `docs/screenshots/phase-22-booking-validation.png`.
 - AI-assisted development documentation is complete in `docs/AI_ASSISTED_DEVELOPMENT.md`.
+- Phase 24 booking save-status screenshot is captured in `docs/screenshots/phase-24-booking-save-status.png`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -136,3 +138,4 @@ The MVP is complete when:
 20. Nikos has a clear interview/demo script and knows what not to overclaim.
 21. The client booking form validates all required appointment request fields with professional messages.
 22. Nikos can explain how AI assistance was used without overclaiming what AI or the developer did.
+23. The booking success confirmation explains whether the request was saved to the booking system or received while online saving is unavailable.

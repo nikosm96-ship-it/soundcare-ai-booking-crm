@@ -6,9 +6,9 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Portfolio-ready junior MVP deployed publicly on Vercel, with professional booking form validation polish completed in Phase 22.
+Portfolio-ready junior MVP deployed publicly on Vercel, with booking save feedback polish completed in Phase 24.
 
-The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, mobile booking page, and Phase 22 booking validation check.
+The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The booking confirmation now tells clients whether the request was saved to the booking system or received while online saving is unavailable. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, mobile booking page, Phase 22 booking validation check, and Phase 24 booking save-status check.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
@@ -17,6 +17,7 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - Public booking page for appointment requests.
 - Required-field validation for full name, email address, phone number, service, preferred date, and preferred time.
 - Email format validation with client-facing error messages.
+- Booking success confirmation with client-friendly save-status feedback.
 - Browser localStorage persistence for demo bookings.
 - Booking repository layer that keeps localStorage behind a clean persistence boundary.
 - Admin dashboard with a dark teal sidebar, overview cards, booking table, status badges, and status updates.
@@ -43,6 +44,7 @@ No external UI libraries, authentication, payments, admin backend reads, or real
 - `docs/screenshots/phase-21-admin-dashboard-page.png`
 - `docs/screenshots/phase-21-mobile-booking-page.png`
 - `docs/screenshots/phase-22-booking-validation.png`
+- `docs/screenshots/phase-24-booking-save-status.png`
 
 ## Run Locally
 
@@ -129,6 +131,8 @@ Phase 18 connects fake/demo booking form submissions to Supabase insert when saf
 Phase 19 documents the live Supabase verification in [Supabase Verification](docs/SUPABASE_VERIFICATION.md): Vercel environment variables are configured, the app was redeployed, fake submissions reached Supabase, and an external browser-safe insert returned HTTP `201`.
 
 Phase 20 adds the final junior-portfolio presentation guide in [Interview Readiness](docs/INTERVIEW_READINESS.md). This is the recommended pause point before adding larger production features such as authenticated admin access.
+
+Phase 24 improves the booking request confirmation so clients see whether the appointment request was saved to the booking system or received while online saving is unavailable. Dashboard and analytics refresh still use the existing local workflow after submit.
 
 ## Safety And Demo Data
 

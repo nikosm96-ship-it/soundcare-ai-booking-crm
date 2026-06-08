@@ -1,11 +1,24 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI and polished client booking validation.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI, polished client booking validation, and client-friendly booking save feedback.
 
 The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It now presents a public `Book Appointment` view and an internal `Admin Dashboard` view. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
+
+### Phase 24: Booking Save Feedback
+Goal: Improve the booking form success confirmation so clients understand whether the appointment request was saved online or received while online saving is unavailable.
+
+Completed:
+- Preserved the existing successful appointment request confirmation.
+- Added a small save-status line for successful online booking-system saves.
+- Added a small unavailable-status line when online saving is skipped or fails.
+- Kept internal error details out of the visible client confirmation.
+- Preserved form reset, local fallback, optional remote insert attempt, dashboard refresh, and analytics refresh after submit.
+- Added BookingForm tests for online save, unavailable/failed online save, and the existing valid submit path.
+- Captured `docs/screenshots/phase-24-booking-save-status.png`.
+- Kept auth, payments, real AI, backend admin reads, schema changes, new libraries, real patient data, and medical advice out of scope.
 
 ### Phase 23: AI-Assisted Development Documentation
 Goal: Explain how AI assistance was used during the project in a professional, honest, junior-developer-friendly way.
@@ -266,7 +279,7 @@ Future work should happen only if it improves the portfolio story or matches a s
 
 ## Next Optional Phase
 
-### Phase 24: Authenticated Admin Planning
+### Phase 25: Authenticated Admin Planning
 Goal: decide whether a future authenticated admin workflow is worth adding before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:

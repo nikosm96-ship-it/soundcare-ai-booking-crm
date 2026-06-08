@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.24.0 - 2026-06-08
+- Completed Phase 24 booking save feedback polish.
+- Updated the booking form success confirmation so it still clearly confirms the appointment request was received.
+- Added a small client-friendly save-status line that says when the request was saved to the booking system.
+- Added a client-friendly unavailable message when online saving is skipped or fails, without exposing internal error details.
+- Preserved the existing createBookingRequest flow, local fallback behavior, optional remote insert attempt, form reset behavior, dashboard refresh, and analytics refresh.
+- Expanded BookingForm tests for successful online save status, unavailable/failed online save status, and the existing valid submit flow.
+- Captured `docs/screenshots/phase-24-booking-save-status.png`.
+- Kept authentication, payments, real AI, backend admin reads, schema changes, new libraries, real patient data, and medical advice out of scope.
+
 ## 0.23.0 - 2026-06-08
 - Completed Phase 23 AI-assisted development documentation.
 - Added `docs/AI_ASSISTED_DEVELOPMENT.md` explaining how AI assistance supported planning, implementation prompts, local debugging, review, validation, documentation, and portfolio storytelling.

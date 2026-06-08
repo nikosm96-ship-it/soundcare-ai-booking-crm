@@ -15,7 +15,21 @@ vi.mock('../services/bookingRepository.js', () => ({
 describe('BookingForm', () => {
   beforeEach(() => {
     createBookingRequest.mockClear();
+    createBookingRequest.mockResolvedValue({
+      bookings: [],
+      remoteStatus: 'skipped',
+      remoteError: null,
+    });
   });
+
+  async function completeValidBookingForm(user) {
+    await user.type(screen.getByLabelText(/full name/i), 'Mina Carter');
+    await user.type(screen.getByLabelText(/email address/i), 'mina@example.com');
+    await user.type(screen.getByLabelText(/phone number/i), '555-0199');
+    await user.selectOptions(screen.getByLabelText(/service/i), 'Hearing test');
+    await user.type(screen.getByLabelText(/preferred date/i), '2026-06-15');
+    await user.type(screen.getByLabelText(/preferred time/i), '10:30');
+  }
 
   test('empty submit shows required validation for booking request fields', async () => {
     const user = userEvent.setup();
@@ -54,12 +68,7 @@ describe('BookingForm', () => {
     const user = userEvent.setup();
     render(<BookingForm />);
 
-    await user.type(screen.getByLabelText(/full name/i), 'Mina Carter');
-    await user.type(screen.getByLabelText(/email address/i), 'mina@example.com');
-    await user.type(screen.getByLabelText(/phone number/i), '555-0199');
-    await user.selectOptions(screen.getByLabelText(/service/i), 'Hearing test');
-    await user.type(screen.getByLabelText(/preferred date/i), '2026-06-15');
-    await user.type(screen.getByLabelText(/preferred time/i), '10:30');
+    await completeValidBookingForm(user);
     await user.click(screen.getByRole('button', { name: /request appointment/i }));
 
     expect(screen.getByText('Thank you!')).toBeInTheDocument();
@@ -81,4 +90,42 @@ describe('BookingForm', () => {
       }),
     );
   });
+
+  test('successful online save shows booking system status', async () => {
+    createBookingRequest.mockResolvedValue({
+      bookings: [],
+      remoteStatus: 'inserted',
+      remoteError: null,
+    });
+    const user = userEvent.setup();
+    render(<BookingForm />);
+
+    await completeValidBookingForm(user);
+    await user.click(screen.getByRole('button', { name: /request appointment/i }));
+
+    expect(
+      screen.getByText('Saved to the booking system.'),
+    ).toBeInTheDocument();
+  });
+
+  test.each(['skipped', 'failed'])(
+    'unavailable online save status shows client-friendly received status for %s',
+    async (remoteStatus) => {
+      createBookingRequest.mockResolvedValue({
+        bookings: [],
+        remoteStatus,
+        remoteError: new Error('internal details'),
+      });
+      const user = userEvent.setup();
+      render(<BookingForm />);
+
+      await completeValidBookingForm(user);
+      await user.click(screen.getByRole('button', { name: /request appointment/i }));
+
+      expect(
+        screen.getByText('Request received. Online saving is currently unavailable.'),
+      ).toBeInTheDocument();
+      expect(screen.queryByText('internal details')).not.toBeInTheDocument();
+    },
+  );
 });

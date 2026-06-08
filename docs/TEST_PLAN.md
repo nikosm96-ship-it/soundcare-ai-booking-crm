@@ -1,6 +1,29 @@
 # Test Plan
 
-## Current Phase: Phase 23
+## Current Phase: Phase 24
+
+Booking save feedback checks:
+- Confirm the booking form still shows `Your appointment request has been received.` after a valid submit.
+- Confirm successful online saving shows `Saved to the booking system.` inside the success confirmation.
+- Confirm skipped or failed online saving shows `Request received. Online saving is currently unavailable.` inside the success confirmation.
+- Confirm internal error details are not shown to clients.
+- Confirm the form resets after a successful request.
+- Confirm dashboard and analytics update after submit.
+- Confirm the visible app UI does not include: demo, fake, MVP, portfolio, mock AI, localStorage, Supabase, Vercel, recruiter.
+- Confirm the urgent-care/non-medical safety copy still appears near the booking page.
+- Confirm desktop and mobile layouts have no horizontal overflow.
+- Confirm `docs/screenshots/phase-24-booking-save-status.png` exists.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run the app locally and check the booking submit flow in browser.
+- Run Git status and review changed files.
+- Confirm no authentication, payments, real AI, backend admin reads, new libraries, schema changes, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 24 validation notes:
+- Expected visible UI change is `yes`: the success confirmation has one additional save-status line.
+- Existing behavior remains: booking submission, local fallback, optional online insert attempt, dashboard listing, status updates, analytics refresh, and administrative draft safety line.
+
+## Phase 23
 
 AI-assisted development documentation checks:
 - Confirm `docs/AI_ASSISTED_DEVELOPMENT.md` exists.

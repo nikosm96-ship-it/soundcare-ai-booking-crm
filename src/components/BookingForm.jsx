@@ -20,6 +20,15 @@ const initialFormValues = {
 };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const onlineSaveSuccessStatus = 'inserted';
+
+function getSaveStatusMessage(remoteStatus) {
+  if (remoteStatus === onlineSaveSuccessStatus) {
+    return 'Saved to the booking system.';
+  }
+
+  return 'Request received. Online saving is currently unavailable.';
+}
 
 function createBookingId() {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
@@ -66,7 +75,7 @@ export default function BookingForm({ onBookingSaved }) {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
   const [isSaving, setIsSaving] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
+  const [saveStatusMessage, setSaveStatusMessage] = useState('');
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -84,7 +93,7 @@ export default function BookingForm({ onBookingSaved }) {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length > 0) {
-      setSuccessMessage('');
+      setSaveStatusMessage('');
       return;
     }
 
@@ -106,11 +115,11 @@ export default function BookingForm({ onBookingSaved }) {
     setIsSaving(true);
 
     try {
-      await createBookingRequest(newBooking);
+      const { remoteStatus } = await createBookingRequest(newBooking);
 
       setFormValues(initialFormValues);
       setErrors({});
-      setSuccessMessage('received');
+      setSaveStatusMessage(getSaveStatusMessage(remoteStatus));
 
       if (onBookingSaved) {
         onBookingSaved();
@@ -131,10 +140,11 @@ export default function BookingForm({ onBookingSaved }) {
       </div>
 
       <form className="booking-form" onSubmit={handleSubmit} noValidate>
-        {successMessage ? (
+        {saveStatusMessage ? (
           <div className="confirmation-card" role="status">
             <h3>Thank you!</h3>
             <p>Your appointment request has been received.</p>
+            <p className="confirmation-save-status">{saveStatusMessage}</p>
             <p>Our team will review your request and contact you soon.</p>
           </div>
         ) : null}
