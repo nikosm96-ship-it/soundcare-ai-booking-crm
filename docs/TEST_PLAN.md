@@ -1,6 +1,35 @@
 # Test Plan
 
-## Current Phase: Phase 25
+## Current Phase: Phase 26
+
+Professional UI polish checks:
+- Confirm the client hero uses a useful reception visual with response expectations, front desk hours, and service categories.
+- Confirm the booking form has professional placeholders, autocomplete-friendly fields, date/time bounds, notes guidance, and a notes character counter.
+- Confirm booking form validation still works for required fields and invalid email.
+- Confirm a valid booking still submits, resets the form, and shows success/save-status feedback.
+- Confirm the client support area uses modern contact/help cards and keeps urgent-care guidance.
+- Confirm the admin sidebar has no disabled/dead navigation items.
+- Confirm the admin sidebar logo returns to the client booking page.
+- Confirm sidebar links target Dashboard, Recent bookings, and Message drafts.
+- Confirm Recent bookings is exposed as a scrollable work area with a sticky header and status controls.
+- Confirm old internal visible note wording such as `Fake demo record only` is not shown in the dashboard.
+- Confirm analytics, status updates, and message draft generation still work.
+- Confirm the visible app UI does not include: demo, fake, MVP, portfolio, mock AI, localStorage, Supabase, Vercel, recruiter.
+- Confirm mobile layout has no horizontal overflow.
+- Capture screenshots:
+  - `docs/screenshots/phase-26-client-polish.png`
+  - `docs/screenshots/phase-26-admin-polish.png`
+  - `docs/screenshots/phase-26-mobile-polish.png`
+- Run `npm run test`.
+- Run `npm run build`.
+- Run Git status and review changed files.
+- Confirm no router, auth, payments, real AI, backend admin reads, Supabase schema changes, new libraries, real patient data, medical advice, diagnosis, treatment recommendation, or clinical claim was added.
+
+Phase 26 validation notes:
+- Expected visible UI change is `yes`.
+- Existing behavior remains: booking submission, local fallback, optional online insert attempt, dashboard listing, status updates, analytics refresh, and administrative draft safety line.
+
+## Phase 25
 
 Final QA and portfolio readiness checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

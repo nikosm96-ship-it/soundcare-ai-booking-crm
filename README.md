@@ -6,9 +6,9 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Portfolio-ready junior React + Vite app deployed publicly on Vercel, with final QA, live deployment review, screenshot refresh, and documentation polish completed in Phase 25.
+Portfolio-ready junior React + Vite app deployed publicly on Vercel, with professional UI polish completed in Phase 26.
 
-The app is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase only as browser-safe booking insert proof. Admin dashboard reads and status updates remain local-only until authentication and RLS role design are added. The current UI has a professional public `Book Appointment` view and an internal `Admin Dashboard` view. Booking requests can be submitted, and the booking confirmation tells clients whether the request was saved to the booking system or received while online saving is unavailable. The screenshot set in `docs/screenshots/` includes final Phase 25 client, admin dashboard, and mobile screenshots.
+The app is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase only as browser-safe booking insert proof. Admin dashboard reads and status updates remain local-only until authentication and RLS role design are added. The current UI has a polished public `Book Appointment` view, useful client support sections, and an internal `Admin Dashboard` view with practical navigation, scrollable bookings, status controls, analytics, and message drafts. Booking requests can be submitted, and the booking confirmation tells clients whether the request was saved to the booking system or received while online saving is unavailable.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
@@ -18,9 +18,10 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 - Required-field validation for full name, email address, phone number, service, preferred date, and preferred time.
 - Email format validation with client-facing error messages.
 - Booking success confirmation with client-friendly save-status feedback.
+- Professional client hero with reception imagery and useful scheduling details.
 - Browser localStorage persistence for local dashboard bookings.
 - Booking repository layer that keeps localStorage behind a clean persistence boundary.
-- Admin dashboard with a dark teal sidebar, overview cards, booking table, status badges, and status updates.
+- Admin dashboard with a dark teal sidebar, overview cards, scrollable booking table, status badges, and status updates.
 - Reset demo bookings action.
 - Analytics overview for total and status-based booking counts.
 - Administrative Draft Assistant that creates safe scheduling draft text from booking data.
@@ -43,6 +44,11 @@ No external UI libraries, authentication, payments, admin backend reads, or real
 - `docs/screenshots/phase-25-final-client-page.png`
 - `docs/screenshots/phase-25-final-admin-dashboard.png`
 - `docs/screenshots/phase-25-final-mobile-page.png`
+- `docs/screenshots/phase-26-client-polish.png`
+- `docs/screenshots/phase-26-admin-polish.png`
+- `docs/screenshots/phase-26-mobile-polish.png`
+
+Reception photo source: [Pexels clinic reception image](https://www.pexels.com/photo/modern-luxury-clinic-reception-interior-design-31844508/).
 
 ## Run Locally
 

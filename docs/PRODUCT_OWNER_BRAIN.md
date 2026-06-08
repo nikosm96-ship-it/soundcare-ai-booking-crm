@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 25: final QA, live deployment check, portfolio readiness review, screenshot refresh, and documentation polish completed.
+Phase 26: professional UI polish and useful dashboard cleanup completed.
 
-Goal: confirm the finished app is portfolio-ready without adding features or widening scope.
+Goal: make the visible app feel more complete, useful, and professional without adding backend complexity or widening junior portfolio scope.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -66,9 +66,10 @@ Goal: confirm the finished app is portfolio-ready without adding features or wid
 - Phase 23: AI-assisted development documentation.
 - Phase 24: Booking save feedback in the client success confirmation.
 - Phase 25: Final QA, live Vercel check, screenshot refresh, documentation polish, and security/privacy sanity check.
+- Phase 26: Professional client/admin UI polish, useful sidebar links, scrollable bookings, improved form presentation, and refreshed screenshots.
 
 ## Next Phase
-Optional Phase 26: authenticated admin read/status update planning.
+Optional Phase 27: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -102,6 +103,7 @@ Expected deployment settings:
 - AI-assisted development documentation is complete in `docs/AI_ASSISTED_DEVELOPMENT.md`.
 - Phase 24 booking save-status screenshot is captured in `docs/screenshots/phase-24-booking-save-status.png`.
 - Phase 25 final screenshots are captured in `docs/screenshots/phase-25-final-client-page.png`, `docs/screenshots/phase-25-final-admin-dashboard.png`, and `docs/screenshots/phase-25-final-mobile-page.png`.
+- Phase 26 polish screenshots are captured in `docs/screenshots/phase-26-client-polish.png`, `docs/screenshots/phase-26-admin-polish.png`, and `docs/screenshots/phase-26-mobile-polish.png`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.

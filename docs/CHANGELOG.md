@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.26.0 - 2026-06-08
+- Completed Phase 26 professional UI polish and useful dashboard cleanup.
+- Replaced the decorative client hero panel with a useful clinic reception visual, scheduling response detail, front desk hours, and service categories.
+- Improved the appointment form presentation with better placeholders, autocomplete hints, date/time bounds, note guidance, and a notes character counter.
+- Reworked the client help section into modern support cards for front desk contact and urgent-care guidance.
+- Removed dead admin sidebar controls and made sidebar navigation link to Dashboard, Recent bookings, and Message drafts.
+- Made the admin logo return to the client booking page.
+- Reworked Recent bookings as a scrollable work area with a sticky table header, clearer status controls, request count, and cleaner note display.
+- Renamed the draft assistant heading to Message drafts while preserving the non-medical administrative safety line.
+- Added a real reception image from Pexels and captured Phase 26 client, admin, and mobile screenshots.
+- Kept routing, backend behavior, auth, payments, real AI, Supabase schema, new libraries, real patient data, medical advice, diagnosis, treatment recommendations, and clinical claims out of scope.
+
 ## 0.25.0 - 2026-06-08
 - Completed Phase 25 final portfolio QA and documentation polish.
 - Confirmed the real project folder is the React + Vite SoundCare AI Booking CRM repository, not the old Codex folder.

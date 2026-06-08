@@ -107,8 +107,8 @@ export default function MockAiAssistant({ refreshKey }) {
   return (
     <section className="mock-ai-assistant" aria-labelledby="draft-assistant-title">
       <div className="section-heading">
-        <h2 id="draft-assistant-title">Administrative Draft Assistant</h2>
-        <p>Create scheduling draft text from the selected booking request.</p>
+        <h2 id="draft-assistant-title">Message drafts</h2>
+        <p>Create administrative scheduling text from the selected booking request.</p>
       </div>
 
       {bookings.length > 0 ? (

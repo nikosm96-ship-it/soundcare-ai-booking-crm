@@ -91,6 +91,20 @@ describe('BookingForm', () => {
     );
   });
 
+  test('notes field shows a character counter for professional input feedback', async () => {
+    const user = userEvent.setup();
+    render(<BookingForm />);
+
+    expect(screen.getByText('0/500')).toBeInTheDocument();
+
+    await user.type(
+      screen.getByLabelText(/additional notes/i),
+      'Morning visit preferred.',
+    );
+
+    expect(screen.getByText('24/500')).toBeInTheDocument();
+  });
+
   test('successful online save shows booking system status', async () => {
     createBookingRequest.mockResolvedValue({
       bookings: [],

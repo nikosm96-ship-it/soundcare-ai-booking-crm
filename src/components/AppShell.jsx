@@ -6,6 +6,24 @@ import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import MockAiAssistant from './MockAiAssistant.jsx';
 
+const adminNavItems = [
+  {
+    label: 'Dashboard',
+    href: '#admin-title',
+    icon: 'D',
+  },
+  {
+    label: 'Recent bookings',
+    href: '#dashboard-title',
+    icon: 'B',
+  },
+  {
+    label: 'Message drafts',
+    href: '#draft-assistant-title',
+    icon: 'M',
+  },
+];
+
 export default function AppShell() {
   const [bookingsRefreshKey, setBookingsRefreshKey] = useState(0);
   const [currentView, setCurrentView] = useState('booking');
@@ -34,18 +52,25 @@ export default function AppShell() {
                 </div>
               </div>
 
-              <div className="clinic-panel" aria-label="Reception preview">
-                <div className="clinic-panel__window">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="clinic-panel__desk">
-                  <div className="clinic-panel__screen">
-                    <strong>Today</strong>
-                    <span>Care team reviewing requests</span>
+              <div className="clinic-preview" aria-label="Clinic appointment overview">
+                <img
+                  src="/clinic-reception.jpg"
+                  alt="Modern hearing care reception area"
+                />
+                <div className="clinic-preview__content">
+                  <div>
+                    <p>Average response</p>
+                    <strong>Same business day</strong>
                   </div>
-                  <div className="clinic-panel__vase" />
+                  <div>
+                    <p>Front desk hours</p>
+                    <strong>Mon-Fri, 09:00-17:00</strong>
+                  </div>
+                </div>
+                <div className="clinic-preview__footer">
+                  <span>Hearing tests</span>
+                  <span>Device consultations</span>
+                  <span>Follow-up visits</span>
                 </div>
               </div>
             </section>
@@ -53,17 +78,26 @@ export default function AppShell() {
             <BookingForm onBookingSaved={refreshBookings} />
 
             <section className="client-help" aria-label="Contact and urgent care">
-              <div>
+              <div className="client-help__copy">
                 <h2>Need help choosing a service?</h2>
                 <p>
                   Call the front desk or add a note with your request. A care
                   coordinator can help match your appointment to the right team member.
                 </p>
               </div>
-              <p className="urgent-note">
-                For urgent symptoms or sudden hearing changes, contact emergency
-                services or a qualified clinician directly.
-              </p>
+              <div className="client-help__cards">
+                <article>
+                  <span>Call reception</span>
+                  <strong>(555) 123-4567</strong>
+                  <small>Mon-Fri, 09:00-17:00</small>
+                </article>
+                <article className="urgent-note">
+                  <span>Urgent concerns</span>
+                  <p>
+                    Contact emergency services or a qualified clinician directly.
+                  </p>
+                </article>
+              </div>
             </section>
           </main>
           <Footer />
@@ -71,7 +105,12 @@ export default function AppShell() {
       ) : (
         <div className="admin-layout">
           <aside className="admin-sidebar" aria-label="Admin navigation">
-            <a className="brand-mark brand-mark--sidebar" href="#top">
+            <a
+              className="brand-mark brand-mark--sidebar"
+              href="#top"
+              aria-label="SoundCare Hearing Care home"
+              onClick={() => setCurrentView('booking')}
+            >
               <span className="brand-mark__symbol">SC</span>
               <span>
                 <strong>SoundCare</strong>
@@ -79,27 +118,13 @@ export default function AppShell() {
               </span>
             </a>
             <nav className="admin-sidebar__nav">
-              {['Dashboard', 'Bookings', 'Calendar', 'Services', 'Reports', 'Settings'].map(
-                (item, index) => (
-                  <button
-                    className={index < 2 ? 'admin-sidebar__item is-active' : 'admin-sidebar__item'}
-                    type="button"
-                    key={item}
-                    disabled={index > 1}
-                  >
-                    <span aria-hidden="true">{item.slice(0, 1)}</span>
-                    {item}
-                  </button>
-                ),
-              )}
+              {adminNavItems.map((item) => (
+                <a className="admin-sidebar__item" href={item.href} key={item.label}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  {item.label}
+                </a>
+              ))}
             </nav>
-            <button
-              className="admin-sidebar__switch"
-              type="button"
-              onClick={() => setCurrentView('booking')}
-            >
-              Book Appointment
-            </button>
           </aside>
 
           <main className="admin-main" aria-labelledby="admin-title">
@@ -108,9 +133,9 @@ export default function AppShell() {
                 <p>Operations</p>
                 <h1 id="admin-title">Dashboard</h1>
               </div>
-              <div className="admin-topbar__tools" aria-label="Admin tools">
-                <button type="button" aria-label="Notifications">!</button>
-                <span aria-label="Admin profile">SC</span>
+              <div className="admin-topbar__status" aria-label="Admin status">
+                <span>Booking desk active</span>
+                <strong>Today</strong>
               </div>
             </div>
 

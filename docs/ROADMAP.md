@@ -1,11 +1,25 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite app with a professional two-view booking CRM UI, polished client booking validation, client-friendly booking save feedback, final QA, refreshed screenshots, and live deployment verification.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite app with a professional two-view booking CRM UI, polished client booking validation, client-friendly booking save feedback, final QA, refreshed screenshots, live deployment verification, and Phase 26 UI polish.
 
-The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase only as browser-safe fake/demo booking insert proof, and safe template-based administrative draft text. It presents a public `Book Appointment` view and an internal `Admin Dashboard` view. Admin dashboard reads and status updates remain local-only until auth/RLS role design is added. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
+The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase only as browser-safe fake/demo booking insert proof, and safe template-based administrative draft text. It presents a polished public `Book Appointment` view and an internal `Admin Dashboard` view with useful sidebar navigation, scrollable bookings, status controls, analytics, and message drafts. Admin dashboard reads and status updates remain local-only until auth/RLS role design is added. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
+
+### Phase 26: Professional UI Polish
+Goal: Make the visible app feel more complete and professional without adding backend complexity or new product scope.
+
+Completed:
+- Replaced the decorative client hero panel with useful clinic reception imagery, response expectations, front desk hours, and service categories.
+- Improved booking form presentation with better placeholders, autocomplete, date/time bounds, notes guidance, and a character counter.
+- Reworked the support/help section into modern service support cards.
+- Removed dead admin sidebar controls and replaced them with working section links.
+- Made the admin sidebar logo return to the client booking page.
+- Made Recent bookings a scrollable work area with sticky table header, clearer status controls, request count, and cleaned visible note wording.
+- Renamed the administrative draft area to Message drafts while keeping the safe non-medical draft line.
+- Captured `docs/screenshots/phase-26-client-polish.png`, `docs/screenshots/phase-26-admin-polish.png`, and `docs/screenshots/phase-26-mobile-polish.png`.
+- Kept routing, backend changes, auth, payments, real AI, Supabase schema changes, new libraries, real patient data, and medical advice out of scope.
 
 ### Phase 25: Final Portfolio QA
 Goal: Complete final QA, live deployment check, portfolio readiness review, screenshot refresh, and documentation polish without adding new features.

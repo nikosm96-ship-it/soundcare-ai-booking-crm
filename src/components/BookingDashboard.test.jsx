@@ -40,4 +40,35 @@ describe('BookingDashboard', () => {
       screen.queryByText('2026-06-06T09:00:00.000Z'),
     ).not.toBeInTheDocument();
   });
+
+  test('bookings list is exposed as a scrollable work area', () => {
+    render(<BookingDashboard />);
+
+    expect(
+      screen.getByRole('region', { name: /scrollable recent bookings/i }),
+    ).toBeInTheDocument();
+  });
+
+  test('cleans old internal demo wording from visible booking notes', () => {
+    saveBookings([
+      {
+        id: 'booking-clean-note-test',
+        customerName: 'Iris Stone',
+        customerEmail: 'iris@example.com',
+        customerPhone: '+30 210 000 1100',
+        service: 'Hearing test',
+        preferredDate: '2026-06-19',
+        preferredTime: '11:00',
+        notes: 'Asked for a quiet appointment slot. Fake demo record only.',
+        status: BOOKING_STATUSES.NEW,
+        createdAt: '2026-06-06T09:00:00.000Z',
+        updatedAt: '2026-06-06T09:00:00.000Z',
+      },
+    ]);
+
+    render(<BookingDashboard />);
+
+    expect(screen.getByText('Asked for a quiet appointment slot.')).toBeInTheDocument();
+    expect(screen.queryByText(/fake demo/i)).not.toBeInTheDocument();
+  });
 });

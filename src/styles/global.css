@@ -57,7 +57,7 @@ p {
 .site-header__content,
 .client-page,
 .site-footer__content {
-  width: min(calc(100% - 32px), 1160px);
+  width: min(calc(100% - 32px), 1280px);
   margin: 0 auto;
 }
 
@@ -129,15 +129,15 @@ p {
 }
 
 .client-page {
-  padding: 56px 0 48px;
+  padding: 54px 0 48px;
 }
 
 .client-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-  gap: 42px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr);
+  gap: 44px;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .client-hero__copy h1 {
@@ -173,74 +173,88 @@ p {
   font-weight: 800;
 }
 
-.clinic-panel {
-  min-height: 360px;
+.clinic-preview {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #eef6f4 0%, #ffffff 62%);
+  min-height: 390px;
+  background: #ffffff;
   border: 1px solid #dce8e5;
   border-radius: 8px;
-  box-shadow: 0 22px 60px rgba(15, 64, 71, 0.12);
+  box-shadow: 0 24px 70px rgba(15, 64, 71, 0.14);
 }
 
-.clinic-panel__window {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 26px;
+.clinic-preview img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  display: block;
+  object-fit: cover;
 }
 
-.clinic-panel__window span {
-  height: 150px;
-  background: linear-gradient(180deg, #d8ebe7, #fafdff);
-  border: 1px solid #c5ddd8;
-  border-radius: 8px;
-}
-
-.clinic-panel__desk {
+.clinic-preview::after {
+  content: "";
   position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 28px;
-  height: 118px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px;
-  background: #ffffff;
-  border: 1px solid #d9e7e4;
-  border-radius: 8px;
-  box-shadow: 0 16px 36px rgba(15, 64, 71, 0.1);
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 61, 68, 0) 48%, rgba(7, 61, 68, 0.72) 100%),
+    linear-gradient(90deg, rgba(7, 61, 68, 0.18), rgba(7, 61, 68, 0));
 }
 
-.clinic-panel__screen {
-  width: min(260px, 72%);
-  min-height: 76px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
+.clinic-preview__content {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 76px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.clinic-preview__content div,
+.clinic-preview__footer {
+  background: rgba(255, 255, 255, 0.93);
+  border: 1px solid rgba(220, 232, 229, 0.88);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(8, 46, 52, 0.14);
+}
+
+.clinic-preview__content div {
   padding: 14px;
-  background: #123f46;
+}
+
+.clinic-preview__content p {
+  margin-bottom: 5px;
+  color: #61757a;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clinic-preview__content strong {
+  color: #102a30;
+  font-size: 1rem;
+}
+
+.clinic-preview__footer {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.clinic-preview__footer span {
+  padding: 7px 9px;
+  color: #0f5c64;
+  background: #e8f4f2;
   border-radius: 8px;
-}
-
-.clinic-panel__screen strong {
-  color: #ffffff;
-  font-size: 1.05rem;
-}
-
-.clinic-panel__screen span {
-  color: #cde7e3;
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-.clinic-panel__vase {
-  width: 42px;
-  height: 72px;
-  background: #72b8ad;
-  border-radius: 8px 8px 20px 20px;
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .booking-form-section,
@@ -255,8 +269,8 @@ p {
 }
 
 .booking-form-section {
-  max-width: 920px;
-  padding: 30px;
+  width: min(100%, 1040px);
+  padding: 34px;
 }
 
 .section-heading {
@@ -302,6 +316,11 @@ p {
   gap: 18px;
 }
 
+.booking-form .form-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
 .form-field {
   min-width: 0;
   display: flex;
@@ -323,13 +342,19 @@ p {
   width: 100%;
   border: 1px solid #c4d3d0;
   border-radius: 8px;
-  padding: 12px 13px;
+  padding: 13px 14px;
   color: #18343a;
   background: #ffffff;
   line-height: 1.4;
 }
 
+.form-field input,
+.form-field select {
+  min-height: 50px;
+}
+
 .form-field textarea {
+  min-height: 128px;
   resize: vertical;
 }
 
@@ -348,6 +373,16 @@ p {
 .field-error {
   color: #b23b46;
   font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.field-helper {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #819499;
+  font-size: 0.8rem;
   font-weight: 800;
   line-height: 1.4;
 }
@@ -446,12 +481,12 @@ p {
 }
 
 .client-help {
-  max-width: 920px;
+  width: min(100%, 1040px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.5fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 0.75fr);
+  gap: 24px;
   margin-top: 24px;
-  padding: 24px 30px;
+  padding: 26px 30px;
 }
 
 .client-help h2 {
@@ -466,12 +501,54 @@ p {
   line-height: 1.6;
 }
 
-.urgent-note {
-  padding: 14px;
-  color: #6b4b12;
-  background: #fff7df;
-  border: 1px solid #ecd596;
+.client-help__copy {
+  align-self: center;
+}
+
+.client-help__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.client-help__cards article {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  background: #f8fbfa;
+  border: 1px solid #dce8e5;
   border-radius: 8px;
+}
+
+.client-help__cards span {
+  color: #61757a;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.client-help__cards strong {
+  color: #0f5c64;
+  font-size: 1.24rem;
+  line-height: 1.2;
+}
+
+.client-help__cards small {
+  color: #61757a;
+  font-weight: 800;
+}
+
+.urgent-note {
+  color: #6b4b12;
+  background: #fff8e8 !important;
+  border-color: #ecd596 !important;
+}
+
+.urgent-note p {
+  color: #6b4b12;
   font-weight: 800;
 }
 
@@ -495,15 +572,17 @@ p {
 .admin-layout {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 272px minmax(0, 1fr);
+  grid-template-columns: 260px minmax(0, 1fr);
   background: #eef4f2;
 }
 
 .admin-sidebar {
   height: 100vh;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 28px;
   padding: 24px 18px;
   color: #d7ebe8;
   background: #073d44;
@@ -527,8 +606,7 @@ p {
   gap: 8px;
 }
 
-.admin-sidebar__item,
-.admin-sidebar__switch {
+.admin-sidebar__item {
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -539,6 +617,7 @@ p {
   border-radius: 8px;
   font-weight: 800;
   text-align: left;
+  text-decoration: none;
 }
 
 .admin-sidebar__item span {
@@ -552,25 +631,14 @@ p {
   font-size: 0.75rem;
 }
 
-.admin-sidebar__item.is-active {
+.admin-sidebar__item:hover,
+.admin-sidebar__item:first-child {
   background: rgba(189, 233, 227, 0.14);
-}
-
-.admin-sidebar__item:disabled {
-  opacity: 0.54;
-}
-
-.admin-sidebar__switch {
-  margin-top: auto;
-  justify-content: center;
-  color: #073d44;
-  background: #bde9e3;
-  cursor: pointer;
 }
 
 .admin-main {
   min-width: 0;
-  padding: 28px;
+  padding: 28px 28px 42px;
 }
 
 .admin-topbar {
@@ -596,22 +664,27 @@ p {
   line-height: 1.1;
 }
 
-.admin-topbar__tools {
+.admin-topbar__status {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.admin-topbar__tools button,
-.admin-topbar__tools span {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
+  gap: 12px;
+  padding: 10px 12px;
   color: #0f5c64;
   background: #ffffff;
   border: 1px solid #dce8e5;
   border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(18, 50, 56, 0.06);
+}
+
+.admin-topbar__status span {
+  color: #61757a;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-topbar__status strong {
+  color: #0f5c64;
   font-weight: 900;
 }
 
@@ -654,7 +727,16 @@ p {
 
 .booking-table-wrap {
   width: 100%;
-  overflow-x: auto;
+  max-height: 560px;
+  overflow: auto;
+  border: 1px solid #e3ece9;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.booking-table-wrap:focus {
+  outline: 3px solid #c7ede7;
+  outline-offset: 3px;
 }
 
 .booking-table {
@@ -666,14 +748,18 @@ p {
 
 .booking-table th,
 .booking-table td {
-  padding: 14px 12px;
+  padding: 16px 14px;
   border-bottom: 1px solid #e3ece9;
   text-align: left;
   vertical-align: top;
 }
 
 .booking-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   color: #607378;
+  background: #f8fbfa;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -685,6 +771,14 @@ p {
   line-height: 1.45;
 }
 
+.booking-table tbody tr:nth-child(even) td {
+  background: #fbfdfc;
+}
+
+.booking-table tbody tr:hover td {
+  background: #f4faf8;
+}
+
 .booking-table td strong,
 .booking-table td span,
 .booking-table td small {
@@ -694,6 +788,14 @@ p {
 .booking-table td small {
   margin-top: 4px;
   color: #61757a;
+}
+
+.booking-table__status-cell {
+  min-width: 174px;
+}
+
+.status-cell__header {
+  min-height: 28px;
 }
 
 .status-badge {
@@ -733,7 +835,7 @@ p {
 }
 
 .status-control {
-  display: grid;
+  display: grid !important;
   gap: 6px;
 }
 
@@ -744,8 +846,8 @@ p {
 }
 
 .status-control select {
-  min-width: 148px;
-  padding: 8px 10px;
+  min-width: 154px;
+  padding: 9px 10px;
   font-size: 0.86rem;
 }
 
@@ -789,13 +891,21 @@ p {
   .analytics-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .booking-form .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .client-help__cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
   .site-header__content,
   .client-page,
   .site-footer__content {
-    width: min(calc(100% - 24px), 1160px);
+    width: min(calc(100% - 24px), 1280px);
   }
 
   .site-header__content {
@@ -823,8 +933,18 @@ p {
     font-size: 2.55rem;
   }
 
-  .clinic-panel {
+  .clinic-preview,
+  .clinic-preview img {
     min-height: 300px;
+  }
+
+  .clinic-preview__content {
+    grid-template-columns: 1fr;
+    bottom: 82px;
+  }
+
+  .clinic-preview__footer {
+    display: none;
   }
 
   .booking-form-section,
@@ -836,6 +956,7 @@ p {
   }
 
   .form-grid,
+  .booking-form .form-grid,
   .analytics-grid,
   .admin-sidebar__nav,
   .section-heading--with-action {

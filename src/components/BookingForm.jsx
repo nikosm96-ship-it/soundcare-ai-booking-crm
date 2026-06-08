@@ -21,6 +21,11 @@ const initialFormValues = {
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const onlineSaveSuccessStatus = 'inserted';
+const maxNotesLength = 500;
+
+function getTodayDateString() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 function getSaveStatusMessage(remoteStatus) {
   if (remoteStatus === onlineSaveSuccessStatus) {
@@ -76,6 +81,8 @@ export default function BookingForm({ onBookingSaved }) {
   const [errors, setErrors] = useState({});
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatusMessage, setSaveStatusMessage] = useState('');
+  const notesLength = formValues.notes.length;
+  const todayDate = getTodayDateString();
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -134,8 +141,8 @@ export default function BookingForm({ onBookingSaved }) {
       <div className="section-heading">
         <h2 id="booking-form-title">Appointment request form</h2>
         <p>
-          Share your contact details and preferred appointment window. Required
-          fields are marked with an asterisk.
+          Share your contact details and preferred appointment window. A care
+          coordinator will review the request before confirming a time.
         </p>
       </div>
 
@@ -156,6 +163,8 @@ export default function BookingForm({ onBookingSaved }) {
               id="customerName"
               name="customerName"
               type="text"
+              autoComplete="name"
+              placeholder="Enter your full name"
               value={formValues.customerName}
               onChange={handleChange}
               aria-invalid={Boolean(errors.customerName)}
@@ -176,6 +185,8 @@ export default function BookingForm({ onBookingSaved }) {
               id="customerEmail"
               name="customerEmail"
               type="email"
+              autoComplete="email"
+              placeholder="you@example.com"
               value={formValues.customerEmail}
               onChange={handleChange}
               aria-invalid={Boolean(errors.customerEmail)}
@@ -196,6 +207,8 @@ export default function BookingForm({ onBookingSaved }) {
               id="customerPhone"
               name="customerPhone"
               type="tel"
+              autoComplete="tel"
+              placeholder="+30 210 000 0000"
               value={formValues.customerPhone}
               onChange={handleChange}
               aria-invalid={Boolean(errors.customerPhone)}
@@ -240,6 +253,7 @@ export default function BookingForm({ onBookingSaved }) {
               id="preferredDate"
               name="preferredDate"
               type="date"
+              min={todayDate}
               value={formValues.preferredDate}
               onChange={handleChange}
               aria-invalid={Boolean(errors.preferredDate)}
@@ -260,6 +274,8 @@ export default function BookingForm({ onBookingSaved }) {
               id="preferredTime"
               name="preferredTime"
               type="time"
+              min="09:00"
+              max="17:00"
               value={formValues.preferredTime}
               onChange={handleChange}
               aria-invalid={Boolean(errors.preferredTime)}
@@ -280,10 +296,15 @@ export default function BookingForm({ onBookingSaved }) {
               id="notes"
               name="notes"
               rows="4"
+              maxLength={maxNotesLength}
               value={formValues.notes}
               onChange={handleChange}
               placeholder="Morning appointment preferred, accessibility requests, or scheduling details."
             />
+            <span className="field-helper">
+              <span>Share scheduling preferences only.</span>
+              <span>{notesLength}/{maxNotesLength}</span>
+            </span>
           </label>
         </div>
 

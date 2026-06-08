@@ -10,6 +10,14 @@ function displayValue(value) {
   return value || 'Not provided';
 }
 
+function displayNote(value) {
+  const cleanedValue = (value || '')
+    .replace(/\s*fake demo record only\.?/gi, '')
+    .trim();
+
+  return displayValue(cleanedValue);
+}
+
 function formatDateTime(booking) {
   const date = displayValue(booking.preferredDate);
   const time = displayValue(booking.preferredTime);
@@ -75,7 +83,7 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
         </div>
 
         <div className="admin-utilities" aria-label="Admin utilities">
-          <span>Admin utilities</span>
+          <span>{bookings.length} requests shown</span>
           <button className="utility-button" type="button" onClick={handleResetBookings}>
             Restore booking list
           </button>
@@ -83,7 +91,12 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
       </div>
 
       {bookings.length > 0 ? (
-        <div className="booking-table-wrap">
+        <div
+          className="booking-table-wrap"
+          role="region"
+          aria-label="Scrollable recent bookings"
+          tabIndex="0"
+        >
           <table className="booking-table">
             <thead>
               <tr>
@@ -108,12 +121,14 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
                     <span>{displayValue(booking.customerEmail)}</span>
                     <small>{displayValue(booking.customerPhone)}</small>
                   </td>
-                  <td>
-                    <span className={statusClassName(booking.status)}>
-                      {displayValue(booking.status)}
-                    </span>
+                  <td className="booking-table__status-cell">
+                    <div className="status-cell__header">
+                      <span className={statusClassName(booking.status)}>
+                        {displayValue(booking.status)}
+                      </span>
+                    </div>
                     <label className="status-control" htmlFor={`status-${booking.id}`}>
-                      <span>Update status</span>
+                      <span>Change status</span>
                       <select
                         id={`status-${booking.id}`}
                         value={booking.status}
@@ -129,7 +144,7 @@ export default function BookingDashboard({ refreshKey, onBookingsChanged }) {
                       </select>
                     </label>
                   </td>
-                  <td>{displayValue(booking.notes)}</td>
+                  <td>{displayNote(booking.notes)}</td>
                   <td>{formatCreatedDate(booking.createdAt)}</td>
                 </tr>
               ))}
