@@ -1,56 +1,123 @@
-# SoundCare AI Booking CRM
+# SoundCare Hearing Care Booking CRM
 
-SoundCare AI Booking CRM is a junior portfolio React + Vite app for a fake hearing-care clinic booking workflow. It shows how a small frontend app can collect booking requests, present a professional client-facing appointment page, persist dashboard data in the browser, track CRM-style statuses, show simple analytics, and generate safe administrative draft text.
+![React](https://img.shields.io/badge/React-18-087EA4?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-insert%20proof-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-This is the active React app version of the project. The earlier WordPress plugin direction was abandoned on 2026-06-06 and the old PHP skeleton was removed.
+A polished React + Vite portfolio app for a hearing-care appointment workflow. Visitors can request an appointment, while an admin-style dashboard reviews bookings, tracks statuses, shows simple analytics, and prepares safe scheduling message drafts.
 
-## Current Status
+The project is intentionally scoped for a junior developer portfolio: professional UI, working frontend flows, automated tests, browser-safe persistence proof, clear documentation, and honest limitations.
 
-Portfolio-ready junior React + Vite app deployed publicly on Vercel, with professional UI polish completed in Phase 26.
+[Live Demo](https://soundcare-ai-booking-crm.vercel.app/) | [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md) | [Interview Readiness](docs/INTERVIEW_READINESS.md) | [AI-Assisted Development Notes](docs/AI_ASSISTED_DEVELOPMENT.md)
 
-The app is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase only as browser-safe booking insert proof. Admin dashboard reads and status updates remain local-only until authentication and RLS role design are added. The current UI has a polished public `Book Appointment` view, useful client support sections, and an internal `Admin Dashboard` view with practical navigation, scrollable bookings, status controls, analytics, and message drafts. Booking requests can be submitted, and the booking confirmation tells clients whether the request was saved to the booking system or received while online saving is unavailable.
+## Preview
 
-Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
+### Client Booking Page
 
-## Features
+![Client booking page](docs/screenshots/phase-26-client-polish.png)
 
-- Public booking page for appointment requests.
-- Required-field validation for full name, email address, phone number, service, preferred date, and preferred time.
-- Email format validation with client-facing error messages.
-- Booking success confirmation with client-friendly save-status feedback.
-- Professional client hero with reception imagery and useful scheduling details.
-- Browser localStorage persistence for local dashboard bookings.
-- Booking repository layer that keeps localStorage behind a clean persistence boundary.
-- Admin dashboard with a dark teal sidebar, overview cards, scrollable booking table, status badges, and status updates.
-- Reset demo bookings action.
-- Analytics overview for total and status-based booking counts.
-- Administrative Draft Assistant that creates safe scheduling draft text from booking data.
-- Beginner-friendly React component structure and plain CSS styling.
-- UI copy cleaned so implementation/demo wording stays out of the visible product surface.
+### Admin Dashboard
 
-## Tech Stack
+![Admin dashboard](docs/screenshots/phase-26-admin-polish.png)
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Browser localStorage
-- Supabase only for browser-safe fake/demo booking insert proof
+### Mobile Layout
 
-No external UI libraries, authentication, payments, admin backend reads, or real AI API calls are used in this phase.
-
-## Screenshots
-
-- `docs/screenshots/phase-25-final-client-page.png`
-- `docs/screenshots/phase-25-final-admin-dashboard.png`
-- `docs/screenshots/phase-25-final-mobile-page.png`
-- `docs/screenshots/phase-26-client-polish.png`
-- `docs/screenshots/phase-26-admin-polish.png`
-- `docs/screenshots/phase-26-mobile-polish.png`
+![Mobile booking page](docs/screenshots/phase-26-mobile-polish.png)
 
 Reception photo source: [Pexels clinic reception image](https://www.pexels.com/photo/modern-luxury-clinic-reception-interior-design-31844508/).
 
-## Run Locally
+## Why This Project Exists
+
+This project was built to demonstrate a realistic junior-friendly product workflow without overbuilding it into a full medical platform.
+
+It shows:
+
+- React component structure and state-driven views.
+- A professional client-facing appointment request form.
+- Form validation with useful client feedback.
+- A CRM-style admin dashboard with booking statuses.
+- Local persistence for dashboard workflow testing.
+- Browser-safe Supabase insert proof for submitted appointment requests.
+- Automated tests for core behavior.
+- Responsible AI-assisted development documentation.
+- Clear product boundaries around privacy, safety, and scope.
+
+## Core Features
+
+- **Book Appointment view**: polished appointment request page with clinic context, service options, support cards, and urgent-care guidance.
+- **Appointment request form**: required fields, email format validation, autocomplete hints, date/time bounds, note guidance, character counter, and success/save-status feedback.
+- **Admin Dashboard view**: overview cards, scrollable recent bookings table, status badges, status controls, and useful sidebar navigation.
+- **Message drafts**: template-based administrative scheduling drafts with a required non-medical safety line.
+- **Analytics overview**: booking totals and status counts refresh after submissions and status updates.
+- **Persistence layer**: React components use a booking repository boundary instead of talking directly to storage helpers.
+- **Supabase insert proof**: submitted requests can be inserted with a publishable key when environment variables are configured.
+- **Local fallback**: the app still works without Supabase configuration.
+
+## Tech Stack
+
+- React 18
+- Vite 5
+- JavaScript
+- CSS
+- Vitest
+- React Testing Library
+- Browser localStorage
+- Supabase JavaScript client
+- Vercel deployment
+
+No external UI kit, authentication provider, payment provider, backend server, or real AI API is used.
+
+## Architecture At A Glance
+
+```text
+Client booking form
+        |
+        v
+bookingRepository.js
+        |
+        +-- localStorage fallback and dashboard source
+        |
+        +-- optional Supabase insert when Vite env vars are configured
+
+Admin dashboard
+        |
+        v
+bookingRepository.js -> local booking list, status updates, analytics refresh
+
+Message drafts
+        |
+        v
+Template-based administrative draft generation
+```
+
+The current dashboard intentionally remains local-only until authenticated admin access and Row Level Security policies are designed.
+
+## What I Focused On
+
+- Building a complete, understandable frontend flow.
+- Keeping the UI polished but not overloaded.
+- Making form and dashboard interactions feel practical.
+- Separating persistence logic from React components.
+- Using Supabase carefully as insert proof without exposing secret keys.
+- Testing core flows instead of relying only on manual checks.
+- Documenting tradeoffs clearly for interviews and code review.
+
+## What This Does Not Claim
+
+This is not a production medical system. It does not provide:
+
+- Medical advice, diagnosis, or treatment recommendations.
+- Real patient data handling.
+- HIPAA/GDPR compliance claims.
+- Authenticated admin database reads or updates.
+- Payment processing.
+- Real AI-generated medical or operational decisions.
+- Public access to all booking records.
+
+Those are intentionally left out so the project stays honest, focused, and appropriate for a junior portfolio.
+
+## Running Locally
 
 Install dependencies:
 
@@ -58,120 +125,97 @@ Install dependencies:
 npm install
 ```
 
-Start the Vite development server:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Build the app:
-
-```bash
-npm run build
-```
-
-Run the automated tests:
+Run tests:
 
 ```bash
 npm run test
 ```
 
-Optional Supabase demo insert setup:
+Build for production:
+
+```bash
+npm run build
+```
+
+If PowerShell resolves Node incorrectly on Windows, these fallback commands also work:
+
+```bash
+node node_modules/vitest/vitest.mjs run
+node node_modules/vite/bin/vite.js build
+```
+
+## Optional Supabase Setup
+
+The app works without environment variables. To enable browser-safe booking inserts, create `.env.local` from `.env.example`:
 
 ```bash
 cp .env.example .env.local
 ```
 
-Then add the project URL and publishable key from Supabase:
+Then add:
 
 ```text
 VITE_SUPABASE_URL=https://your-project-ref.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
 ```
 
-Use only the publishable browser-safe key. Never use a secret or service role key in the React app, `.env.local`, Vercel frontend variables, or Git.
-
-If the build command fails in PowerShell with `Access is denied`, try:
-
-```bash
-node node_modules/vite/bin/vite.js build
-```
-
-If the test command fails in PowerShell with `Access is denied`, try:
-
-```bash
-node node_modules/vitest/vitest.mjs run
-```
+Use only the publishable browser-safe key. Never use a secret key or service role key in frontend code, Vercel public variables, `.env.local`, or Git.
 
 ## Deployment
 
-Current deployment: [Vercel live demo](https://soundcare-ai-booking-crm.vercel.app/).
+Live deployment: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
-Recommended deployment target: Vercel or Netlify as a static Vite site.
-
-Use these settings:
+Recommended static deployment settings:
 
 - Framework: Vite
 - Build command: `npm run build`
 - Output directory: `dist`
+- Environment variables: optional for Supabase insert proof
 
-The deployed app can run without environment variables because localStorage remains the fallback. To enable Supabase demo inserts on Vercel, configure:
+## Tests And Validation
 
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_PUBLISHABLE_KEY`
+The project includes automated tests for:
 
-Do not configure or expose a secret/service role key.
+- Booking storage and repository behavior.
+- Booking form validation and submit flow.
+- Save-status feedback.
+- Dashboard listing, status controls, and cleaned visible notes.
+- Analytics counts.
+- Message draft safety line.
+- Client/admin view switching and visible UI wording guardrails.
 
-## Backend Planning
+Latest local validation:
 
-Phase 15 documents a future Supabase persistence path in [Backend Persistence Plan](docs/BACKEND_PLAN.md).
+```text
+Test Files: 7 passed
+Tests: 32 passed
+Production build: passed
+```
 
-Phase 16 adds the Supabase setup notes and draft SQL in [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md).
+## Documentation
 
-Phase 17 adds a small booking repository layer in `src/services/bookingRepository.js`. This keeps localStorage as the active implementation while preparing a cleaner boundary for a later Supabase adapter.
+- [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md)
+- [Portfolio Copy](docs/PORTFOLIO_COPY.md)
+- [Interview Readiness](docs/INTERVIEW_READINESS.md)
+- [AI-Assisted Development](docs/AI_ASSISTED_DEVELOPMENT.md)
+- [Backend Persistence Plan](docs/BACKEND_PLAN.md)
+- [Supabase Setup Plan](docs/SUPABASE_SETUP_PLAN.md)
+- [Supabase Verification](docs/SUPABASE_VERIFICATION.md)
+- [Test Plan](docs/TEST_PLAN.md)
+- [Changelog](docs/CHANGELOG.md)
 
-Phase 18 connects fake/demo booking form submissions to Supabase insert when safe publishable environment variables are configured. localStorage remains the fallback and the dashboard/status updates remain localStorage-only until an auth/admin phase is approved.
+## Project History
 
-Phase 19 documents the live Supabase verification in [Supabase Verification](docs/SUPABASE_VERIFICATION.md): Vercel environment variables are configured, the app was redeployed, fake submissions reached Supabase, and an external browser-safe insert returned HTTP `201`.
+The project started as a WordPress plugin idea, then pivoted to React + Vite on 2026-06-06 to better demonstrate frontend application skills. The old WordPress skeleton was removed, and the current repository is the active React version.
 
-Phase 20 adds the final junior-portfolio presentation guide in [Interview Readiness](docs/INTERVIEW_READINESS.md). This is the recommended pause point before adding larger production features such as authenticated admin access.
+Development was organized into small phases: React skeleton, booking data, public form, dashboard, analytics, message drafts, testing, Supabase insert proof, deployment, professional UI polish, and GitHub presentation polish.
 
-Phase 24 improves the booking request confirmation so clients see whether the appointment request was saved to the booking system or received while online saving is unavailable. Dashboard and analytics refresh still use the existing local workflow after submit.
+## Contact And Review Notes
 
-Phase 25 completes the final portfolio QA pass: local tests/build, local browser QA, live Vercel QA, screenshot refresh, documentation polish, and security/privacy sanity checks. No new features were added.
-
-## Safety And Demo Data
-
-This project is a junior portfolio demo only. Use fake/demo data only. Do not enter real patient data.
-
-The app does not provide medical advice, diagnosis, treatment recommendations, clinical claims, or message sending. The mock assistant is limited to administrative draft text about scheduling and booking details.
-
-## Portfolio Walkthrough
-
-For presentation flow, screenshot planning, limitations, and interview talking points, see [Portfolio Walkthrough](docs/PORTFOLIO_WALKTHROUGH.md).
-
-For ready-to-use CV, LinkedIn, portfolio case-study, and interview copy, see [Portfolio Copy](docs/PORTFOLIO_COPY.md).
-
-For Supabase setup proof, current data flow, and backend limitations, see [Supabase Verification](docs/SUPABASE_VERIFICATION.md).
-
-For final demo flow, interview answers, and what not to overclaim, see [Interview Readiness](docs/INTERVIEW_READINESS.md).
-
-For how AI assistance was used responsibly during planning, implementation prompts, review, validation, and documentation, see [AI-Assisted Development](docs/AI_ASSISTED_DEVELOPMENT.md).
-
-Captured portfolio screenshots are stored in [docs/screenshots](docs/screenshots).
-
-## Current Limitations
-
-- Submitted fake/demo bookings can be inserted into Supabase when publishable environment variables are configured.
-- Supabase is used only as browser-safe booking insert proof.
-- Admin dashboard reads and status updates remain local-only until auth/RLS role design is added.
-- localStorage remains the fallback and the dashboard data source for now.
-- The AI assistant is mock/template-based only.
-- There is no authenticated admin backend workflow yet.
-- There is no real AI API integration.
-- There is no authentication or role-based access.
-- There are no payments.
-
-## Project Docs
-
-See `docs/` for the backend plan, product spec, roadmap, decisions log, prompt log, test plan, changelog, and learning notes.
+For recruiters or reviewers: the best review path is to open the live demo, submit a sample appointment request, switch to the admin dashboard, update a booking status, and generate a scheduling draft. The README and docs explain the tradeoffs behind the current scope and what would come next in a production version.

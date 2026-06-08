@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.27.0 - 2026-06-08
+- Completed Phase 27 GitHub presentation polish.
+- Reworked `README.md` into a recruiter-friendly GitHub landing page with badges, live demo link, embedded screenshots, project purpose, core features, architecture notes, testing summary, deployment settings, limitations, and documentation links.
+- Moved the first impression away from internal phase history and toward what the app demonstrates.
+- Kept claims realistic: junior portfolio project, browser-safe Supabase insert proof, local-only admin dashboard workflow, no medical advice, no real patient data, no auth, no payments, and no real AI API.
+- Kept app source, UI behavior, dependencies, backend policies, schema, screenshots, and deployment unchanged.
+
 ## 0.26.0 - 2026-06-08
 - Completed Phase 26 professional UI polish and useful dashboard cleanup.
 - Replaced the decorative client hero panel with a useful clinic reception visual, scheduling response detail, front desk hours, and service categories.

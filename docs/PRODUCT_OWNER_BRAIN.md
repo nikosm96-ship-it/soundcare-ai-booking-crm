@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 26: professional UI polish and useful dashboard cleanup completed.
+Phase 27: GitHub presentation polish completed.
 
-Goal: make the visible app feel more complete, useful, and professional without adding backend complexity or widening junior portfolio scope.
+Goal: make the GitHub repository first impression modern, recruiter-friendly, and honest without overpromising production readiness.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -67,9 +67,10 @@ Goal: make the visible app feel more complete, useful, and professional without 
 - Phase 24: Booking save feedback in the client success confirmation.
 - Phase 25: Final QA, live Vercel check, screenshot refresh, documentation polish, and security/privacy sanity check.
 - Phase 26: Professional client/admin UI polish, useful sidebar links, scrollable bookings, improved form presentation, and refreshed screenshots.
+- Phase 27: Recruiter-friendly GitHub README presentation with embedded screenshots, live demo, architecture notes, tests, limitations, and documentation links.
 
 ## Next Phase
-Optional Phase 27: authenticated admin read/status update planning.
+Optional Phase 28: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -104,6 +105,7 @@ Expected deployment settings:
 - Phase 24 booking save-status screenshot is captured in `docs/screenshots/phase-24-booking-save-status.png`.
 - Phase 25 final screenshots are captured in `docs/screenshots/phase-25-final-client-page.png`, `docs/screenshots/phase-25-final-admin-dashboard.png`, and `docs/screenshots/phase-25-final-mobile-page.png`.
 - Phase 26 polish screenshots are captured in `docs/screenshots/phase-26-client-polish.png`, `docs/screenshots/phase-26-admin-polish.png`, and `docs/screenshots/phase-26-mobile-polish.png`.
+- GitHub presentation polish is complete in `README.md`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -144,3 +146,4 @@ The MVP is complete when:
 22. Nikos can explain how AI assistance was used without overclaiming what AI or the developer did.
 23. The booking success confirmation explains whether the request was saved to the booking system or received while online saving is unavailable.
 24. Final local and live QA confirms the portfolio app works, the live deployment is available, screenshots are refreshed, and documentation clearly states Supabase is insert-proof only while admin reads/status updates remain local-only until auth/RLS role design is added.
+25. README presents the project clearly for recruiters with live demo, screenshots, realistic scope, testing evidence, and honest limitations.

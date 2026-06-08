@@ -1,6 +1,25 @@
 # Test Plan
 
-## Current Phase: Phase 26
+## Current Phase: Phase 27
+
+GitHub presentation polish checks:
+- Confirm `README.md` starts with a recruiter-friendly project summary.
+- Confirm the live demo link is easy to find near the top.
+- Confirm client, admin, and mobile screenshots are embedded in the README.
+- Confirm the README explains what the project demonstrates without overpromising production readiness.
+- Confirm the README includes realistic limitations: no medical advice, no real patient data, no authenticated admin backend, no payments, no real AI API, and no public booking-record reads.
+- Confirm the README includes tech stack, architecture notes, test summary, run commands, deployment settings, and documentation links.
+- Confirm no app source, UI behavior, dependencies, Supabase schema, backend policy, screenshot, or deployment behavior changed.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run Git status and review changed files.
+
+Phase 27 validation notes:
+- Expected visible app UI change is `no`.
+- Expected GitHub/repository presentation change is `yes`.
+- No screenshot is required because existing Phase 26 screenshots are reused.
+
+## Phase 26
 
 Professional UI polish checks:
 - Confirm the client hero uses a useful reception visual with response expectations, front desk hours, and service categories.
