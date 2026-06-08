@@ -19,6 +19,8 @@ const initialFormValues = {
   notes: '',
 };
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 function createBookingId() {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
     return `booking-${crypto.randomUUID()}`;
@@ -29,17 +31,32 @@ function createBookingId() {
 
 function validateBookingForm(values) {
   const errors = {};
+  const email = values.customerEmail.trim();
 
   if (!values.customerName.trim()) {
-    errors.customerName = 'Please enter a customer name.';
+    errors.customerName = 'Please enter your full name.';
   }
 
-  if (!values.customerEmail.trim()) {
-    errors.customerEmail = 'Please enter a customer email.';
+  if (!email) {
+    errors.customerEmail = 'Please enter your email address.';
+  } else if (!emailPattern.test(email)) {
+    errors.customerEmail = 'Please enter a valid email address.';
+  }
+
+  if (!values.customerPhone.trim()) {
+    errors.customerPhone = 'Please enter your phone number.';
   }
 
   if (!values.service) {
     errors.service = 'Please choose a service.';
+  }
+
+  if (!values.preferredDate) {
+    errors.preferredDate = 'Please choose a preferred date.';
+  }
+
+  if (!values.preferredTime) {
+    errors.preferredTime = 'Please choose a preferred time.';
   }
 
   return errors;
@@ -164,14 +181,23 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
 
           <label className="form-field" htmlFor="customerPhone">
-            <span>Phone Number</span>
+            <span>Phone Number *</span>
             <input
               id="customerPhone"
               name="customerPhone"
               type="tel"
               value={formValues.customerPhone}
               onChange={handleChange}
+              aria-invalid={Boolean(errors.customerPhone)}
+              aria-describedby={
+                errors.customerPhone ? 'customerPhone-error' : undefined
+              }
             />
+            {errors.customerPhone ? (
+              <span className="field-error" id="customerPhone-error">
+                {errors.customerPhone}
+              </span>
+            ) : null}
           </label>
 
           <label className="form-field" htmlFor="service">
@@ -199,25 +225,43 @@ export default function BookingForm({ onBookingSaved }) {
           </label>
 
           <label className="form-field" htmlFor="preferredDate">
-            <span>Preferred date</span>
+            <span>Preferred date *</span>
             <input
               id="preferredDate"
               name="preferredDate"
               type="date"
               value={formValues.preferredDate}
               onChange={handleChange}
+              aria-invalid={Boolean(errors.preferredDate)}
+              aria-describedby={
+                errors.preferredDate ? 'preferredDate-error' : undefined
+              }
             />
+            {errors.preferredDate ? (
+              <span className="field-error" id="preferredDate-error">
+                {errors.preferredDate}
+              </span>
+            ) : null}
           </label>
 
           <label className="form-field" htmlFor="preferredTime">
-            <span>Preferred time</span>
+            <span>Preferred time *</span>
             <input
               id="preferredTime"
               name="preferredTime"
               type="time"
               value={formValues.preferredTime}
               onChange={handleChange}
+              aria-invalid={Boolean(errors.preferredTime)}
+              aria-describedby={
+                errors.preferredTime ? 'preferredTime-error' : undefined
+              }
             />
+            {errors.preferredTime ? (
+              <span className="field-error" id="preferredTime-error">
+                {errors.preferredTime}
+              </span>
+            ) : null}
           </label>
 
           <label className="form-field form-field--full" htmlFor="notes">

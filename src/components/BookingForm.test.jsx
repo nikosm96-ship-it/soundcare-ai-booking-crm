@@ -1,18 +1,53 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, test } from 'vitest';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 import BookingForm from './BookingForm.jsx';
+import { createBookingRequest } from '../services/bookingRepository.js';
+
+vi.mock('../services/bookingRepository.js', () => ({
+  createBookingRequest: vi.fn().mockResolvedValue({
+    bookings: [],
+    remoteStatus: 'skipped',
+    remoteError: null,
+  }),
+}));
 
 describe('BookingForm', () => {
-  test('empty submit shows required validation for name, email, and service', async () => {
+  beforeEach(() => {
+    createBookingRequest.mockClear();
+  });
+
+  test('empty submit shows required validation for booking request fields', async () => {
     const user = userEvent.setup();
     render(<BookingForm />);
 
     await user.click(screen.getByRole('button', { name: /request appointment/i }));
 
-    expect(screen.getByText('Please enter a customer name.')).toBeInTheDocument();
-    expect(screen.getByText('Please enter a customer email.')).toBeInTheDocument();
+    expect(screen.getByText('Please enter your full name.')).toBeInTheDocument();
+    expect(screen.getByText('Please enter your email address.')).toBeInTheDocument();
+    expect(screen.getByText('Please enter your phone number.')).toBeInTheDocument();
     expect(screen.getByText('Please choose a service.')).toBeInTheDocument();
+    expect(screen.getByText('Please choose a preferred date.')).toBeInTheDocument();
+    expect(screen.getByText('Please choose a preferred time.')).toBeInTheDocument();
+    expect(createBookingRequest).not.toHaveBeenCalled();
+  });
+
+  test('invalid email format shows a validation message', async () => {
+    const user = userEvent.setup();
+    render(<BookingForm />);
+
+    await user.type(screen.getByLabelText(/full name/i), 'Mina Carter');
+    await user.type(screen.getByLabelText(/email address/i), 'not-an-email');
+    await user.type(screen.getByLabelText(/phone number/i), '555-0199');
+    await user.selectOptions(screen.getByLabelText(/service/i), 'Hearing test');
+    await user.type(screen.getByLabelText(/preferred date/i), '2026-06-15');
+    await user.type(screen.getByLabelText(/preferred time/i), '10:30');
+    await user.click(screen.getByRole('button', { name: /request appointment/i }));
+
+    expect(
+      screen.getByText('Please enter a valid email address.'),
+    ).toBeInTheDocument();
+    expect(createBookingRequest).not.toHaveBeenCalled();
   });
 
   test('successful submit shows client confirmation copy', async () => {
@@ -21,7 +56,10 @@ describe('BookingForm', () => {
 
     await user.type(screen.getByLabelText(/full name/i), 'Mina Carter');
     await user.type(screen.getByLabelText(/email address/i), 'mina@example.com');
+    await user.type(screen.getByLabelText(/phone number/i), '555-0199');
     await user.selectOptions(screen.getByLabelText(/service/i), 'Hearing test');
+    await user.type(screen.getByLabelText(/preferred date/i), '2026-06-15');
+    await user.type(screen.getByLabelText(/preferred time/i), '10:30');
     await user.click(screen.getByRole('button', { name: /request appointment/i }));
 
     expect(screen.getByText('Thank you!')).toBeInTheDocument();
@@ -31,5 +69,16 @@ describe('BookingForm', () => {
     expect(
       screen.getByText('Our team will review your request and contact you soon.'),
     ).toBeInTheDocument();
+    expect(createBookingRequest).toHaveBeenCalledTimes(1);
+    expect(createBookingRequest).toHaveBeenCalledWith(
+      expect.objectContaining({
+        customerName: 'Mina Carter',
+        customerEmail: 'mina@example.com',
+        customerPhone: '555-0199',
+        service: 'Hearing test',
+        preferredDate: '2026-06-15',
+        preferredTime: '10:30',
+      }),
+    );
   });
 });

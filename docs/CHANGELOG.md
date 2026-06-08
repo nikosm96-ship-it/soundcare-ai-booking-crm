@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.22.0 - 2026-06-08
+- Completed Phase 22 professional booking form validation polish.
+- Made full name, email address, phone number, service, preferred date, and preferred time required on the client appointment request form.
+- Added stronger email validation so empty email and invalid email format show distinct client-facing messages.
+- Updated required field labels with asterisks and added clear validation messages for each required booking field.
+- Preserved the existing booking request save flow, local fallback behavior, optional remote insert attempt, and professional success confirmation copy.
+- Expanded BookingForm tests for empty submit validation, invalid email format, successful submission, and the existing save-flow call.
+- Kept authentication, payments, backend APIs, real AI, real patient data, and technical persistence details out of the client UI.
+
 ## 0.21.0 - 2026-06-07
 - Completed Phase 21 professional UI redesign.
 - Reworked the app into two simple state-driven views: `Book Appointment` for clients and `Admin Dashboard` for internal review.

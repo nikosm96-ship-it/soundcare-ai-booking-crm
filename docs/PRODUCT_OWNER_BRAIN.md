@@ -34,9 +34,9 @@ The project must teach the "why" behind each step, not only produce code.
 - Every Coding Agent phase report should follow `docs/AGENT_REPORT_TEMPLATE.md` so warnings, blockers, validation commands, visual checks, and changed files are easy to review.
 
 ## Current Phase
-Phase 21: Professional UI redesign completed.
+Phase 22: Professional booking form validation polish completed.
 
-Goal: make the app feel like a professional hearing-care booking CRM while preserving the existing frontend data flow, localStorage fallback, optional Supabase insert proof, tests, and safety boundaries.
+Goal: make the client appointment request form feel more production-aware by requiring the key booking fields, distinguishing empty email from invalid email format, and keeping technical persistence details out of the visible client UI.
 
 ## Completed Phases
 - Phase 0: Initial project foundation docs for the WordPress version.
@@ -62,9 +62,10 @@ Goal: make the app feel like a professional hearing-care booking CRM while prese
 - Phase 19: Supabase integration QA and documentation cleanup.
 - Phase 20: Interview readiness and portfolio pause point.
 - Phase 21: Professional two-view UI redesign.
+- Phase 22: Professional booking form validation polish.
 
 ## Next Phase
-Optional Phase 22: authenticated admin read/status update planning.
+Optional Phase 23: authenticated admin read/status update planning.
 
 Suggested scope:
 - Decide whether the dashboard should move to Supabase only after admin authentication exists.
@@ -94,6 +95,7 @@ Expected deployment settings:
 - Supabase live insert verification is documented in `docs/SUPABASE_VERIFICATION.md`.
 - Interview/demo readiness is documented in `docs/INTERVIEW_READINESS.md`.
 - Phase 21 screenshots are captured in `docs/screenshots/phase-21-client-booking-page.png`, `docs/screenshots/phase-21-admin-dashboard-page.png`, and `docs/screenshots/phase-21-mobile-booking-page.png`.
+- Phase 22 validation screenshot is captured in `docs/screenshots/phase-22-booking-validation.png`.
 
 ## Important Decisions
 - Pivot from WordPress plugin to React app on 2026-06-06.
@@ -130,3 +132,4 @@ The MVP is complete when:
 18. A repository layer exists so React components do not depend directly on localStorage helpers.
 19. Supabase demo insert works for fake booking submissions without exposing secret keys.
 20. Nikos has a clear interview/demo script and knows what not to overclaim.
+21. The client booking form validates all required appointment request fields with professional messages.

@@ -1,6 +1,29 @@
 # Test Plan
 
-## Current Phase: Phase 21
+## Current Phase: Phase 22
+
+Professional booking form validation checks:
+- Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.
+- Confirm this is still a React + Vite app from `package.json` and `vite.config.js`.
+- Empty-submit the booking form and confirm required errors appear for full name, email address, phone number, service, preferred date, and preferred time.
+- Enter an invalid email format and confirm `Please enter a valid email address.` appears.
+- Submit a valid booking request and confirm `Your appointment request has been received.` and `Our team will review your request and contact you soon.` appear.
+- Confirm the successful submit path still calls the existing booking request save flow.
+- Confirm the visible app UI does not include: demo, fake, portfolio, MVP, mock AI, localStorage, Supabase, Vercel, recruiter.
+- Run `npm run test`.
+- Run `npm run build`.
+- Run the app locally and check desktop/mobile browser rendering.
+- Check browser console for errors.
+- Confirm no horizontal overflow on mobile.
+- Capture `docs/screenshots/phase-22-booking-validation.png` if the required labels/errors are visually meaningful.
+- Run `git status` and review changed files.
+- Confirm no authentication, payments, real AI API, backend API routes, production medical claims, real patient data, diagnosis, treatment recommendations, or HIPAA/GDPR claims were added.
+
+Phase 22 validation notes:
+- Expected visible UI change is `yes`: required labels and validation errors are more complete.
+- Existing behavior remains: booking submission, localStorage fallback, Supabase insert attempt when configured, dashboard listing, status updates, analytics refresh, and administrative draft safety line.
+
+## Phase 21
 
 Professional UI redesign checks:
 - Confirm the real project folder contains `.git`, `package.json`, `vite.config.js`, `src`, and `docs`.

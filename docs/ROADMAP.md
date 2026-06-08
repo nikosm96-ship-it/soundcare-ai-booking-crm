@@ -1,11 +1,22 @@
 # Roadmap
 
 ## Project Status
-SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI.
+SoundCare AI Booking CRM is currently a portfolio-ready junior React + Vite MVP with a professional two-view booking CRM UI and polished client booking validation.
 
 The current version is intentionally scoped for a junior portfolio. It uses fake/demo booking data, browser localStorage for the dashboard workflow, Supabase for fake/demo booking inserts, and safe template-based administrative draft text. It now presents a public `Book Appointment` view and an internal `Admin Dashboard` view. It does not include public booking reads, authenticated admin database updates, real AI calls, payments, real patient data, medical advice, diagnosis, treatment recommendations, or clinical claims.
 
 ## Completed Phases
+
+### Phase 22: Professional Booking Form Validation Polish
+Goal: Improve the client appointment request form so validation feels realistic and production-aware.
+
+Completed:
+- Required full name, email address, phone number, service, preferred date, and preferred time.
+- Added distinct email messages for empty email and invalid email format.
+- Updated all required visible labels with asterisks.
+- Preserved the existing booking request persistence flow and professional success confirmation.
+- Added BookingForm tests for empty required fields, invalid email, valid submit success, and save-flow invocation.
+- Kept technical persistence details and portfolio implementation wording out of the client UI.
 
 ### Phase 21: Professional UI Redesign
 Goal: Redesign the visible product surface as a professional hearing-care booking CRM.
@@ -244,7 +255,7 @@ Future work should happen only if it improves the portfolio story or matches a s
 
 ## Next Optional Phase
 
-### Phase 21: Authenticated Admin Planning
+### Phase 23: Authenticated Admin Planning
 Goal: decide whether a future authenticated admin workflow is worth adding before dashboard reads/status updates move from localStorage to Supabase.
 
 Suggested acceptance criteria:

@@ -6,16 +6,17 @@ This is the active React app version of the project. The earlier WordPress plugi
 
 ## Current Status
 
-Portfolio-ready junior MVP deployed publicly on Vercel, with a professional two-view UI redesign completed in Phase 21.
+Portfolio-ready junior MVP deployed publicly on Vercel, with professional booking form validation polish completed in Phase 22.
 
-The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, and mobile booking page.
+The MVP is designed for portfolio review. It uses browser localStorage for the demo dashboard workflow and Supabase for optional fake/demo booking inserts. The current UI has a public `Book Appointment` view and an internal `Admin Dashboard` view. The screenshot set in `docs/screenshots/` includes the Phase 21 client booking page, admin dashboard page, mobile booking page, and Phase 22 booking validation check.
 
 Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-booking-crm.vercel.app/)
 
 ## Features
 
 - Public booking page for appointment requests.
-- Required-field validation for name, email, and service.
+- Required-field validation for full name, email address, phone number, service, preferred date, and preferred time.
+- Email format validation with client-facing error messages.
 - Browser localStorage persistence for demo bookings.
 - Booking repository layer that keeps localStorage behind a clean persistence boundary.
 - Admin dashboard with a dark teal sidebar, overview cards, booking table, status badges, and status updates.
@@ -36,11 +37,12 @@ Live demo: [https://soundcare-ai-booking-crm.vercel.app/](https://soundcare-ai-b
 
 No external UI libraries, authentication, payments, admin backend reads, or real AI API calls are used in this phase.
 
-## Phase 21 Screenshots
+## Screenshots
 
 - `docs/screenshots/phase-21-client-booking-page.png`
 - `docs/screenshots/phase-21-admin-dashboard-page.png`
 - `docs/screenshots/phase-21-mobile-booking-page.png`
+- `docs/screenshots/phase-22-booking-validation.png`
 
 ## Run Locally
 

@@ -3,7 +3,7 @@
 ## Purpose
 This document is the final presentation guide for SoundCare AI Booking CRM as a junior portfolio project.
 
-The goal is to explain the project clearly without making it sound bigger than it is. The app is a polished MVP that demonstrates React, form handling, state updates, local persistence, a small Supabase insert proof, testing, deployment, professional UI redesign, and responsible product boundaries.
+The goal is to explain the project clearly without making it sound bigger than it is. The app is a polished MVP that demonstrates React, form handling, production-aware validation, state updates, local persistence, a small Supabase insert proof, testing, deployment, professional UI redesign, and responsible product boundaries.
 
 ## One-Minute Explanation
 SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care clinic booking workflow. It has a professional client appointment request page and an internal admin dashboard. A visitor can submit a fake booking request, the app saves it locally for the dashboard, analytics update from the same booking data, and an administrative draft assistant can generate safe scheduling text. The deployed version also proves that fake booking submissions can be inserted into Supabase using browser-safe environment variables, while dashboard reads and status updates stay local until an authenticated admin phase exists.
@@ -26,6 +26,7 @@ SoundCare AI Booking CRM is a React + Vite portfolio MVP for a fake hearing-care
 - I did not add public reads or updates from Supabase because that should wait for authentication and stricter admin access rules.
 - I kept the administrative draft assistant template-based because real AI would introduce privacy, safety, cost, and API-key concerns that are not needed for this junior portfolio MVP.
 - I redesigned the visible UI into separate client and admin experiences so the project looks closer to a professional booking CRM without adding risky backend scope.
+- I strengthened the booking form validation so required appointment fields and invalid email addresses show clear client-facing messages before a request is saved.
 - I added tests for the most important behavior: storage fallback, repository behavior, form validation, analytics counts, and mock assistant safety text.
 - I deployed the app to Vercel and documented the setup so the project can be reviewed from GitHub and the live URL.
 
@@ -62,7 +63,7 @@ The best next step would be authenticated admin access, then Supabase read/updat
 - No auth, payments, real AI call, message sending, real patient data, or medical advice.
 
 ## Recommended Portfolio Line
-Built and deployed a React + Vite booking CRM portfolio MVP with form validation, localStorage-backed dashboard state, analytics, a safe mock assistant, automated tests, and Supabase demo insert persistence using browser-safe configuration.
+Built and deployed a React + Vite booking CRM portfolio MVP with professional booking form validation, localStorage-backed dashboard state, analytics, a safe mock assistant, automated tests, and Supabase demo insert persistence using browser-safe configuration.
 
 ## Recommended Pause Point
 For a junior portfolio, this is a good stopping point for now. The project is understandable, deployed, documented, tested, and connected to a small backend proof without becoming too complex for the target role.
